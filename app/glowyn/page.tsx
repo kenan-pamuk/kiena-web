@@ -1,12 +1,7 @@
 "use client";
 
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "Glowyn",
-};
 
 const modules = [
   {
