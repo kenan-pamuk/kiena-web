@@ -1,155 +1,216 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 const modules = [
-  ["💬", "AI Asistan", "Glowyn ile konuşun, yazışın ve günlük hayatınız için akıllı öneriler alın."],
-  ["📅", "Planım", "Takvim, hedef, yapılacaklar ve hatırlatıcılarınızı tek yerden yönetin."],
-  ["🥗", "Yemeğim", "Buzdolabı, kiler ve beslenme alışkanlıklarınıza göre yemek önerileri alın."],
-  ["✨", "Stilim", "Kombin, makyaj ve bakım önerileriyle kişisel stilinizi keşfedin."],
-  ["📍", "Keşfet", "Yakınınızdaki restoran, etkinlik ve yaşam alanlarını keşfedin."],
-  ["🛒", "Listem", "Alışveriş listenizi otomatik oluşturun ve ihtiyaçlarınızı takip edin."]
+  {
+    icon: "💬",
+    title: "AI Asistan",
+    items: ["Sohbet et", "Sesli görüş", "Günlük öneriler", "Hatırlatmalar"],
+    image: "/assets/phone-mock.png",
+  },
+  {
+    icon: "📅",
+    title: "Planım",
+    items: ["Takvim", "Görevler", "Hatırlatıcılar", "Hedefler"],
+    image: "/assets/phone-mock.png",
+  },
+  {
+    icon: "🥗",
+    title: "Yemeğim",
+    items: ["Tarif önerileri", "Günlük yemek planı", "Kilerim"],
+    image: "/assets/phone-mock.png",
+  },
+  {
+    icon: "👗",
+    title: "Keşfet",
+    items: ["Kombin önerileri", "Makyaj önerileri", "Yakındaki mekanlar", "Trend içerikler"],
+    image: "/assets/phone-mock.png",
+  },
 ];
 
-const steps = [
-  ["01", "Profilini oluştur", "Yaşam tarzını, hedeflerini ve tercihlerini Glowyn’e anlat."],
-  ["02", "Günlük planını al", "Glowyn gününü analiz eder ve sana özel öneriler üretir."],
-  ["03", "Hayatını kolaylaştır", "Plan, yemek, stil ve alışveriş süreçlerini tek uygulamada yönet."]
+const howItWorks = [
+  ["💬", "Seninle Sohbet Eder", "İhtiyaçlarını anlamak için seninle konuşur."],
+  ["🧠", "Seni Tanır", "Alışkanlıklarını öğrenir, seni daha iyi tanır."],
+  ["💡", "Öneriler Oluşturur", "Sana özel planlar, öneriler ve hatırlatmalar sunar."],
+  ["😊", "Hayatını Kolaylaştırır", "Zamanını daha verimli kullanmanı sağlar."],
+];
+
+const day = [
+  ["☀️", "Sabah", "Bugünkü planını ve hava durumunu sunar."],
+  ["🍴", "Öğle", "Evdeki malzemelere göre yemek önerir."],
+  ["👚", "Akşam", "Akşam için kombin önerisi sunar."],
+  ["🌙", "Gece", "Yarınki planlarını hatırlatır."],
+];
+
+const coming = [
+  ["🧥", "Kombinim", "Dolabını dijitalleştir, sana özel kombin önerileri al."],
+  ["💄", "Makyajım", "Tarzına uygun makyaj önerileri ve ürün tavsiyeleri al."],
+  ["🎙️", "Sesli Glowyn", "Glowyn ile sesli konuş, derdini anlat."],
+  ["✅", "Rutinlerim", "Günlük rutinlerini oluştur ve takip et."],
+  ["📊", "Analizlerim", "Alışkanlıklarını analiz et, gelişimini görselleştir."],
 ];
 
 export default function GlowynPage() {
   return (
-    <main className="glowynPage">
-      <header className="header">
+    <main className="glowyn">
+      <header className="topbar">
         <Link href="/" className="brand">
-          <span className="brandIcon">K</span>
+          <span className="brandMark">K</span>
           <span>KIENA</span>
         </Link>
 
-        <nav className="nav">
+        <nav>
           <Link href="/">Ana Sayfa</Link>
-          <a>Özellikler</a>
-          <a>Nasıl Çalışır?</a>
-          <a>Bekleme Listesi</a>
+          <a href="#how">Hakkımızda</a>
+          <a href="#modules">Çözümlerimiz</a>
+          <a className="active" href="#glowyn">Glowyn</a>
+          <a href="#contact">İletişim</a>
         </nav>
+
+        <a className="contact" href="mailto:hello@kiena.com">Bize Ulaşın</a>
       </header>
 
-      <section className="hero">
+      <section className="hero" id="glowyn">
         <div className="heroText">
-          <p className="eyebrow">GLOWYN</p>
+          <p className="eyebrow">YAPAY ZEKÂ İLE GELECEĞİ ŞEKİLLENDİRİYORUZ</p>
           <h1>
-            AI destekli <br />
-            <span>kişisel yaşam asistanınız.</span>
+            Glowyn ile <br />
+            hayatın <span>seninle uyum içinde.</span>
           </h1>
-          <p className="lead">
-            Glowyn; planlama, beslenme, stil, alışveriş ve günlük yaşam önerilerini
-            tek bir akıllı uygulamada birleştirir.
-          </p>
-
-          <div className="actions">
-            <a href="#waitlist" className="primary">Bekleme Listesine Katıl</a>
-            <Link href="/" className="secondary">Kiena’ya Dön</Link>
-          </div>
-        </div>
-
-        <div className="heroVisual">
-          <div className="orb">
-            <div className="face">✨</div>
-          </div>
-          <div className="floatingCard cardOne">Bugünkü planın hazır</div>
-          <div className="floatingCard cardTwo">3 yemek önerisi bulundu</div>
-          <div className="floatingCard cardThree">Stil önerin oluşturuldu</div>
-        </div>
-      </section>
-
-      <section className="section">
-        <p className="eyebrow center">NASIL ÇALIŞIR?</p>
-        <h2>Glowyn hayatınızı üç adımda kolaylaştırır.</h2>
-
-        <div className="steps">
-          {steps.map(([no, title, text]) => (
-            <article className="step" key={title}>
-              <strong>{no}</strong>
-              <h3>{title}</h3>
-              <p>{text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section modules">
-        <p className="eyebrow center">ANA MODÜLLER</p>
-        <h2>Günlük yaşamınız için akıllı modüller.</h2>
-
-        <div className="grid">
-          {modules.map(([icon, title, text]) => (
-            <article className="module" key={title}>
-              <div className="icon">{icon}</div>
-              <h3>{title}</h3>
-              <p>{text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="dayPanel">
-        <div>
-          <p className="eyebrow">GLOWYN İLE BİR GÜN</p>
-          <h2>Sabah planından akşam önerilerine kadar yanınızda.</h2>
           <p>
-            Glowyn sabah takviminizi düzenler, öğlen yemek önerir, gün içinde
-            alışveriş listenizi günceller ve akşam için stil veya etkinlik önerileri sunar.
+            Glowyn, planlamadan beslenmeye, stil önerilerinden günlük keşiflere kadar
+            yaşamının her alanında sana eşlik eden yapay zeka destekli kişisel yaşam asistanındır.
           </p>
+
+          <div className="buttons">
+            <a href="#waitlist" className="primary">Bekleme Listesine Katıl →</a>
+            <a href="#modules" className="secondary">Glowyn’i Keşfet ↓</a>
+          </div>
         </div>
 
-        <div className="timeline">
-          <div><b>08:30</b><span>Günlük plan oluşturuldu</span></div>
-          <div><b>12:15</b><span>Yemek önerisi hazırlandı</span></div>
-          <div><b>17:45</b><span>Alışveriş listesi güncellendi</span></div>
-          <div><b>20:00</b><span>Akşam önerileri sunuldu</span></div>
+        <div className="heroImage">
+          <Image src="/assets/hero-orb.png" alt="Glowyn karakteri" width={560} height={500} priority />
+          <div className="bubble">Merhaba! 👋<br />Ben Glowyn.</div>
         </div>
       </section>
 
-      <section id="waitlist" className="waitlist">
-        <div className="miniOrb">✨</div>
-        <h2>Glowyn yakında sizinle.</h2>
-        <p>Beta süreci, yeni özellikler ve özel duyurulardan ilk siz haberdar olun.</p>
+      <section className="panel" id="how">
+        <h2>GLOWYN NASIL ÇALIŞIR?</h2>
+        <div className="howGrid">
+          {howItWorks.map(([icon, title, text], i) => (
+            <article key={title}>
+              <div className="bigIcon">{icon}</div>
+              <span>{i + 1}</span>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
 
+      <section className="panel" id="modules">
+        <h2>GLOWYN’İN ANA MODÜLLERİ</h2>
+        <div className="moduleGrid">
+          {modules.map((m) => (
+            <article className="module" key={m.title}>
+              <div className="moduleTitle">
+                <span>{m.icon}</span>
+                <h3>{m.title}</h3>
+              </div>
+              <ul>
+                {m.items.map((x) => <li key={x}>{x}</li>)}
+              </ul>
+              <Image src={m.image} alt={m.title} width={210} height={260} />
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="panel">
+        <h2>GLOWYN İLE BİR GÜN</h2>
+        <div className="dayGrid">
+          {day.map(([icon, title, text]) => (
+            <article key={title}>
+              <div>{icon}</div>
+              <h3>{title}</h3>
+              <p>{text}</p>
+              <Image src="/assets/phone-mock.png" alt={title} width={190} height={230} />
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="panel characters">
+        <h2>GLOWYN KARAKTERİ</h2>
+        {["Mutlu", "Düşünen", "Şaşkın", "Kutlama", "Üzgün"].map((x) => (
+          <div key={x}>
+            <Image src="/assets/glow-face.png" alt={x} width={120} height={120} />
+            <strong>{x}</strong>
+          </div>
+        ))}
+      </section>
+
+      <section className="panel">
+        <h2>YAKINDA SİZİNLE</h2>
+        <div className="comingGrid">
+          {coming.map(([icon, title, text]) => (
+            <article key={title}>
+              <span>{icon}</span>
+              <div>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="waitlist" id="waitlist">
+        <Image src="/assets/glow-face.png" alt="Glowyn" width={150} height={150} />
+        <div>
+          <h2>Glowyn’den ilk sen haberdar ol!</h2>
+          <p>Yeniliklerden, beta testlerinden ve özel fırsatlardan ilk sen haberdar ol.</p>
+        </div>
         <form>
-          <input type="email" placeholder="E-posta adresinizi girin" />
-          <button type="button">Haber Ver</button>
+          <input placeholder="Ad Soyad" />
+          <input placeholder="E-posta adresiniz" />
+          <button type="button">Bekleme Listesine Katıl →</button>
+          <small>🔒 Bilgileriniz güvendedir.</small>
         </form>
-
-        <small>🔒 Bilgileriniz güvendedir. İstediğiniz zaman abonelikten çıkabilirsiniz.</small>
       </section>
 
-      <footer className="footer">
-        <Link href="/" className="brand">
-          <span className="brandIcon">K</span>
-          <span>KIENA</span>
-        </Link>
-        <p>© 2024 Kiena Teknoloji. Tüm hakları saklıdır.</p>
+      <footer className="footer" id="contact">
+        <div>
+          <Link href="/" className="brand">
+            <span className="brandMark">K</span>
+            <span>KIENA</span>
+          </Link>
+          <p>Yapay zekâ ve veri teknolojileriyle dijital dünyanın geleceğini şekillendiriyoruz.</p>
+        </div>
+
+        <div><h4>Şirket</h4><a>Hakkımızda</a><a>Misyonumuz</a><a>Değerlerimiz</a><a>İletişim</a></div>
+        <div><h4>Çözümlerimiz</h4><a>Yapay Zekâ Çözümleri</a><a>Mobil Uygulamalar</a><a>Veri ve Analitik</a></div>
+        <div><h4>Glowyn</h4><a>Glowyn Nedir?</a><a>Özellikleri</a><a>Yakında</a></div>
+        <div><h4>İletişim</h4><a href="mailto:hello@kiena.com">hello@kiena.com</a><a>İstanbul, Türkiye</a></div>
       </footer>
 
       <style jsx>{`
-        .glowynPage {
+        .glowyn {
           min-height: 100vh;
-          background:
-            radial-gradient(circle at top left, rgba(217, 70, 239, 0.25), transparent 34%),
-            radial-gradient(circle at top right, rgba(99, 102, 241, 0.25), transparent 32%),
-            #050816;
-          color: white;
-          overflow: hidden;
-          padding: 28px;
+          background: #030615;
+          color: #fff;
+          padding: 24px 64px;
+          font-family: Arial, sans-serif;
         }
 
-        .header {
-          max-width: 1180px;
-          margin: 0 auto;
+        .topbar {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 18px 0;
+          max-width: 1320px;
+          margin: auto;
         }
 
         .brand {
@@ -159,346 +220,365 @@ export default function GlowynPage() {
           color: white;
           text-decoration: none;
           font-weight: 800;
-          letter-spacing: 2px;
+          letter-spacing: 6px;
+          font-size: 24px;
         }
 
-        .brandIcon {
+        .brandMark {
           width: 38px;
           height: 38px;
-          border-radius: 12px;
           display: grid;
           place-items: center;
-          background: linear-gradient(135deg, #d946ef, #6366f1);
-          box-shadow: 0 0 28px rgba(217, 70, 239, 0.65);
+          border-radius: 8px;
+          background: linear-gradient(135deg, #d946ef, #2563eb);
         }
 
-        .nav {
+        nav {
           display: flex;
-          gap: 28px;
+          gap: 44px;
         }
 
-        .nav a {
-          color: #cbd5e1;
+        nav a {
+          color: white;
           text-decoration: none;
-          font-size: 14px;
+          font-size: 15px;
+        }
+
+        nav .active {
+          color: #ff4df8;
+          border-bottom: 2px solid #ff4df8;
+          padding-bottom: 16px;
+        }
+
+        .contact {
+          color: white;
+          text-decoration: none;
+          border: 1px solid #e879f9;
+          border-radius: 999px;
+          padding: 14px 32px;
         }
 
         .hero {
-          max-width: 1180px;
-          margin: 70px auto 40px;
+          max-width: 1320px;
+          margin: 50px auto 28px;
           display: grid;
-          grid-template-columns: 1.05fr 0.95fr;
-          gap: 60px;
+          grid-template-columns: 1fr 1.15fr;
           align-items: center;
         }
 
         .eyebrow {
-          color: #f0abfc;
-          font-size: 13px;
-          font-weight: 800;
-          letter-spacing: 3px;
-          margin-bottom: 18px;
-        }
-
-        .center {
-          text-align: center;
+          color: #e879f9;
+          font-size: 15px;
+          letter-spacing: 1px;
+          font-weight: 700;
         }
 
         h1 {
-          font-size: clamp(48px, 7vw, 92px);
-          line-height: 0.95;
-          letter-spacing: -4px;
-          margin: 0;
+          font-size: 60px;
+          line-height: 1.08;
+          margin: 20px 0;
         }
 
-        h1 span,
-        h2 span {
-          background: linear-gradient(90deg, #f472b6, #a78bfa, #60a5fa);
+        h1 span {
+          background: linear-gradient(90deg, #ff4df8, #3b82f6);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
 
-        .lead {
-          max-width: 650px;
-          color: #cbd5e1;
-          font-size: 21px;
+        .heroText p:last-of-type {
+          max-width: 480px;
           line-height: 1.7;
-          margin: 28px 0 0;
+          color: #fff;
+          font-size: 18px;
         }
 
-        .actions {
+        .buttons {
           display: flex;
-          gap: 16px;
-          margin-top: 34px;
-          flex-wrap: wrap;
+          gap: 24px;
+          margin-top: 28px;
         }
 
         .primary,
         .secondary {
-          padding: 16px 24px;
-          border-radius: 16px;
           text-decoration: none;
+          color: white;
+          border-radius: 10px;
+          padding: 18px 28px;
           font-weight: 700;
         }
 
         .primary {
-          color: white;
-          background: linear-gradient(135deg, #d946ef, #7c3aed);
-          box-shadow: 0 18px 42px rgba(124, 58, 237, 0.42);
+          background: linear-gradient(135deg, #a855f7, #2563eb);
         }
 
         .secondary {
-          color: white;
-          border: 1px solid rgba(255,255,255,0.18);
-          background: rgba(255,255,255,0.06);
+          border: 1px solid #7e22ce;
         }
 
-        .heroVisual {
+        .heroImage {
           position: relative;
-          min-height: 520px;
-          display: grid;
-          place-items: center;
-        }
-
-        .orb {
-          width: 390px;
-          height: 390px;
-          border-radius: 50%;
-          background:
-            radial-gradient(circle at 35% 25%, rgba(255,255,255,0.95), transparent 8%),
-            radial-gradient(circle at center, #f9a8d4 0%, #a855f7 36%, #4f46e5 70%, #111827 100%);
-          box-shadow:
-            0 0 55px rgba(217,70,239,0.85),
-            0 0 120px rgba(99,102,241,0.55);
-          display: grid;
-          place-items: center;
-          border: 8px solid rgba(255,255,255,0.12);
-        }
-
-        .face {
-          font-size: 92px;
-          filter: drop-shadow(0 0 25px rgba(255,255,255,0.8));
-        }
-
-        .floatingCard {
-          position: absolute;
-          padding: 14px 18px;
-          border-radius: 18px;
-          background: rgba(15, 23, 42, 0.72);
-          border: 1px solid rgba(255,255,255,0.14);
-          backdrop-filter: blur(16px);
-          color: #e2e8f0;
-          box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-        }
-
-        .cardOne { top: 60px; left: 10px; }
-        .cardTwo { right: 0; top: 210px; }
-        .cardThree { left: 40px; bottom: 70px; }
-
-        .section {
-          max-width: 1180px;
-          margin: 90px auto 0;
-        }
-
-        .section h2,
-        .dayPanel h2,
-        .waitlist h2 {
-          font-size: clamp(34px, 5vw, 58px);
-          line-height: 1.08;
-          text-align: center;
-          margin: 0 0 34px;
-          letter-spacing: -2px;
-        }
-
-        .steps {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 20px;
-        }
-
-        .step,
-        .module {
-          background: rgba(255,255,255,0.06);
-          border: 1px solid rgba(255,255,255,0.12);
-          border-radius: 28px;
-          padding: 28px;
-          box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
-        }
-
-        .step strong {
-          color: #f0abfc;
-          font-size: 34px;
-        }
-
-        .step h3,
-        .module h3 {
-          font-size: 22px;
-          margin: 18px 0 10px;
-        }
-
-        .step p,
-        .module p,
-        .dayPanel p,
-        .waitlist p,
-        .footer p {
-          color: #cbd5e1;
-          line-height: 1.7;
-        }
-
-        .grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 20px;
-        }
-
-        .icon {
-          width: 54px;
-          height: 54px;
-          border-radius: 18px;
-          display: grid;
-          place-items: center;
-          font-size: 26px;
-          background: linear-gradient(135deg, rgba(217,70,239,0.28), rgba(99,102,241,0.28));
-        }
-
-        .dayPanel {
-          max-width: 1180px;
-          margin: 95px auto 0;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 34px;
-          align-items: center;
-          padding: 42px;
-          border-radius: 36px;
-          background:
-            linear-gradient(135deg, rgba(217,70,239,0.18), rgba(99,102,241,0.12)),
-            rgba(255,255,255,0.05);
-          border: 1px solid rgba(255,255,255,0.13);
-        }
-
-        .dayPanel h2 {
-          text-align: left;
-        }
-
-        .timeline {
-          display: grid;
-          gap: 14px;
-        }
-
-        .timeline div {
           display: flex;
-          gap: 18px;
+          justify-content: center;
+        }
+
+        .heroImage img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        .bubble {
+          position: absolute;
+          right: 40px;
+          top: 80px;
+          background: linear-gradient(135deg, rgba(37,99,235,.75), rgba(126,34,206,.75));
+          border: 1px solid #a855f7;
+          padding: 22px 34px;
+          border-radius: 12px;
+          font-size: 22px;
+          font-weight: 700;
+        }
+
+        .panel {
+          max-width: 1320px;
+          margin: 22px auto;
+          border: 1px solid rgba(59,130,246,.22);
+          background: rgba(7, 12, 35, .78);
+          border-radius: 12px;
+          padding: 22px;
+        }
+
+        .panel h2 {
+          text-align: center;
+          color: #e879f9;
+          font-size: 20px;
+          margin: 0 0 18px;
+        }
+
+        .howGrid,
+        .moduleGrid,
+        .dayGrid,
+        .comingGrid {
+          display: grid;
+          gap: 22px;
+        }
+
+        .howGrid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        .howGrid article {
+          text-align: center;
+        }
+
+        .bigIcon {
+          font-size: 58px;
+          filter: drop-shadow(0 0 16px #a855f7);
+        }
+
+        .howGrid span {
+          display: inline-grid;
+          place-items: center;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          background: #312e81;
+          margin: 8px 0;
+        }
+
+        .howGrid h3,
+        .module h3,
+        .dayGrid h3,
+        .comingGrid h3 {
+          margin: 8px 0;
+        }
+
+        .howGrid p,
+        .module li,
+        .dayGrid p,
+        .comingGrid p,
+        .footer p,
+        .footer a {
+          color: #d6d9e8;
+          font-size: 14px;
+          line-height: 1.6;
+        }
+
+        .moduleGrid,
+        .dayGrid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        .module,
+        .dayGrid article {
+          border: 1px solid rgba(168,85,247,.28);
+          border-radius: 10px;
+          padding: 22px;
+          overflow: hidden;
+          min-height: 365px;
+          background: rgba(4, 8, 27, .75);
+        }
+
+        .moduleTitle {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          font-size: 24px;
+        }
+
+        .moduleTitle span,
+        .dayGrid article > div,
+        .comingGrid span {
+          font-size: 42px;
+          filter: drop-shadow(0 0 15px #ec4899);
+        }
+
+        .module img,
+        .dayGrid img {
+          margin-top: 24px;
+          width: 100%;
+          height: auto;
+        }
+
+        .dayGrid article {
+          min-height: 335px;
+        }
+
+        .characters {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          text-align: center;
+          align-items: center;
+        }
+
+        .characters h2 {
+          grid-column: 1 / -1;
+        }
+
+        .characters div {
+          display: grid;
+          justify-items: center;
+          gap: 8px;
+        }
+
+        .comingGrid {
+          grid-template-columns: repeat(5, 1fr);
+        }
+
+        .comingGrid article {
+          display: flex;
+          gap: 14px;
           padding: 18px;
-          border-radius: 20px;
-          background: rgba(2, 6, 23, 0.42);
-          border: 1px solid rgba(255,255,255,0.09);
-        }
-
-        .timeline b {
-          color: #f0abfc;
-        }
-
-        .timeline span {
-          color: #e2e8f0;
+          border: 1px solid rgba(168,85,247,.22);
+          border-radius: 10px;
+          background: rgba(5, 10, 30, .75);
         }
 
         .waitlist {
-          max-width: 900px;
-          margin: 95px auto 0;
-          text-align: center;
-          padding: 55px;
-          border-radius: 40px;
-          background:
-            radial-gradient(circle at top, rgba(244,114,182,0.28), transparent 45%),
-            rgba(255,255,255,0.06);
-          border: 1px solid rgba(255,255,255,0.12);
-        }
-
-        .miniOrb {
-          width: 98px;
-          height: 98px;
-          border-radius: 50%;
+          max-width: 1320px;
+          margin: 22px auto;
+          border: 1px solid rgba(59,130,246,.22);
+          background: rgba(7, 12, 35, .86);
+          border-radius: 12px;
+          padding: 24px 42px;
           display: grid;
-          place-items: center;
-          margin: 0 auto 20px;
-          font-size: 42px;
-          background: linear-gradient(135deg, #f472b6, #7c3aed);
-          box-shadow: 0 0 70px rgba(217,70,239,0.8);
+          grid-template-columns: 180px 1fr 1.35fr;
+          align-items: center;
+          gap: 30px;
         }
 
-        form {
-          margin: 28px auto 14px;
-          display: flex;
-          max-width: 620px;
-          gap: 12px;
+        .waitlist h2 {
+          font-size: 31px;
+          margin: 0 0 12px;
+        }
+
+        .waitlist form {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 14px;
         }
 
         input {
-          flex: 1;
-          border: 1px solid rgba(255,255,255,0.16);
-          background: rgba(2,6,23,0.5);
+          background: rgba(2, 6, 23, .85);
+          border: 1px solid rgba(59,130,246,.28);
+          border-radius: 8px;
           color: white;
-          border-radius: 16px;
-          padding: 17px 18px;
-          outline: none;
+          padding: 18px;
         }
 
         button {
-          border: 0;
-          border-radius: 16px;
-          padding: 17px 24px;
+          grid-column: 2;
+          background: linear-gradient(135deg, #a855f7, #2563eb);
           color: white;
-          font-weight: 800;
-          background: linear-gradient(135deg, #d946ef, #7c3aed);
-          cursor: pointer;
+          border: 0;
+          border-radius: 8px;
+          font-weight: 700;
+          padding: 18px;
         }
 
         small {
-          color: #94a3b8;
+          color: #aab0c0;
         }
 
         .footer {
-          max-width: 1180px;
-          margin: 70px auto 0;
-          padding: 30px 0;
-          border-top: 1px solid rgba(255,255,255,0.12);
+          max-width: 1320px;
+          margin: 22px auto 0;
+          border: 1px solid rgba(59,130,246,.22);
+          background: rgba(7, 12, 35, .86);
+          border-radius: 12px;
+          padding: 26px;
+          display: grid;
+          grid-template-columns: 1.6fr 1fr 1.2fr 1fr 1fr;
+          gap: 30px;
+        }
+
+        .footer div {
           display: flex;
-          justify-content: space-between;
-          align-items: center;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .footer a {
+          text-decoration: none;
         }
 
         @media (max-width: 900px) {
-          .nav {
+          .glowyn {
+            padding: 20px;
+          }
+
+          nav {
             display: none;
           }
 
           .hero,
-          .dayPanel {
-            grid-template-columns: 1fr;
-          }
-
-          .steps,
-          .grid {
-            grid-template-columns: 1fr;
-          }
-
-          .heroVisual {
-            min-height: 420px;
-          }
-
-          .orb {
-            width: 300px;
-            height: 300px;
-          }
-
-          form {
-            flex-direction: column;
-          }
-
+          .waitlist,
           .footer {
-            flex-direction: column;
-            gap: 14px;
-            text-align: center;
+            grid-template-columns: 1fr;
+          }
+
+          .howGrid,
+          .moduleGrid,
+          .dayGrid,
+          .comingGrid,
+          .characters {
+            grid-template-columns: 1fr;
+          }
+
+          h1 {
+            font-size: 44px;
+          }
+
+          .bubble {
+            position: static;
+            margin-top: 16px;
+          }
+
+          .waitlist form {
+            grid-template-columns: 1fr;
+          }
+
+          button {
+            grid-column: auto;
           }
         }
       `}</style>
