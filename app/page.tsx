@@ -21,7 +21,15 @@ export default function Home() {
       <div className="ambient ambient-one" />
       <div className="ambient ambient-two" />
       <header className="site-header">
-        <a href="#" className="brand" aria-label="Kiena ana sayfa"><span className="brand-mark">K</span><span>KIENA</span></a>
+        <a href="#" className="brand" aria-label="Kiena ana sayfa"><Link href="/" className="brandLogo">
+  <Image
+    src="/assets/kiena-logo.png"
+    alt="Kiena"
+    width={170}
+    height={60}
+    priority
+  />
+</Link></a>
         <nav className="nav">
   <a className="active">Ana Sayfa</a>
   <a>Hakkımızda</a>
