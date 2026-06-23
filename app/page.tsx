@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const features = [
   ['▣', 'Yapay Zekâ Odaklı', 'Akıllı algoritmalarla veriye dayalı çözümler sunarız.'],
@@ -21,7 +22,13 @@ export default function Home() {
       <div className="ambient ambient-two" />
       <header className="site-header">
         <a href="#" className="brand" aria-label="Kiena ana sayfa"><span className="brand-mark">K</span><span>KIENA</span></a>
-        <nav className="nav"><a className="active">Ana Sayfa</a><a>Hakkımızda</a><a>Çözümlerimiz</a><a>Glowyn</a><a>İletişim</a></nav>
+        <nav className="nav">
+  <a className="active">Ana Sayfa</a>
+  <a>Hakkımızda</a>
+  <a>Çözümlerimiz</a>
+  <Link href="/glowyn">Glowyn</Link>
+  <a>İletişim</a>
+</nav>
         <a className="contact-btn">Bize Ulaşın</a>
       </header>
 
@@ -30,7 +37,7 @@ export default function Home() {
           <p className="eyebrow">YAPAY ZEKÂ İLE GELECEĞİ ŞEKİLLENDİRİYORUZ</p>
           <h1>Akıllı çözümlerle hayatı kolaylaştırıyor, <span>değeri artırıyoruz.</span></h1>
           <p className="lead">Kiena, yapay zekâ ve veri teknolojileriyle dijital ürünler geliştiren bir teknoloji şirketidir.</p>
-          <div className="hero-actions"><a className="primary">Kiena'yı Keşfedin <b>→</b></a><a className="secondary">Glowyn'i İnceleyin ✨</a></div>
+          <div className="hero-actions"><a className="primary">Kiena'yı Keşfedin <b>→</b></a><Link href="/glowyn" className="secondary">Glowyn'i İnceleyin ✨</Link></div>
         </div>
         <div className="hero-visual">
           <Image src="/assets/hero-orb.png" alt="Glowyn AI karakteri" width={435} height={380} priority />
