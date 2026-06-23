@@ -1,10 +1,10 @@
+"use client";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Glowyn",
 };
-
-"use client";
 
 import Image from "next/image";
 import Link from "next/link";
