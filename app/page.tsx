@@ -23,8 +23,8 @@ export default function Home() {
       <header className="site-header">
         <a href="#" className="brand" aria-label="Kiena ana sayfa"><Link href="/" className="brandLogo">
   <Image
-    src="/assets/kiena-logo.png"
-    alt="Kiena"
+    src="/assets/kiena_logo.png"
+    alt=""
     width={170}
     height={60}
     priority
