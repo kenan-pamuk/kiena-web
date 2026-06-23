@@ -49,7 +49,7 @@ export default function Home() {
       <section className="newsletter"><Image src="/assets/glow-face.png" alt="Glowyn maskotu" width={190} height={185}/><div><h2>Glowyn’den<br/> ilk sen haberdar ol!</h2><p>Yeniliklerden, beta testlerinden ve özel fırsatlardan ilk sen haberdar ol.</p></div><form><input type="email" placeholder="E-posta adresinizi girin"/><button>Haber Ver</button><small>🔒 Bilgileriniz güvendedir. İstediğiniz zaman abonelikten çıkabilirsiniz.</small></form></section>
 
       <footer className="footer"><div className="footer-brand"><a className="brand"><span className="brand-mark">K</span><span>KIENA</span></a><p>Yapay zekâ ve veri teknolojileriyle dijital dünyanın geleceğini şekillendiriyoruz.</p><div className="social"><span>in</span><span>◎</span><span>𝕏</span><span>▶</span></div></div><div><h4>Şirket</h4><a>Hakkımızda</a><a>Misyonumuz</a><a>Değerlerimiz</a><a>Kariyer</a></div><div><h4>Çözümlerimiz</h4><a>Yapay Zekâ</a><a>Veri Analitiği</a><a>Mobil Uygulamalar</a><a>Danışmanlık</a></div><div><h4>Glowyn</h4><a>Glowyn Nedir?</a><a>Özellikleri</a><a>Yakında</a><a>S.S.S.</a></div><div><h4>İletişim</h4><a>✉ hello@kiena.com</a><a>⌖ İstanbul, Türkiye</a></div></footer>
-      <p className="copyright">© 2024 Kiena Teknoloji A.Ş. Tüm hakları saklıdır.</p>
+      <p className="copyright">© 2026 Kiena (c) Tüm hakları saklıdır.</p>
     </main>
   );
 }
