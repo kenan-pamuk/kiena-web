@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Header from "@/components/header";
 
 const features = [
   ['▣', 'Yapay Zekâ Odaklı', 'Akıllı algoritmalarla veriye dayalı çözümler sunarız.'],
@@ -20,26 +21,7 @@ export default function Home() {
     <main className="page-shell">
       <div className="ambient ambient-one" />
       <div className="ambient ambient-two" />
-      <header className="site-header">
-        <a href="#" className="brand" aria-label="Kiena ana sayfa"><Link href="/" className="brandLogo">
-  <Image
-    src="/assets/kiena_logo_glowyn.png"
-    alt=""
-    width={170}
-    height={60}
-    priority
-  />
-</Link></a>
-        <nav className="nav">
-  <a className="active">Ana Sayfa</a>
-  <a>Hakkımızda</a>
-  <a>Çözümlerimiz</a>
-  <Link href="/glowyn">Glowyn</Link>
-  <a>İletişim</a>
-</nav>
-        <a className="contact-btn">Bize Ulaşın</a>
-      </header>
-
+      <Header />
       <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow">YAPAY ZEKÂ İLE GELECEĞİ ŞEKİLLENDİRİYORUZ</p>
