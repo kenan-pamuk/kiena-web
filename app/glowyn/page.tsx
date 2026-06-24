@@ -191,26 +191,7 @@ export default function GlowynPage() {
           font-family: Arial, sans-serif;
         }
 
-        .topbar {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          max-width: 1320px;
-          margin: auto;
-        }
-
-        .brand {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          color: white;
-          text-decoration: none;
-          font-weight: 800;
-          letter-spacing: 6px;
-          font-size: 24px;
-        }
-
-        .brandMark {
+         .brandMark {
           width: 38px;
           height: 38px;
           display: grid;
@@ -219,29 +200,10 @@ export default function GlowynPage() {
           background: linear-gradient(135deg, #d946ef, #2563eb);
         }
 
-        nav {
-          display: flex;
-          gap: 44px;
-        }
-
-        nav a {
-          color: white;
-          text-decoration: none;
-          font-size: 15px;
-        }
-
         nav .active {
           color: #ff4df8;
           border-bottom: 2px solid #ff4df8;
           padding-bottom: 16px;
-        }
-
-        .contact {
-          color: white;
-          text-decoration: none;
-          border: 1px solid #e879f9;
-          border-radius: 999px;
-          padding: 14px 32px;
         }
 
         .hero {
