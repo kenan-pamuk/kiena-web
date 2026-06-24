@@ -1,7 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="site-header">
       <Link href="/" className="brand" aria-label="Kiena ana sayfa">
@@ -13,13 +18,20 @@ export default function Header() {
           priority
         />
       </Link>
-      
+
       <nav className="nav">
-        <Link className="active" href="/">Ana Sayfa</Link>
-        <a>Hakkımızda</a>
-        <a>Çözümlerimiz</a>
-        <Link href="/glowyn">Glowyn</Link>
-        <a>İletişim</a>
+        <Link className={pathname === "/" ? "active" : ""} href="/">
+          Ana Sayfa
+        </Link>
+
+        <a href="/#about">Hakkımızda</a>
+        <a href="/#solutions">Çözümlerimiz</a>
+
+        <Link className={pathname === "/glowyn" ? "active" : ""} href="/glowyn">
+          Glowyn
+        </Link>
+
+        <a href="/#contact">İletişim</a>
       </nav>
 
       <a className="contact-btn" href="mailto:info@kiena.com.tr">
