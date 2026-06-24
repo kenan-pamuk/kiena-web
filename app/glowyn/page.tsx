@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Header from "@/components/header";
 
 const modules = [
   {
@@ -55,22 +56,7 @@ const coming = [
 export default function GlowynPage() {
   return (
     <main className="glowyn">
-      <header className="topbar">
-        <Link href="/" className="brand">
-          <span className="brandMark">K</span>
-          <span>KIENA</span>
-        </Link>
-
-        <nav>
-          <Link href="/">Ana Sayfa</Link>
-          <a href="#how">Hakkımızda</a>
-          <a href="#modules">Çözümlerimiz</a>
-          <a className="active" href="#glowyn">Glowyn</a>
-          <a href="#contact">İletişim</a>
-        </nav>
-
-        <a className="contact" href="mailto:hello@kiena.com">Bize Ulaşın</a>
-      </header>
+      <Header />
 
       <section className="hero" id="glowyn">
         <div className="heroText">
