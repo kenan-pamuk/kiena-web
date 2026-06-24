@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Header from "@/components/header";
+import Header from "@/components/Header";
 
 const features = [
   ['▣', 'Yapay Zekâ Odaklı', 'Akıllı algoritmalarla veriye dayalı çözümler sunarız.'],
