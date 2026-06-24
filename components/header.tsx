@@ -13,7 +13,7 @@ export default function Header() {
           priority
         />
       </Link>
-
+      
       <nav className="nav">
         <Link className="active" href="/">Ana Sayfa</Link>
         <a>Hakkımızda</a>
