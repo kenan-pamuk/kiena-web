@@ -223,14 +223,19 @@
 }
 
 .footer-bottom {
+  position: relative;
+  z-index: 1;
   width: min(1180px, 100%);
-  margin: 36px auto 0;
+  margin: 42px auto 0;
   padding-top: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-top: 1px solid rgba(108, 125, 255, 0.12);
   color: rgba(184, 187, 207, 0.72);
   font-size: 12px;
+  text-align: center;
 }
-
 @media (max-width: 768px) {
   .site-footer {
     margin-top: 72px;
@@ -425,7 +430,8 @@
     grid-template-columns: 1fr;
   }
 
-  .footer-bottom {
-    flex-direction: column;
+.footer-bottom {
+    justify-content: center;
+    text-align: center;
   }
 }
