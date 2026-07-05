@@ -1,14 +1,14 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import Footer from '../components/footer';
+import type { Metadata } from "next";
+import "./globals.css";
+import Footer from "../components/footer";
 
 export const metadata: Metadata = {
   title: {
-    default: 'Kiena',
-    template: '%s | Kiena',
+    default: "Kiena",
+    template: "%s | Kiena",
   },
   description:
-    'Yapay zekâ ve veri teknolojileriyle dijital ürünler geliştiren teknoloji şirketi.',
+    "Yapay zekâ ve veri teknolojileriyle dijital ürünler geliştiren teknoloji şirketi.",
 };
 
 export default function RootLayout({
@@ -18,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="tr">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
