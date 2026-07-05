@@ -68,7 +68,6 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <span>© 2026 Kiena. Tüm hakları saklıdır.</span>
-        <span>Modern software. Intelligent products.</span>
       </div>
     </footer>
   );
