@@ -52,20 +52,41 @@
 }
 
 @media (max-width: 900px) {
-  .site-header {
-    padding: 18px 0;
+
+  .site-header{
+    padding:16px 0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
   }
 
-  .brand img {
-    width: 135px;
+  .brand img{
+    width:130px;
+    height:auto;
   }
 
-  .nav {
-    display: none;
+  .nav{
+    display:flex;
+    width:100%;
+    overflow-x:auto;
+    gap:18px;
+    order:3;
+    padding-top:10px;
+    scrollbar-width:none;
   }
 
-  .contact-btn {
-    padding: 11px 18px;
-    font-size: 14px;
+  .nav::-webkit-scrollbar{
+    display:none;
   }
+
+  .nav a{
+    white-space:nowrap;
+    font-size:14px;
+  }
+
+  .contact-btn{
+    padding:10px 18px;
+    font-size:13px;
+  }
+
 }
