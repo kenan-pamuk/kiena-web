@@ -27,7 +27,7 @@ export default function Footer() {
 
           <div>
             <h3>İletişim</h3>
-            <a href="mailto:hello@kiena.com.tr">hello@kiena.com.tr</a>
+            <a href="mailto:hello@kiena.com.tr">hellx@kiena.com.tr</a>
             <span>İstanbul, Türkiye</span>
           </div>
         </div>
