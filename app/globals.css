@@ -96,15 +96,16 @@
   header nav,
   .navbar nav,
   .site-header nav {
-    gap: 10px !important;
+    gap: 9px !important;
     overflow: visible !important;
   }
 
   header nav a,
   .navbar nav a,
   .site-header nav a {
+    position: relative !important;
     font-size: 12px !important;
-    padding: 8px 5px !important;
+    padding: 8px 4px 10px !important;
     white-space: nowrap !important;
     flex-shrink: 0 !important;
   }
@@ -112,11 +113,17 @@
   header nav a::after,
   .navbar nav a::after,
   .site-header nav a::after {
-    display: block !important;
-    opacity: 1 !important;
-    bottom: -3px !important;
+    content: "" !important;
+    position: absolute !important;
+    left: 50% !important;
+    bottom: 2px !important;
+    width: 55% !important;
+    max-width: 34px !important;
     height: 2px !important;
-    transform: scaleX(1) !important;
+    transform: translateX(-50%) !important;
+    border-radius: 999px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
 
   header nav a.active::after,
@@ -128,7 +135,7 @@
     opacity: 1 !important;
     visibility: visible !important;
     background: linear-gradient(90deg, #f84df6, #a855f7, #2d7cff) !important;
-    box-shadow: 0 0 12px rgba(248, 77, 246, 0.9) !important;
+    box-shadow: 0 0 6px rgba(248, 77, 246, 0.55) !important;
   }
 }
 
@@ -136,13 +143,20 @@
   header nav,
   .navbar nav,
   .site-header nav {
-    gap: 7px !important;
+    gap: 6px !important;
   }
 
   header nav a,
   .navbar nav a,
   .site-header nav a {
     font-size: 11px !important;
-    padding: 7px 4px !important;
+    padding: 7px 3px 9px !important;
+  }
+
+  header nav a::after,
+  .navbar nav a::after,
+  .site-header nav a::after {
+    width: 50% !important;
+    max-width: 28px !important;
   }
 }
