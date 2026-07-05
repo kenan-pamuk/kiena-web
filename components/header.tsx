@@ -34,7 +34,7 @@ export default function Header() {
         <a href="/#contact">İletişim</a>
       </nav>
 
-      <a className="contact-btn" href="mailto:info@kiena.com.tr">
+      <a className="contact-btn" href="mailto:hello@kiena.com.tr">
         Bize Ulaşın
       </a>
     </header>
