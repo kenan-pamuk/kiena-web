@@ -4,8 +4,6 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="site-footer">
-      <div className="footer-glow" />
-
       <div className="footer-inner">
         <div className="footer-brand">
           <Link href="/" className="footer-logo" aria-label="Kiena Ana Sayfa">
@@ -18,56 +16,51 @@ export default function Footer() {
           </Link>
 
           <p>
-            Yapay zekâ, veri teknolojileri ve modern yazılım çözümleriyle
-            kurumların dijital dönüşümünü hızlandıran yenilikçi teknoloji
-            şirketidir.
+            Yapay zekâ ve veri teknolojileriyle dijital dünyanın geleceğini
+            şekillendiriyoruz.
           </p>
 
-          <div className="footer-badge">AI Powered by Kiena</div>
+          <div className="footer-socials">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="X">𝕏</a>
+            <a href="#" aria-label="YouTube">▶</a>
+          </div>
         </div>
 
-        <div className="footer-highlight">
-          <span>Yeni Ürün</span>
-          <h3>Glowyn</h3>
-          <p>
-            Yapay zekâ destekli yaşam, stil ve kişisel asistan deneyimi.
-          </p>
-          <Link href="/glowyn">Glowyn’i keşfet</Link>
+        <div className="footer-col">
+          <h4>Şirket</h4>
+          <a href="/#about">Hakkımızda</a>
+          <a href="/#about">Misyonumuz</a>
+          <a href="/#about">Değerlerimiz</a>
+          <a href="/#contact">Kariyer</a>
         </div>
 
-        <div className="footer-links">
-          <div>
-            <h3>Kurumsal</h3>
-            <Link href="/">Ana Sayfa</Link>
-            <a href="/#about">Hakkımızda</a>
-            <a href="/#solutions">Çözümlerimiz</a>
-            <a href="/#contact">İletişim</a>
-          </div>
+        <div className="footer-col">
+          <h4>Çözümlerimiz</h4>
+          <a href="/#solutions">Yapay Zekâ</a>
+          <a href="/#solutions">Veri Analitiği</a>
+          <a href="/#solutions">Mobil Uygulamalar</a>
+          <a href="/#solutions">Danışmanlık</a>
+        </div>
 
-          <div>
-            <h3>Çözümler</h3>
-            <a href="/#solutions">Yazılım Geliştirme</a>
-            <a href="/#solutions">Yapay Zekâ</a>
-            <a href="/#solutions">Veri Teknolojileri</a>
-            <Link href="/glowyn">Glowyn</Link>
-          </div>
+        <div className="footer-col">
+          <h4>Glowyn</h4>
+          <Link href="/glowyn">Glowyn Nedir?</Link>
+          <Link href="/glowyn">Özellikleri</Link>
+          <Link href="/glowyn">Yakında</Link>
+          <Link href="/glowyn">S.S.S.</Link>
+        </div>
 
-          <div>
-            <h3>İletişim</h3>
-            <a href="mailto:hello@kiena.com.tr">hello@kiena.com.tr</a>
-            <span>İstanbul, Türkiye</span>
-
-            <div className="footer-socials">
-              <a href="#" aria-label="LinkedIn">in</a>
-              <a href="#" aria-label="GitHub">gh</a>
-              <a href="#" aria-label="X">x</a>
-            </div>
-          </div>
+        <div className="footer-col footer-contact">
+          <h4>İletişim</h4>
+          <a href="mailto:hello@kiena.com.tr">✉ hello@kiena.com.tr</a>
+          <span>⌖ İstanbul, Türkiye</span>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <span>© 2026 Kiena. Tüm hakları saklıdır.</span>
+        © 2026 Kiena. Tüm hakları saklıdır.
       </div>
     </footer>
   );
