@@ -772,3 +772,7 @@ a.kiena-footer-contact-row:hover {
   box-shadow: none;
   text-shadow: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}
