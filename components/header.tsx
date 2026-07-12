@@ -36,7 +36,7 @@ export default function Header() {
           Glowyn
         </Link>
 
-        <Link className={pathname === "/#contact" ? "active" : ""} href="/#contact">
+        <Link href="/#contact">
           İletişim
         </Link>
         
