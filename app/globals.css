@@ -776,3 +776,6 @@ a.kiena-footer-contact-row:hover {
 html {
   scroll-behavior: smooth;
 }
+#contact {
+  scroll-margin-top: 20px;
+}
