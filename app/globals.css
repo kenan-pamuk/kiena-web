@@ -756,8 +756,8 @@ a.kiena-footer-contact-row:hover {
 }
 .glow-card-image {
   display: block;
-  width: 140px;
-  height: 140px;
+  width: 130px;
+  height: 130px;
   object-fit: contain;
   transform: translate(-25px, -5px);
 }
