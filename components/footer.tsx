@@ -271,7 +271,7 @@ export default function Footer() {
             <FooterColumn title="Glowyn" links={glowynLinks} />
 
             <div 
-              id="iletisim"
+              id="contact"
               className="kiena-footer-column kiena-footer-contact">
               <h3>İletişim</h3>
 
