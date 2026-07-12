@@ -11,7 +11,7 @@ const features = [
 
 const cards = [
    [
-    "/assets/asistan.png",
+    "../public/assets/asistan.png",
     "AI Asistan",
     "Glowyn ile yazışın, konuşun, öneriler alın ve günlük hayatınızda akıllı destek alın."
   ],
