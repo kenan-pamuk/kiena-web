@@ -757,14 +757,14 @@ a.kiena-footer-contact-row:hover {
 
 .glow-card-image {
   display: block;
-  width: 96px;
-  height: 96px;
+  width: 140px;
+  height: 140px;
   object-fit: contain;
 }
 
 .glow-card .big-icon:has(.glow-card-image) {
-  width: 96px;
-  height: 96px;
+  width: 140px;
+  height: 140px;
   background: transparent;
   box-shadow: none;
   text-shadow: none;
