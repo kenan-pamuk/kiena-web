@@ -759,7 +759,7 @@ a.kiena-footer-contact-row:hover {
   width: 140px;
   height: 140px;
   object-fit: contain;
-  transform: translate(-15px, -15px);
+  transform: translate(-20px, -20px);
 }
 .glow-card .big-icon {
   width: 128px;
