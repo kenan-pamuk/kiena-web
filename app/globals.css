@@ -182,8 +182,9 @@
 .kiena-footer-panel {
   position: relative;
   width: 100%;
-  min-height: 220px;
-  padding: 30px 24px 27px;
+  min-height: 185px;
+  padding: 22px 24px 20px;
+  /*padding: 30px 24px 27px;*/
   overflow: hidden;
   border: 1px solid rgba(98, 111, 177, 0.14);
   border-radius: 18px;
