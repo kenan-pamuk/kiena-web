@@ -1,9 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import NextImage from 'next/image'; // Hataları önlemek için takma ad (alias) kullanıldı
 import { FaLinkedin, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { HiOutlineMail } from 'react-icons/hi';
@@ -22,8 +19,8 @@ export default function Footer() {
           {/* Logo ve Hakkında Alanı */}
           <div className="lg:col-span-1 flex flex-col space-y-4">
             <div className="flex items-center">
-              <Image 
-                src="/assets/kiena_logo_glowyn.png" 
+              <NextImage 
+                src="/assets/kiena_logo_glowyn.png" // Next.js standardına uygun olarak güncellendi
                 alt="Kiena Logo" 
                 width={130} 
                 height={35}
@@ -104,7 +101,7 @@ export default function Footer() {
 
         {/* Alt Kısım: Telif Hakkı (Copyright) */}
         <div className="border-t border-slate-900 pt-6 text-center text-xs text-slate-500">
-          <p>© {currentYear} Kiena Teknoloji A.Ş. Tüm hakları saklıdır.</p>
+          <p>© {currentYear} Kiena Bilişim Teknolojileri Ltd.Şti. Tüm hakları saklıdır.</p>
         </div>
 
       </div>
