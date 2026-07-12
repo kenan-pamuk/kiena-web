@@ -24,8 +24,8 @@ export default function Header() {
           Ana Sayfa
         </Link>
 
-        <a href="/#about">Hakkımızda</a>
-        <a href="/#solutions">Çözümlerimiz</a>
+        <a href="/hakkimizda">Hakkımızda</a>
+        <a href="/cozumlerimiz">Çözümlerimiz</a>
 
         <Link className={pathname === "/glowyn" ? "active" : ""} href="/glowyn">
           Glowyn
