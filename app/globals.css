@@ -490,13 +490,13 @@
   position: relative;
   width: 100%;
   margin-top: 28px;
-  padding: 0 48px 18px;
+  padding: 0 24px 18px;
   background: transparent;
 }
 
 .kiena-footer-container {
   width: 100%;
-  max-width: 1180px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
