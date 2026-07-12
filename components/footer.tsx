@@ -296,7 +296,7 @@ export default function Footer() {
         </div>
 
         <p className="kiena-footer-copyright">
-          © 2026 Kiena Teknoloji A.Ş. Tüm hakları saklıdır.
+          © 2026 Kiena Bilişim Teknolojileri Lts.Şti. Tüm hakları saklıdır.
         </p>
       </div>
     </footer>
