@@ -44,7 +44,33 @@ export default function Home() {
 
       <section className="glowyn-panel" id="glowyn">
         <div className="glowyn-intro"><p className="eyebrow">GLOWYN</p><h2>AI destekli kişisel yaşam asistanınız.</h2><p>Glowyn ile planlarınızı düzenleyin, beslenmenizi yönetin, stilinizi keşfedin ve hayatınızı tek bir uygulamada kolaylaştırın.</p><Image className="phone" src="/assets/phone-mock.png" alt="Glowyn mobil uygulama ekranı" width={295} height={310}/></div>
-        <div className="card-grid">{cards.map(([icon,title,text]) => <article key={title} className="glow-card"><div className="big-icon">{icon}</div><div><h3>{title}</h3><p>{text}</p><a>Keşfet <span>→</span></a></div></article>)}</div>
+        <div className="card-grid">
+  {cards.map(([icon, title, text]) => (
+    <article key={title} className="glow-card">
+      <div className="big-icon">
+        {icon.startsWith("/") ? (
+          <Image
+            src={icon}
+            alt={title}
+            width={96}
+            height={96}
+            className="glow-card-image"
+          />
+        ) : (
+          icon
+        )}
+      </div>
+
+      <div>
+        <h3>{title}</h3>
+        <p>{text}</p>
+        <a>
+          Keşfet <span>→</span>
+        </a>
+      </div>
+    </article>
+  ))}
+</div>
       </section>
 
       <section className="newsletter"><Image src="/assets/glow-face.png" alt="Glowyn maskotu" width={190} height={185}/><div><h2>Glowyn’den<br/> ilk sen haberdar ol!</h2><p>Yeniliklerden, beta testlerinden ve özel fırsatlardan ilk sen haberdar ol.</p></div><form><input type="email" placeholder="E-posta adresinizi girin"/><button>Haber Ver</button><small>🔒 Bilgileriniz güvendedir. İstediğiniz zaman abonelikten çıkabilirsiniz.</small></form></section>
