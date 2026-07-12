@@ -626,3 +626,131 @@ a.kiena-footer-contact-row:hover {
     border-radius: 18px;
   }
 }
+
+/* =========================================================
+   FOOTER LINK PLACEHOLDER PAGES + HEADER
+   app/globals.css dosyasının sonuna ekleyin.
+   ========================================================= */
+
+.placeholder-page-shell {
+  min-height: calc(100vh - 190px);
+}
+
+.placeholder-page {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: calc(100vh - 300px);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.placeholder-page-glow {
+  position: absolute;
+  z-index: -1;
+  border-radius: 999px;
+  pointer-events: none;
+  filter: blur(80px);
+}
+
+.placeholder-page-glow-one {
+  top: 12%;
+  left: 8%;
+  width: 280px;
+  height: 280px;
+  background: rgba(248, 77, 246, 0.16);
+}
+
+.placeholder-page-glow-two {
+  right: 8%;
+  bottom: 10%;
+  width: 320px;
+  height: 320px;
+  background: rgba(45, 124, 255, 0.15);
+}
+
+.placeholder-page-card {
+  position: relative;
+  width: min(720px, 100%);
+  min-height: 260px;
+  padding: 48px 32px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(108, 125, 255, 0.18);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(248, 77, 246, 0.12), transparent 34%),
+    radial-gradient(circle at 85% 75%, rgba(45, 124, 255, 0.12), transparent 36%),
+    linear-gradient(145deg, rgba(13, 17, 40, 0.92), rgba(6, 9, 25, 0.94));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.025),
+    0 28px 80px rgba(0, 0, 0, 0.28);
+}
+
+.placeholder-page-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.025) 45%,
+    transparent 70%
+  );
+}
+
+.placeholder-page-card h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: clamp(42px, 8vw, 78px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #f15cff 40%,
+    #756cff 68%,
+    #37a4ff 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 22px rgba(168, 85, 247, 0.18));
+}
+
+.placeholder-page-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+@media (max-width: 980px) {
+  .placeholder-page {
+    min-height: calc(100vh - 360px);
+  }
+}
+
+@media (max-width: 560px) {
+  .placeholder-page-shell {
+    min-height: calc(100vh - 160px);
+  }
+
+  .placeholder-page {
+    min-height: calc(100vh - 330px);
+  }
+
+  .placeholder-page-card {
+    min-height: 220px;
+    padding: 38px 20px;
+    border-radius: 18px;
+  }
+}
