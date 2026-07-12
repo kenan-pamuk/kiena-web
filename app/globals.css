@@ -754,3 +754,18 @@ a.kiena-footer-contact-row:hover {
     border-radius: 18px;
   }
 }
+
+.glow-card-image {
+  display: block;
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
+.glow-card .big-icon:has(.glow-card-image) {
+  width: 96px;
+  height: 96px;
+  background: transparent;
+  box-shadow: none;
+  text-shadow: none;
+}
