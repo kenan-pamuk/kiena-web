@@ -24,11 +24,11 @@ export default function Header() {
           Ana Sayfa
         </Link>
 
-        <Link className={pathname === "/" ? "active" : ""} href="/hakkimizda">
+        <Link className={pathname === "/hakkimizda" ? "active" : ""} href="/hakkimizda">
           Hakkımızda
         </Link>
 
-        <Link className={pathname === "/" ? "active" : ""} href="/cozumlerimiz">
+        <Link className={pathname === "/cozumlerimiz" ? "active" : ""} href="/cozumlerimiz">
           Çözümlerimiz
         </Link>
 
