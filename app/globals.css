@@ -435,3 +435,49 @@
     text-align: center;
   }
 }
+
+.footer-title{
+    @apply mb-5 font-semibold text-white;
+}
+
+.footer-list{
+    @apply space-y-3 text-sm text-gray-400;
+}
+
+.footer-list a{
+    transition:.25s;
+}
+
+.footer-list a:hover{
+    color:white;
+}
+
+.social-btn{
+    width:36px;
+    height:36px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,.12);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#c7c7d1;
+    font-size:14px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.social-btn:hover{
+
+    color:white;
+
+    border-color:#7c3aed;
+
+    background:rgba(124,58,237,.15);
+
+    box-shadow:
+    0 0 15px rgba(124,58,237,.25);
+
+}
