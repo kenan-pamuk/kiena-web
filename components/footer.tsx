@@ -1,59 +1,68 @@
 import Link from "next/link";
 
+type FooterLink = {
+  label: string;
+  href: string;
+};
+
+type FooterColumnProps = {
+  title: string;
+  links: FooterLink[];
+};
+
 function KienaLogo() {
   return (
     <Link href="/" className="kiena-footer-logo" aria-label="Kiena ana sayfa">
       <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
+        className="kiena-footer-logo-icon"
+        viewBox="0 0 44 44"
         fill="none"
         aria-hidden="true"
       >
         <defs>
           <linearGradient
-            id="kiena-footer-gradient-1"
+            id="footer-logo-gradient-a"
             x1="3"
             y1="4"
-            x2="25"
-            y2="28"
+            x2="35"
+            y2="37"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#E553FF" />
-            <stop offset="1" stopColor="#7137FF" />
+            <stop stopColor="#E64CFF" />
+            <stop offset="1" stopColor="#713BFF" />
           </linearGradient>
 
           <linearGradient
-            id="kiena-footer-gradient-2"
+            id="footer-logo-gradient-b"
             x1="7"
-            y1="17"
-            x2="28"
-            y2="27"
+            y1="23"
+            x2="40"
+            y2="37"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#9A42FF" />
-            <stop offset="1" stopColor="#435BFF" />
+            <stop stopColor="#A53EFF" />
+            <stop offset="1" stopColor="#415CFF" />
           </linearGradient>
         </defs>
 
         <path
-          d="M3.5 5.25H17.35L10.3 14.7H3.5L8.45 9.97L3.5 5.25Z"
-          fill="url(#kiena-footer-gradient-1)"
+          d="M4 7H24L14.5 20H4L11.3 13.5L4 7Z"
+          fill="url(#footer-logo-gradient-a)"
         />
 
         <path
-          d="M3.5 16.45H10.4L18.2 26.75H3.5L8.65 21.6L3.5 16.45Z"
-          fill="url(#kiena-footer-gradient-2)"
+          d="M4 23H14.5L25.5 37H4L11.5 30L4 23Z"
+          fill="url(#footer-logo-gradient-b)"
         />
 
         <path
-          d="M11.1 15.45L18.65 5.25H28.5L20.55 15.45H11.1Z"
+          d="M15.5 21L26 7H40L29 21H15.5Z"
           fill="#A33EFF"
         />
 
         <path
-          d="M11.1 16.15H20.55L28.5 26.75H18.65L11.1 16.15Z"
-          fill="#6946FF"
+          d="M15.5 23H29L40 37H26L15.5 23Z"
+          fill="#6847FF"
         />
       </svg>
 
@@ -67,7 +76,7 @@ function LinkedinIcon() {
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path
         fill="currentColor"
-        d="M5.2 7.9a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6ZM3.7 19.7h3V9.1h-3v10.6ZM9 9.1h2.9v1.5h.1c.4-.8 1.4-1.8 3.1-1.8 3.3 0 3.9 2.1 3.9 5v5.9h-3v-5.2c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8v5.3H9V9.1Z"
+        d="M5.32 7.82a1.76 1.76 0 1 0 0-3.52 1.76 1.76 0 0 0 0 3.52ZM3.78 19.5h3.08V9.18H3.78V19.5ZM9.1 9.18h2.96v1.4h.04c.41-.78 1.42-1.7 2.92-1.7 3.13 0 3.71 2.06 3.71 4.74v5.88h-3.08v-5.21c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.3H9.1V9.18Z"
       />
     </svg>
   );
@@ -77,15 +86,16 @@ function InstagramIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <rect
-        x="4"
-        y="4"
-        width="16"
-        height="16"
+        x="3.5"
+        y="3.5"
+        width="17"
+        height="17"
         rx="5"
         fill="none"
         stroke="currentColor"
         strokeWidth="1.8"
       />
+
       <circle
         cx="12"
         cy="12"
@@ -94,7 +104,8 @@ function InstagramIcon() {
         stroke="currentColor"
         strokeWidth="1.8"
       />
-      <circle cx="17.3" cy="6.8" r="1" fill="currentColor" />
+
+      <circle cx="17.4" cy="6.7" r="1.05" fill="currentColor" />
     </svg>
   );
 }
@@ -104,7 +115,7 @@ function XIcon() {
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path
         fill="currentColor"
-        d="M5.2 4h3.6l4 5.3L17.3 4h1.5l-5.3 6.3L19.2 20h-3.6l-4.4-5.8L6.3 20H4.8l5.7-6.8L5.2 4Zm2.7 1.3 8.4 13.4h1.2L9.1 5.3H7.9Z"
+        d="M5.1 4h3.75l4.02 5.38L17.43 4H19l-5.42 6.43L19.35 20h-3.74l-4.48-5.96L6.08 20H4.5l5.91-7.02L5.1 4Zm2.82 1.3 8.44 13.4h1.18L9.1 5.3H7.92Z"
       />
     </svg>
   );
@@ -115,7 +126,7 @@ function YoutubeIcon() {
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path
         fill="currentColor"
-        d="M20.2 7.1a2.7 2.7 0 0 0-1.9-1.9C16.7 4.8 12 4.8 12 4.8s-4.7 0-6.3.4a2.7 2.7 0 0 0-1.9 1.9A28 28 0 0 0 3.4 12a28 28 0 0 0 .4 4.9 2.7 2.7 0 0 0 1.9 1.9c1.6.4 6.3.4 6.3.4s4.7 0 6.3-.4a2.7 2.7 0 0 0 1.9-1.9 28 28 0 0 0 .4-4.9 28 28 0 0 0-.4-4.9ZM10.3 15.2V8.8l5.3 3.2-5.3 3.2Z"
+        d="M20.45 7.15a2.7 2.7 0 0 0-1.9-1.91C16.88 4.8 12 4.8 12 4.8s-4.88 0-6.55.44a2.7 2.7 0 0 0-1.9 1.91A27.7 27.7 0 0 0 3.1 12c0 1.62.15 3.23.45 4.85a2.7 2.7 0 0 0 1.9 1.91c1.67.44 6.55.44 6.55.44s4.88 0 6.55-.44a2.7 2.7 0 0 0 1.9-1.91c.3-1.62.45-3.23.45-4.85s-.15-3.23-.45-4.85ZM10.25 15.4V8.6L15.9 12l-5.65 3.4Z"
       />
     </svg>
   );
@@ -132,13 +143,14 @@ function MailIcon() {
         rx="2.5"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.6"
+        strokeWidth="1.65"
       />
+
       <path
         d="m4.5 7 7.5 6 7.5-6"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.6"
+        strokeWidth="1.65"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -150,436 +162,24 @@ function LocationIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path
-        d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"
+        d="M12 21s7-6.25 7-12a7 7 0 1 0-14 0c0 5.75 7 12 7 12Z"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.6"
+        strokeWidth="1.65"
         strokeLinejoin="round"
       />
+
       <circle
         cx="12"
         cy="9"
         r="2.4"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.6"
+        strokeWidth="1.65"
       />
     </svg>
   );
 }
-
-const companyLinks = [
-  { label: "Hakkımızda", href: "/hakkimizda" },
-  { label: "Misyonumuz", href: "/hakkimizda#misyonumuz" },
-  { label: "Değerlerimiz", href: "/hakkimizda#degerlerimiz" },
-  { label: "Kariyer", href: "/kariyer" },
-];
-
-const solutionLinks = [
-  { label: "Yapay Zekâ", href: "/cozumlerimiz#yapay-zeka" },
-  { label: "Veri Analitiği", href: "/cozumlerimiz#veri-analitigi" },
-  { label: "Mobil Uygulamalar", href: "/cozumlerimiz#mobil-uygulamalar" },
-  { label: "Danışmanlık", href: "/cozumlerimiz#danismanlik" },
-];
-
-const glowynLinks = [
-  { label: "Glowyn Nedir?", href: "/glowyn" },
-  { label: "Özellikleri", href: "/glowyn#ozellikler" },
-  { label: "Yakında", href: "/glowyn#yakinda" },
-  { label: "S.S.S.", href: "/glowyn#sss" },
-];
-
-export default function Footer() {
-  return (
-    <footer className="kiena-footer">
-      <div className="kiena-footer-shell">
-        <div className="kiena-footer-glow kiena-footer-glow-left" />
-        <div className="kiena-footer-glow kiena-footer-glow-right" />
-
-        <div className="kiena-footer-grid">
-          <div className="kiena-footer-brand">
-            <KienaLogo />
-
-            <p className="kiena-footer-description">
-              Yapay zekâ ve veri teknolojileriyle dijital dünyanın geleceğini
-              şekillendiriyoruz.
-            </p>
-
-            <div className="kiena-socials">
-              <a
-                href="https://www.linkedin.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn"
-              >
-                <LinkedinIcon />
-              </a>
-
-              <a
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram"
-              >
-                <InstagramIcon />
-              </a>
-
-              <a
-                href="https://x.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="X"
-              >
-                <XIcon />
-              </a>
-
-              <a
-                href="https://www.youtube.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="YouTube"
-              >
-                <YoutubeIcon />
-              </a>
-            </div>
-          </div>
-
-          <FooterColumn title="Şirket" links={companyLinks} />
-
-          <FooterColumn title="Çözümlerimiz" links={solutionLinks} />
-
-          <FooterColumn title="Glowyn" links={glowynLinks} />
-
-          <div className="kiena-footer-column kiena-footer-contact">
-            <h3>İletişim</h3>
-
-            <a href="mailto:hello@kiena.com" className="kiena-contact-row">
-              <span className="kiena-contact-icon">
-                <MailIcon />
-              </span>
-
-              <span>hello@kiena.com</span>
-            </a>
-
-            <div className="kiena-contact-row">
-              <span className="kiena-contact-icon">
-                <LocationIcon />
-              </span>
-
-              <span>İstanbul, Türkiye</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p className="kiena-footer-copyright">
-        © 2026 Kiena Teknoloji A.Ş. Tüm hakları saklıdır.
-      </p>
-
-      <style jsx>{`
-        .kiena-footer {
-          width: 100%;
-          padding: 0 48px 18px;
-          background: transparent;
-          font-family: inherit;
-        }
-
-        .kiena-footer-shell {
-          position: relative;
-          width: 100%;
-          max-width: 1280px;
-          margin: 0 auto;
-          padding: 30px 38px 27px;
-          overflow: hidden;
-          border: 1px solid rgba(97, 112, 176, 0.14);
-          border-radius: 18px;
-          background:
-            linear-gradient(
-              105deg,
-              rgba(8, 12, 31, 0.98) 0%,
-              rgba(6, 10, 26, 0.99) 45%,
-              rgba(7, 12, 31, 0.98) 100%
-            );
-          box-shadow:
-            inset 0 1px 0 rgba(255, 255, 255, 0.015),
-            0 14px 45px rgba(0, 0, 0, 0.16);
-        }
-
-        .kiena-footer-glow {
-          position: absolute;
-          z-index: 0;
-          pointer-events: none;
-          border-radius: 999px;
-          filter: blur(70px);
-          opacity: 0.15;
-        }
-
-        .kiena-footer-glow-left {
-          left: -120px;
-          bottom: -130px;
-          width: 270px;
-          height: 220px;
-          background: #7238ff;
-        }
-
-        .kiena-footer-glow-right {
-          top: -170px;
-          right: -100px;
-          width: 310px;
-          height: 250px;
-          background: #204dff;
-          opacity: 0.1;
-        }
-
-        .kiena-footer-grid {
-          position: relative;
-          z-index: 1;
-          display: grid;
-          grid-template-columns:
-            minmax(230px, 1.45fr)
-            minmax(120px, 0.82fr)
-            minmax(145px, 1fr)
-            minmax(120px, 0.82fr)
-            minmax(190px, 1.15fr);
-          gap: 38px;
-          align-items: start;
-        }
-
-        .kiena-footer-brand {
-          min-width: 0;
-        }
-
-        .kiena-footer-logo {
-          display: inline-flex;
-          align-items: center;
-          gap: 12px;
-          color: #ffffff;
-          text-decoration: none;
-        }
-
-        .kiena-footer-logo span {
-          padding-top: 1px;
-          font-size: 21px;
-          font-weight: 600;
-          line-height: 1;
-          letter-spacing: 4px;
-        }
-
-        .kiena-footer-description {
-          max-width: 235px;
-          margin: 18px 0 0;
-          color: rgba(226, 228, 241, 0.68);
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 1.75;
-        }
-
-        .kiena-socials {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          margin-top: 17px;
-        }
-
-        .kiena-socials a {
-          display: inline-flex;
-          width: 29px;
-          height: 29px;
-          align-items: center;
-          justify-content: center;
-          border: 1px solid rgba(255, 255, 255, 0.13);
-          border-radius: 50%;
-          color: rgba(255, 255, 255, 0.88);
-          background: rgba(255, 255, 255, 0.025);
-          text-decoration: none;
-          transition:
-            color 180ms ease,
-            border-color 180ms ease,
-            background 180ms ease,
-            transform 180ms ease,
-            box-shadow 180ms ease;
-        }
-
-        .kiena-socials a:hover {
-          color: #e452ff;
-          border-color: rgba(211, 70, 255, 0.56);
-          background: rgba(168, 56, 255, 0.1);
-          box-shadow: 0 0 14px rgba(170, 55, 255, 0.18);
-          transform: translateY(-2px);
-        }
-
-        .kiena-socials svg {
-          width: 15px;
-          height: 15px;
-        }
-
-        .kiena-footer-column h3 {
-          margin: 3px 0 19px;
-          color: rgba(255, 255, 255, 0.94);
-          font-size: 14px;
-          font-weight: 600;
-          line-height: 1.2;
-        }
-
-        .kiena-footer-column ul {
-          display: flex;
-          flex-direction: column;
-          gap: 13px;
-          margin: 0;
-          padding: 0;
-          list-style: none;
-        }
-
-        .kiena-footer-column li {
-          margin: 0;
-          padding: 0;
-        }
-
-        .kiena-footer-column a {
-          color: rgba(214, 217, 232, 0.68);
-          font-size: 13px;
-          font-weight: 400;
-          line-height: 1.4;
-          text-decoration: none;
-          transition:
-            color 160ms ease,
-            text-shadow 160ms ease;
-        }
-
-        .kiena-footer-column a:hover {
-          color: #efb2ff;
-          text-shadow: 0 0 12px rgba(215, 75, 255, 0.25);
-        }
-
-        .kiena-footer-contact {
-          min-width: 190px;
-        }
-
-        .kiena-contact-row {
-          display: flex;
-          align-items: center;
-          gap: 11px;
-          min-height: 27px;
-          margin-bottom: 14px;
-          color: rgba(214, 217, 232, 0.7);
-          font-size: 13px;
-          line-height: 1.4;
-          text-decoration: none;
-        }
-
-        .kiena-contact-icon {
-          display: inline-flex;
-          flex: 0 0 20px;
-          width: 20px;
-          height: 20px;
-          align-items: center;
-          justify-content: center;
-          color: #d343ff;
-        }
-
-        .kiena-contact-icon svg {
-          width: 20px;
-          height: 20px;
-        }
-
-        a.kiena-contact-row:hover {
-          color: #efb2ff;
-        }
-
-        .kiena-footer-copyright {
-          width: 100%;
-          max-width: 1280px;
-          margin: 12px auto 0;
-          color: rgba(181, 185, 207, 0.48);
-          font-size: 11px;
-          font-weight: 400;
-          line-height: 1.5;
-          text-align: center;
-        }
-
-        @media (max-width: 1100px) {
-          .kiena-footer-grid {
-            grid-template-columns: 1.4fr 1fr 1fr;
-            row-gap: 38px;
-          }
-
-          .kiena-footer-contact {
-            min-width: 0;
-          }
-        }
-
-        @media (max-width: 760px) {
-          .kiena-footer {
-            padding: 0 18px 18px;
-          }
-
-          .kiena-footer-shell {
-            padding: 28px 25px 25px;
-            border-radius: 16px;
-          }
-
-          .kiena-footer-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 35px 25px;
-          }
-
-          .kiena-footer-brand {
-            grid-column: 1 / -1;
-          }
-
-          .kiena-footer-description {
-            max-width: 290px;
-          }
-
-          .kiena-footer-contact {
-            grid-column: 1 / -1;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .kiena-footer {
-            padding-right: 13px;
-            padding-left: 13px;
-          }
-
-          .kiena-footer-shell {
-            padding: 26px 21px 24px;
-          }
-
-          .kiena-footer-grid {
-            grid-template-columns: 1fr;
-            gap: 30px;
-          }
-
-          .kiena-footer-brand,
-          .kiena-footer-contact {
-            grid-column: auto;
-          }
-
-          .kiena-footer-column h3 {
-            margin-bottom: 15px;
-          }
-
-          .kiena-footer-column ul {
-            gap: 11px;
-          }
-
-          .kiena-footer-logo span {
-            font-size: 19px;
-          }
-        }
-      `}</style>
-    </footer>
-  );
-}
-
-type FooterColumnProps = {
-  title: string;
-  links: {
-    label: string;
-    href: string;
-  }[];
-};
 
 function FooterColumn({ title, links }: FooterColumnProps) {
   return (
@@ -594,5 +194,157 @@ function FooterColumn({ title, links }: FooterColumnProps) {
         ))}
       </ul>
     </div>
+  );
+}
+
+const companyLinks: FooterLink[] = [
+  {
+    label: "Hakkımızda",
+    href: "/hakkimizda",
+  },
+  {
+    label: "Misyonumuz",
+    href: "/hakkimizda#misyonumuz",
+  },
+  {
+    label: "Değerlerimiz",
+    href: "/hakkimizda#degerlerimiz",
+  },
+  {
+    label: "Kariyer",
+    href: "/kariyer",
+  },
+];
+
+const solutionLinks: FooterLink[] = [
+  {
+    label: "Yapay Zekâ",
+    href: "/cozumlerimiz#yapay-zeka",
+  },
+  {
+    label: "Veri Analitiği",
+    href: "/cozumlerimiz#veri-analitigi",
+  },
+  {
+    label: "Mobil Uygulamalar",
+    href: "/cozumlerimiz#mobil-uygulamalar",
+  },
+  {
+    label: "Danışmanlık",
+    href: "/cozumlerimiz#danismanlik",
+  },
+];
+
+const glowynLinks: FooterLink[] = [
+  {
+    label: "Glowyn Nedir?",
+    href: "/glowyn",
+  },
+  {
+    label: "Özellikleri",
+    href: "/glowyn#ozellikler",
+  },
+  {
+    label: "Yakında",
+    href: "/glowyn#yakinda",
+  },
+  {
+    label: "S.S.S.",
+    href: "/glowyn#sss",
+  },
+];
+
+export default function Footer() {
+  return (
+    <footer className="kiena-footer">
+      <div className="kiena-footer-container">
+        <div className="kiena-footer-panel">
+          <div className="kiena-footer-light kiena-footer-light-left" />
+          <div className="kiena-footer-light kiena-footer-light-right" />
+
+          <div className="kiena-footer-grid">
+            <div className="kiena-footer-brand">
+              <KienaLogo />
+
+              <p className="kiena-footer-description">
+                Yapay zekâ ve veri teknolojileriyle dijital dünyanın geleceğini
+                şekillendiriyoruz.
+              </p>
+
+              <div className="kiena-footer-socials">
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <LinkedinIcon />
+                </a>
+
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <InstagramIcon />
+                </a>
+
+                <a
+                  href="https://x.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X"
+                >
+                  <XIcon />
+                </a>
+
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                >
+                  <YoutubeIcon />
+                </a>
+              </div>
+            </div>
+
+            <FooterColumn title="Şirket" links={companyLinks} />
+
+            <FooterColumn title="Çözümlerimiz" links={solutionLinks} />
+
+            <FooterColumn title="Glowyn" links={glowynLinks} />
+
+            <div className="kiena-footer-column kiena-footer-contact">
+              <h3>İletişim</h3>
+
+              <a
+                href="mailto:hello@kiena.com"
+                className="kiena-footer-contact-row"
+              >
+                <span className="kiena-footer-contact-icon">
+                  <MailIcon />
+                </span>
+
+                <span>hello@kiena.com</span>
+              </a>
+
+              <div className="kiena-footer-contact-row">
+                <span className="kiena-footer-contact-icon">
+                  <LocationIcon />
+                </span>
+
+                <span>İstanbul, Türkiye</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p className="kiena-footer-copyright">
+          © 2026 Kiena Teknoloji A.Ş. Tüm hakları saklıdır.
+        </p>
+      </div>
+    </footer>
   );
 }
