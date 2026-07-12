@@ -52,8 +52,8 @@ export default function Home() {
           <Image
             src={icon}
             alt={title}
-            width={96}
-            height={96}
+            width={140}
+            height={140}
             className="glow-card-image"
           />
         ) : (
