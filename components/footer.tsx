@@ -210,7 +210,7 @@ const glowynLinks: FooterLink[] = [
 
 export default function Footer() {
   return (
-    <footer className="kiena-footer">
+    <footer id="contact" className="kiena-footer">
       <div className="kiena-footer-container">
         <div className="kiena-footer-panel">
           <div className="kiena-footer-light kiena-footer-light-left" />
@@ -271,7 +271,6 @@ export default function Footer() {
             <FooterColumn title="Glowyn" links={glowynLinks} />
 
             <div 
-              id="contact"
               className="kiena-footer-column kiena-footer-contact">
               <h3>İletişim</h3>
 
