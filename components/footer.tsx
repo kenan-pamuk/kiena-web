@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 type FooterLink = {
   label: string;
@@ -13,60 +14,13 @@ type FooterColumnProps = {
 function KienaLogo() {
   return (
     <Link href="/" className="kiena-footer-logo" aria-label="Kiena ana sayfa">
-      <svg
-        className="kiena-footer-logo-icon"
-        viewBox="0 0 44 44"
-        fill="none"
-        aria-hidden="true"
-      >
-        <defs>
-          <linearGradient
-            id="footer-logo-gradient-a"
-            x1="3"
-            y1="4"
-            x2="35"
-            y2="37"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="#E64CFF" />
-            <stop offset="1" stopColor="#713BFF" />
-          </linearGradient>
-
-          <linearGradient
-            id="footer-logo-gradient-b"
-            x1="7"
-            y1="23"
-            x2="40"
-            y2="37"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="#A53EFF" />
-            <stop offset="1" stopColor="#415CFF" />
-          </linearGradient>
-        </defs>
-
-        <path
-          d="M4 7H24L14.5 20H4L11.3 13.5L4 7Z"
-          fill="url(#footer-logo-gradient-a)"
-        />
-
-        <path
-          d="M4 23H14.5L25.5 37H4L11.5 30L4 23Z"
-          fill="url(#footer-logo-gradient-b)"
-        />
-
-        <path
-          d="M15.5 21L26 7H40L29 21H15.5Z"
-          fill="#A33EFF"
-        />
-
-        <path
-          d="M15.5 23H29L40 37H26L15.5 23Z"
-          fill="#6847FF"
-        />
-      </svg>
-
-      <span>KIENA</span>
+      <Image
+        src="/assets/kiena_logo_glowyn.png"
+        alt="Kiena"
+        width={170}
+        height={60}
+        priority
+      />
     </Link>
   );
 }
