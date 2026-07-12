@@ -15,7 +15,11 @@ const cards = [
     "AI Asistan",
     "Glowyn ile yazışın, konuşun, öneriler alın ve günlük hayatınızda akıllı destek alın."
   ],
-  ['▦', 'Planım', 'Takviminizi yönetin, hedeflerinizi belirleyin, hatırlatıcılarla planlı yaşayın.'],
+   [
+    "/assets/takvim.png",
+    "Planım",
+    "Takviminizi yönetin, hedeflerinizi belirleyin, hatırlatıcılarla planlı yaşayın."
+  ],
   ['🥗', 'Yemeğim', 'Günlük yemek önerileri alın, beslenmenizi planlayın ve kilerinizi yönetin.'],
   ['♕', 'Keşfet', 'Kombin ve makyaj önerileri alın, yakınınızdaki merkezleri keşfedin.']
 ];
