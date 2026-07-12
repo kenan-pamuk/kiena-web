@@ -24,8 +24,12 @@ const cards = [
     "/assets/yemek.png",
     "Yemeğim",
     "Günlük yemek önerileri alın, beslenmenizi planlayın ve kilerinizi yönetin."
-  ],  
-  ['♕', 'Keşfet', 'Kombin ve makyaj önerileri alın, yakınınızdaki merkezleri keşfedin.']
+  ],
+   [
+    "/assets/kesfet.png",
+    "Keşfet",
+    "Kombin ve makyaj önerileri alın, yakınınızdaki merkezleri keşfedin."
+  ] 
 ];
 
 export default function Home() {
