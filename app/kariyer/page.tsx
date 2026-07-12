@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Header from "../../components/header";
 
 export const metadata: Metadata = {
-  title: "Kariyer | Kiena",
+  title: "Kariyer",
 };
 
 export default function Page() {
