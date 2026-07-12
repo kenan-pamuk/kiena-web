@@ -20,7 +20,11 @@ const cards = [
     "Planım",
     "Takviminizi yönetin, hedeflerinizi belirleyin, hatırlatıcılarla planlı yaşayın."
   ],
-  ['🥗', 'Yemeğim', 'Günlük yemek önerileri alın, beslenmenizi planlayın ve kilerinizi yönetin.'],
+   [
+    "/assets/yemek.png",
+    "Yemeğim",
+    "Günlük yemek önerileri alın, beslenmenizi planlayın ve kilerinizi yönetin."
+  ],  
   ['♕', 'Keşfet', 'Kombin ve makyaj önerileri alın, yakınınızdaki merkezleri keşfedin.']
 ];
 
