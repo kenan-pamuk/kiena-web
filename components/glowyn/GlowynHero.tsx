@@ -29,10 +29,7 @@ export default function GlowynHero() {
             <b aria-hidden="true">→</b>
           </Link>
 
-          <Link
-            href="#nasil-calisir"
-            className="secondary glowyn-secondary"
-          >
+          <Link href="#nasil-calisir" className="secondary glowyn-secondary">
             Glowyn&apos;i Keşfet
             <span className="glowyn-discover-icon" aria-hidden="true">
               ↓
