@@ -15,30 +15,30 @@ export default function GlowynNewsletter() {
       return;
     }
 
-    setMessage(
-      "Teşekkürler! Bekleme listesi bağlantısı hazır olduğunda kaydınız alınacak."
-    );
+    setMessage("Teşekkürler! E-posta adresiniz kaydedildi.");
   }
 
   return (
     <section
       id="bekleme-listesi"
-      className="newsletter"
+      className="glowyn-newsletter"
       aria-labelledby="glowyn-newsletter-title"
     >
-      <Image
-        src="/assets/glow-face.png"
-        alt="Glowyn maskotu"
-        width={220}
-        height={220}
-        className="glowyn-newsletter-image"
-      />
+      <div className="glowyn-newsletter-avatar">
+        <Image
+          src="/assets/glow-face.png"
+          alt="Glowyn"
+          width={220}
+          height={220}
+          priority={false}
+        />
+      </div>
 
       <div className="glowyn-newsletter-copy">
         <h2 id="glowyn-newsletter-title">
-          Glowyn’den
+          Glowyn&apos;den
           <br />
-          <span>ilk sen haberdar ol!</span>
+          ilk sen <span>haberdar ol!</span>
         </h2>
 
         <p>
@@ -47,29 +47,30 @@ export default function GlowynNewsletter() {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} noValidate>
-        <label className="sr-only" htmlFor="glowyn-newsletter-email">
-          E-posta adresiniz
-        </label>
+      <form className="glowyn-newsletter-form" onSubmit={handleSubmit} noValidate>
+        <div className="glowyn-newsletter-fields">
+          <label className="sr-only" htmlFor="glowyn-newsletter-email">
+            E-posta adresiniz
+          </label>
 
-        <input
-          id="glowyn-newsletter-email"
-          name="email"
-          type="email"
-          value={email}
-          onChange={(event) => {
-            setEmail(event.target.value);
-            setMessage("");
-          }}
-          placeholder="E-posta adresinizi girin"
-          autoComplete="email"
-          required
-        />
+          <input
+            id="glowyn-newsletter-email"
+            name="email"
+            type="email"
+            value={email}
+            onChange={(event) => {
+              setEmail(event.target.value);
+              setMessage("");
+            }}
+            placeholder="E-posta adresinizi girin"
+            autoComplete="email"
+            required
+          />
 
-        <button type="submit">
-          Haber Ver
-          <span aria-hidden="true">→</span>
-        </button>
+          <button type="submit">
+            Haber Ver
+          </button>
+        </div>
 
         <small>
           <span aria-hidden="true">🔒</span>
