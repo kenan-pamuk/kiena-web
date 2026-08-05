@@ -2686,8 +2686,8 @@ html {
 }
 
 .about-mission__container {
-  width: min(1180px, calc(100% - 64px));
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
 }
 
 .about-mission__card {
