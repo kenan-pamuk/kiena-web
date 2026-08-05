@@ -11,23 +11,18 @@ export const metadata: Metadata = {
 
 export default function HakkimizdaPage() {
   return (
-    <div className="about-page">
-      <div className="about-page-container">
+    <div className="glowyn-page">
+      <div className="glowyn-background" aria-hidden="true">
+        <div className="glowyn-background-orb glowyn-background-orb-left" />
+        <div className="glowyn-background-orb glowyn-background-orb-right" />
+        <div className="glowyn-background-grid" />
+      </div>
+
+      <div className="glowyn-page-container">
         <Header />
 
-        <main className="about-main">
+        <main className="glowyn-main">
           <AboutHero />
-
-          {/*
-            Sonraki bölümler burada, Glowyn sayfasındaki yapı korunarak
-            parça parça eklenecek:
-
-            <AboutMission />
-            <AboutVision />
-            <AboutValues />
-            <AboutGlowyn />
-            <AboutContact />
-          */}
         </main>
       </div>
     </div>
