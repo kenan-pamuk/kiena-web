@@ -1,28 +1,47 @@
 import type { Metadata } from "next";
+
 import Header from "../../components/header";
+import Footer from "../../components/footer";
+
+import GlowynHero from "../../components/glowyn/GlowynHero";
+import GlowynHowItWorks from "../../components/glowyn/GlowynHowItWorks";
+import GlowynModules from "../../components/glowyn/GlowynModules";
+import GlowynDay from "../../components/glowyn/GlowynDay";
+import GlowynCharacters from "../../components/glowyn/GlowynCharacters";
+import GlowynComingSoon from "../../components/glowyn/GlowynComingSoon";
+import GlowynNewsletter from "../../components/glowyn/GlowynNewsletter";
 
 export const metadata: Metadata = {
   title: "Glowyn",
+  description:
+    "Glowyn; planlama, beslenme, stil ve günlük yaşam ihtiyaçlarını tek bir yapay zekâ destekli deneyimde birleştiren kişisel yaşam asistanıdır.",
 };
 
-export default function Page() {
+export default function GlowynPage() {
   return (
     <>
-      <div className="page-shell placeholder-page-shell">
-        <Header />
+      <div className="glowyn-page">
+        <div className="glowyn-background" aria-hidden="true">
+          <div className="glowyn-background-orb glowyn-background-orb-left" />
+          <div className="glowyn-background-orb glowyn-background-orb-right" />
+          <div className="glowyn-background-grid" />
+        </div>
 
-        <main className="placeholder-page">
-          <div className="placeholder-page-glow placeholder-page-glow-one" />
-          <div className="placeholder-page-glow placeholder-page-glow-two" />
+        <div className="glowyn-page-container">
+          <Header />
 
-          <span id="ozellikler" className="placeholder-page-anchor" aria-hidden="true" />
-          <span id="yakinda" className="placeholder-page-anchor" aria-hidden="true" />
-          <span id="sss" className="placeholder-page-anchor" aria-hidden="true" />
+          <main className="glowyn-main">
+            <GlowynHero />
+            <GlowynHowItWorks />
+            <GlowynModules />
+            <GlowynDay />
+            <GlowynCharacters />
+            <GlowynComingSoon />
+            <GlowynNewsletter />
+          </main>
+        </div>
 
-          <section className="placeholder-page-card">
-            <h1>Glowyn</h1>
-          </section>
-        </main>
+        <Footer />
       </div>
     </>
   );
