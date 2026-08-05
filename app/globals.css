@@ -2493,6 +2493,7 @@ html {
 
 /* =========================================================
    HAKKIMIZDA SAYFASI
+   Ana sayfa ve Glowyn ile aynı hero sistemi kullanılır.
 ========================================================= */
 
 .about-page {
@@ -2500,8 +2501,8 @@ html {
   min-height: 100vh;
   overflow: hidden;
   background:
-    radial-gradient(circle at 76% 8%, rgba(54, 65, 255, 0.13), transparent 26%),
-    radial-gradient(circle at 8% 32%, rgba(185, 42, 255, 0.09), transparent 28%),
+    radial-gradient(circle at 82% 8%, rgba(36, 80, 255, 0.12), transparent 25%),
+    radial-gradient(circle at 16% 24%, rgba(179, 42, 255, 0.09), transparent 28%),
     #030512;
 }
 
@@ -2517,357 +2518,87 @@ html {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
-
-.about-page-background {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.about-page-background-orb {
-  position: absolute;
-  border-radius: 999px;
-  filter: blur(110px);
-}
-
-.about-page-background-orb-left {
-  top: 280px;
-  left: -260px;
-  width: 520px;
-  height: 520px;
-  background: rgba(168, 47, 255, 0.1);
-}
-
-.about-page-background-orb-right {
-  top: 40px;
-  right: -220px;
-  width: 560px;
-  height: 560px;
-  background: rgba(40, 81, 255, 0.11);
-}
-
-/* =========================================================
-   HAKKIMIZDA HERO
-========================================================= */
 
 .about-hero {
   position: relative;
-  isolation: isolate;
-  display: grid;
-  grid-template-columns: minmax(0, 0.91fr) minmax(470px, 1.09fr);
-  min-height: 590px;
-  align-items: center;
-  gap: clamp(28px, 5vw, 70px);
-  overflow: hidden;
-  padding: 38px 20px 40px 16px;
-}
-
-.about-hero-background {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-}
-
-.about-hero-grid-effect {
-  position: absolute;
-  inset: 0;
-  opacity: 0.026;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.38) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.38) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), transparent 45%);
-}
-
-.about-hero-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
-}
-
-.about-hero-orb-one {
-  top: 11%;
-  left: 27%;
-  width: 250px;
-  height: 250px;
-  background: rgba(176, 44, 255, 0.09);
-}
-
-.about-hero-orb-two {
-  right: 5%;
-  bottom: 6%;
-  width: 280px;
-  height: 280px;
-  background: rgba(34, 97, 255, 0.1);
+  width: 100%;
 }
 
 .about-hero-copy {
   position: relative;
-  z-index: 5;
-  max-width: 540px;
+  z-index: 3;
 }
 
-.about-hero-eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
-  color: #f05eff;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-
-.about-hero-eyebrow-line {
-  width: 30px;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(238, 78, 255, 0), rgba(238, 78, 255, 1));
-  box-shadow: 0 0 10px rgba(238, 78, 255, 0.45);
-}
-
-.about-hero h1 {
-  max-width: 530px;
+.about-hero-copy .eyebrow {
   margin: 0;
-  color: #ffffff;
-  font-size: clamp(48px, 5.15vw, 68px);
-  font-weight: 750;
-  line-height: 1.03;
-  letter-spacing: -0.055em;
 }
 
-.about-hero h1 span {
-  display: inline-block;
-  margin-top: 4px;
-  background: linear-gradient(90deg, #f454ff 0%, #b24aff 38%, #7268ff 68%, #39a4ff 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0 0 24px rgba(164, 64, 255, 0.14));
+.about-hero .hero-actions {
+  margin-top: 36px;
 }
 
-.about-hero-description {
-  max-width: 520px;
-  margin: 24px 0 0;
-  color: rgba(231, 233, 245, 0.84);
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.72;
-}
-
-.about-hero-description-secondary {
-  margin-top: 10px;
-  color: rgba(195, 200, 222, 0.72);
-}
-
-.about-hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 32px;
-}
-
-.about-hero-primary-button,
-.about-hero-secondary-button {
-  position: relative;
-  display: inline-flex;
-  min-height: 56px;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  overflow: hidden;
-  border-radius: 12px;
+.about-hero .primary,
+.about-hero .secondary {
   padding: 0 22px;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 650;
-  line-height: 1;
-  text-decoration: none;
-  transition:
-    transform 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease,
-    background-color 180ms ease;
 }
 
-.about-hero-primary-button {
-  min-width: 218px;
-  border: 1px solid rgba(217, 92, 255, 0.36);
-  background: linear-gradient(115deg, #b62dff 0%, #8339ff 48%, #3868ff 100%);
-  box-shadow:
-    0 15px 35px rgba(80, 61, 255, 0.24),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+.about-hero .primary {
+  min-width: 230px;
 }
 
-.about-hero-primary-button::before {
-  content: "";
-  position: absolute;
-  top: -80%;
-  left: -35%;
-  width: 38%;
-  height: 260%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
-  transform: rotate(20deg);
-  transition: left 450ms ease;
-}
-
-.about-hero-primary-button:hover::before {
-  left: 120%;
-}
-
-.about-hero-secondary-button {
+.about-hero .secondary {
   min-width: 250px;
-  border: 1px solid rgba(210, 74, 255, 0.42);
-  background: rgba(7, 10, 29, 0.74);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.025),
-    0 12px 28px rgba(0, 0, 0, 0.16);
-  backdrop-filter: blur(16px);
 }
 
-.about-hero-primary-button:hover,
-.about-hero-secondary-button:hover {
-  transform: translateY(-2px);
-}
-
-.about-hero-primary-button:hover {
-  box-shadow:
-    0 18px 44px rgba(79, 61, 255, 0.32),
-    0 0 25px rgba(209, 61, 255, 0.15);
-}
-
-.about-hero-secondary-button:hover {
-  border-color: rgba(231, 100, 255, 0.72);
-  background: rgba(15, 18, 43, 0.86);
-  box-shadow:
-    0 14px 34px rgba(0, 0, 0, 0.2),
-    0 0 20px rgba(202, 65, 255, 0.1);
-}
-
-.about-hero-button-icon,
-.about-hero-sparkle {
+.about-hero-arrow {
   display: inline-flex;
-  width: 21px;
-  height: 21px;
+  width: 22px;
+  height: 22px;
+  margin-left: 14px;
   align-items: center;
   justify-content: center;
 }
 
-.about-hero-button-icon svg,
-.about-hero-sparkle svg {
+.about-hero-arrow svg {
   width: 100%;
   height: 100%;
 }
 
-.about-hero-sparkle {
-  color: #e95aff;
-}
-
-.about-hero-trust {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  margin-top: 28px;
-  color: rgba(207, 211, 232, 0.7);
-}
-
-.about-hero-trust-icon {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  flex: 0 0 38px;
-  place-items: center;
-  border: 1px solid rgba(171, 82, 255, 0.2);
-  border-radius: 11px;
-  color: #c85aff;
-  background: rgba(133, 61, 255, 0.07);
-}
-
-.about-hero-trust-icon svg {
-  width: 24px;
-  height: 24px;
-}
-
-.about-hero-trust div:last-child {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.about-hero-trust strong {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.about-hero-trust span {
-  font-size: 10.5px;
-  line-height: 1.45;
-}
-
-/* =========================================================
-   HAKKIMIZDA HERO GÖRSEL ALANI
-========================================================= */
-
 .about-hero-visual {
   position: relative;
-  display: flex;
   min-width: 0;
-  min-height: 520px;
-  align-items: center;
-  justify-content: center;
 }
 
-.about-hero-visual-glow {
+.about-hero-visual::before {
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 480px;
-  height: 380px;
+  width: 430px;
+  height: 300px;
   border-radius: 50%;
   background:
     radial-gradient(
       ellipse,
-      rgba(200, 49, 255, 0.2) 0%,
-      rgba(100, 65, 255, 0.12) 38%,
-      rgba(39, 101, 255, 0.08) 58%,
+      rgba(169, 41, 255, 0.16) 0%,
+      rgba(35, 91, 255, 0.08) 48%,
       transparent 76%
     );
-  filter: blur(36px);
+  filter: blur(34px);
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
 
-.about-hero-image {
+.about-hero-visual img {
   position: relative;
   z-index: 2;
   display: block;
-  width: min(100%, 520px);
+  width: min(100%, 435px);
   height: auto;
   object-fit: contain;
-  filter:
-    drop-shadow(0 0 26px rgba(191, 46, 255, 0.26))
-    drop-shadow(0 18px 32px rgba(0, 0, 0, 0.32));
-}
-
-/* =========================================================
-   HAKKIMIZDA RESPONSIVE
-========================================================= */
-
-@media (max-width: 1080px) {
-  .about-hero {
-    grid-template-columns: minmax(0, 0.9fr) minmax(430px, 1.1fr);
-    gap: 25px;
-  }
-
-  .about-hero-image {
-    width: min(100%, 470px);
-  }
+  filter: drop-shadow(0 0 32px rgba(180, 45, 255, 0.35));
 }
 
 @media (max-width: 980px) {
@@ -2875,107 +2606,23 @@ html {
     width: min(720px, calc(100% - 28px));
   }
 
-  .about-hero {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    gap: 8px;
-    padding: 20px 12px 52px;
-  }
-
-  .about-hero-copy {
-    max-width: 650px;
-    order: 2;
-  }
-
   .about-hero-visual {
-    min-height: 450px;
-    order: 1;
+    order: -1;
   }
 
-  .about-hero-image {
-    width: min(100%, 500px);
-  }
-
-  .about-hero h1 {
-    max-width: 640px;
-    font-size: clamp(47px, 9vw, 66px);
-  }
-
-  .about-hero-description {
-    max-width: 610px;
+  .about-hero .primary,
+  .about-hero .secondary {
+    width: 100%;
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 560px) {
   .about-page-container {
     width: calc(100% - 24px);
   }
 
-  .about-hero {
-    padding: 15px 2px 40px;
-  }
-
-  .about-hero h1 {
-    font-size: clamp(42px, 13vw, 58px);
-    line-height: 1.04;
-  }
-
-  .about-hero-description {
-    font-size: 14px;
-  }
-
-  .about-hero-actions {
-    flex-direction: column;
-  }
-
-  .about-hero-primary-button,
-  .about-hero-secondary-button {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .about-hero-visual {
-    min-height: 350px;
-  }
-
-  .about-hero-image {
-    width: min(100%, 390px);
-  }
-
-  .about-hero-visual-glow {
-    width: 360px;
-    height: 280px;
-  }
-
-  .about-hero-trust {
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 420px) {
-  .about-hero-visual {
-    min-height: 300px;
-  }
-
-  .about-hero-image {
+  .about-hero-visual img {
     width: 100%;
   }
-
-  .about-hero h1 {
-    font-size: 40px;
-  }
-
-  .about-hero-eyebrow {
-    font-size: 12px;
-  }
 }
-.kiena-footer-copyright {
-  width: 100%;
-  margin: 14px 0 0;
-  padding-left: 0;
-  color: rgba(174, 179, 201, 0.48);
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: left;
-}
+
