@@ -1949,3 +1949,63 @@ html {
     max-width: 225px;
   }
 }
+
+/* GLOWYN MODÜL GÖRSELLERİ - GÖRÜNÜRLÜK DÜZELTMESİ */
+
+.glowyn-module-card {
+  min-height: 300px;
+}
+
+.glowyn-module-phone {
+  position: absolute;
+  right: 12px;
+  bottom: 0;
+  left: 12px;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 168px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.glowyn-module-phone-image {
+  display: block !important;
+  width: auto !important;
+  height: 168px !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  object-position: center bottom !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.42));
+}
+
+@media (max-width: 980px) {
+  .glowyn-module-card {
+    min-height: 330px;
+  }
+
+  .glowyn-module-phone {
+    height: 190px;
+  }
+
+  .glowyn-module-phone-image {
+    height: 190px !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .glowyn-module-card {
+    min-height: 350px;
+  }
+
+  .glowyn-module-phone {
+    height: 205px;
+  }
+
+  .glowyn-module-phone-image {
+    height: 205px !important;
+  }
+}
