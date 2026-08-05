@@ -1,34 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
-function ArrowIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        d="M5 12h14M13 6l6 6-6 6"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 export default function AboutHero() {
   return (
     <section
-      className="hero about-hero"
+      className="hero glowyn-hero"
       aria-labelledby="about-hero-title"
     >
-      <div className="about-hero-copy">
-        <p className="eyebrow">HAKKIMIZDA</p>
+      <div className="hero-copy glowyn-hero-copy">
+        <p className="eyebrow">YAPAY ZEKÂ İLE GELECEĞİ ŞEKİLLENDİRİYORUZ</p>
 
         <h1 id="about-hero-title">
-          Yapay zekâ ile geleceği
-          <br />
-          <span>şekillendiriyoruz.</span>
+          Teknolojiyi insan için
+          <span> anlamlı hâle getiriyoruz.</span>
         </h1>
 
         <p className="lead">
@@ -36,26 +20,22 @@ export default function AboutHero() {
           deneyimlere dönüştüren yenilikçi bir teknoloji şirketidir.
         </p>
 
-        <p className="lead">
-          İlk ürünümüz Glowyn ile insanların günlük yaşamlarını daha planlı,
-          verimli ve keyifli hâle getirmeyi hedefliyoruz.
-        </p>
-
         <div className="hero-actions">
-          <Link href="/glowyn" className="primary">
+          <Link href="/glowyn" className="primary glowyn-primary">
             Glowyn&apos;i Keşfedin
-            <span className="about-hero-arrow">
-              <ArrowIcon />
-            </span>
+            <b aria-hidden="true">→</b>
           </Link>
 
-          <Link href="/hakkimizda#misyonumuz" className="secondary">
+          <Link href="#misyonumuz" className="secondary glowyn-secondary">
             Bizi Daha Yakından Tanıyın
+            <span className="glowyn-discover-icon" aria-hidden="true">
+              ↓
+            </span>
           </Link>
         </div>
       </div>
 
-      <div className="hero-visual about-hero-visual" aria-hidden="true">
+      <div className="hero-visual" aria-hidden="true">
         <Image
           src="/assets/hero-orb.png"
           alt=""
