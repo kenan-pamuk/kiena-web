@@ -2672,3 +2672,373 @@ html {
     width: 100%;
   }
 }
+
+/* =========================================================
+   HAKKIMIZDA — MİSYONUMUZ
+   components/about/AboutMission.tsx
+   ========================================================= */
+
+.about-mission {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 28px 0 48px;
+}
+
+.about-mission__container {
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+.about-mission__card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid rgba(103, 122, 198, 0.18);
+  border-radius: 22px;
+  background:
+    radial-gradient(
+      circle at 7% 48%,
+      rgba(138, 43, 255, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 94% 35%,
+      rgba(40, 77, 255, 0.09),
+      transparent 31%
+    ),
+    linear-gradient(
+      115deg,
+      rgba(8, 12, 31, 0.97) 0%,
+      rgba(4, 8, 24, 0.98) 52%,
+      rgba(5, 11, 31, 0.97) 100%
+    );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.025),
+    0 26px 72px rgba(0, 0, 0, 0.22);
+}
+
+.about-mission__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      108deg,
+      rgba(255, 255, 255, 0.018),
+      transparent 38%,
+      transparent 72%,
+      rgba(78, 104, 255, 0.024)
+    );
+}
+
+.about-mission__card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.32;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 0.45),
+    transparent
+  );
+}
+
+.about-mission__glow {
+  position: absolute;
+  z-index: -1;
+  border-radius: 999px;
+  pointer-events: none;
+  filter: blur(85px);
+}
+
+.about-mission__glow--left {
+  left: -150px;
+  bottom: -180px;
+  width: 390px;
+  height: 340px;
+  background: rgba(138, 42, 255, 0.17);
+}
+
+.about-mission__glow--right {
+  top: -185px;
+  right: -140px;
+  width: 380px;
+  height: 340px;
+  background: rgba(37, 75, 255, 0.13);
+}
+
+.about-mission__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) 1px minmax(350px, 0.82fr);
+  min-height: 310px;
+}
+
+.about-mission__main {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 34px;
+  align-items: center;
+  padding: 40px 38px 40px 28px;
+}
+
+.about-mission__target {
+  display: flex;
+  width: 148px;
+  height: 148px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(161, 67, 255, 0.15);
+  border-radius: 24px;
+  color: #bd55ff;
+  background:
+    radial-gradient(
+      circle at 50% 42%,
+      rgba(181, 69, 255, 0.26),
+      transparent 59%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(49, 16, 103, 0.7),
+      rgba(18, 10, 53, 0.84)
+    );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 0 42px rgba(139, 46, 255, 0.1);
+}
+
+.about-mission__target svg {
+  width: 88px;
+  height: 88px;
+  filter: drop-shadow(0 0 13px rgba(192, 79, 255, 0.58));
+}
+
+.about-mission__text {
+  min-width: 0;
+}
+
+.about-mission__eyebrow {
+  display: block;
+  margin-bottom: 13px;
+  color: #eb5cf6;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.about-mission__text h2 {
+  max-width: 545px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.97);
+  font-size: clamp(24px, 2.05vw, 32px);
+  font-weight: 500;
+  line-height: 1.38;
+  letter-spacing: -0.027em;
+}
+
+.about-mission__text h2 span {
+  color: #c34eff;
+  text-shadow: 0 0 22px rgba(190, 70, 255, 0.25);
+}
+
+.about-mission__text p {
+  max-width: 510px;
+  margin: 15px 0 0;
+  color: rgba(198, 204, 225, 0.66);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.about-mission__divider {
+  width: 1px;
+  margin: 25px 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(104, 120, 181, 0.2) 14%,
+    rgba(104, 120, 181, 0.2) 86%,
+    transparent
+  );
+}
+
+.about-mission__benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding: 34px 35px 34px 28px;
+}
+
+.about-mission__benefit {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 17px;
+  align-items: center;
+}
+
+.about-mission__benefit-icon {
+  display: flex;
+  width: 54px;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(156, 62, 255, 0.14);
+  border-radius: 14px;
+  color: #bc4fff;
+  background:
+    radial-gradient(
+      circle at 50% 32%,
+      rgba(168, 65, 255, 0.22),
+      transparent 64%
+    ),
+    rgba(37, 13, 79, 0.56);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.025),
+    0 0 24px rgba(132, 41, 255, 0.09);
+}
+
+.about-mission__benefit-icon svg {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 0 8px rgba(185, 70, 255, 0.38));
+}
+
+.about-mission__benefit > div:last-child {
+  min-width: 0;
+}
+
+.about-mission__benefit h3 {
+  margin: 0 0 5px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.about-mission__benefit p {
+  margin: 0;
+  color: rgba(188, 195, 218, 0.58);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* Tablet */
+
+@media (max-width: 1020px) {
+  .about-mission__container {
+    width: min(760px, calc(100% - 32px));
+  }
+
+  .about-mission__content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-mission__divider {
+    width: auto;
+    height: 1px;
+    margin: 0 28px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(104, 120, 181, 0.2) 14%,
+      rgba(104, 120, 181, 0.2) 86%,
+      transparent
+    );
+  }
+
+  .about-mission__benefits {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 30px 28px 35px;
+  }
+
+  .about-mission__benefit {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 720px) {
+  .about-mission {
+    padding-top: 18px;
+    padding-bottom: 36px;
+  }
+
+  .about-mission__container {
+    width: calc(100% - 28px);
+  }
+
+  .about-mission__main {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 30px 24px;
+  }
+
+  .about-mission__target {
+    width: 112px;
+    height: 112px;
+    border-radius: 20px;
+  }
+
+  .about-mission__target svg {
+    width: 68px;
+    height: 68px;
+  }
+
+  .about-mission__benefits {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 28px 24px 32px;
+  }
+
+  .about-mission__benefit {
+    grid-template-columns: 54px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-mission__card {
+    border-radius: 17px;
+  }
+
+  .about-mission__main {
+    padding: 26px 20px;
+  }
+
+  .about-mission__text h2 {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .about-mission__text p {
+    font-size: 13px;
+  }
+
+  .about-mission__benefits {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .about-mission__benefit h3 {
+    font-size: 14px;
+  }
+
+  .about-mission__benefit p {
+    font-size: 11px;
+  }
+}
