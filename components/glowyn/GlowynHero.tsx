@@ -38,16 +38,13 @@ export default function GlowynHero() {
         </div>
       </div>
 
-      <div className="hero-visual glowyn-hero-visual" aria-hidden="true">
-        <div className="glowyn-hero-visual-glow" />
-
+      <div className="hero-visual" aria-hidden="true">
         <Image
-          src="/glowyn/glowyn-hero.webp"
+          src="/assets/hero-orb.png"
           alt=""
-          width={860}
-          height={660}
+          width={435}
+          height={380}
           priority
-          className="glowyn-hero-image"
         />
       </div>
     </section>
