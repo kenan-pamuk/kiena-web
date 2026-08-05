@@ -2500,16 +2500,8 @@ html {
   min-height: 100vh;
   overflow: hidden;
   background:
-    radial-gradient(
-      circle at 76% 8%,
-      rgba(54, 65, 255, 0.13),
-      transparent 26%
-    ),
-    radial-gradient(
-      circle at 8% 32%,
-      rgba(185, 42, 255, 0.09),
-      transparent 28%
-    ),
+    radial-gradient(circle at 76% 8%, rgba(54, 65, 255, 0.13), transparent 26%),
+    radial-gradient(circle at 8% 32%, rgba(185, 42, 255, 0.09), transparent 28%),
     #030512;
 }
 
@@ -2586,21 +2578,10 @@ html {
   inset: 0;
   opacity: 0.026;
   background-image:
-    linear-gradient(
-      rgba(255, 255, 255, 0.38) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.38) 1px,
-      transparent 1px
-    );
+    linear-gradient(rgba(255, 255, 255, 0.38) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.38) 1px, transparent 1px);
   background-size: 48px 48px;
-  mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.3),
-    transparent 45%
-  );
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), transparent 45%);
 }
 
 .about-hero-orb {
@@ -2646,11 +2627,7 @@ html {
 .about-hero-eyebrow-line {
   width: 30px;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    rgba(238, 78, 255, 0),
-    rgba(238, 78, 255, 1)
-  );
+  background: linear-gradient(90deg, rgba(238, 78, 255, 0), rgba(238, 78, 255, 1));
   box-shadow: 0 0 10px rgba(238, 78, 255, 0.45);
 }
 
@@ -2667,13 +2644,7 @@ html {
 .about-hero h1 span {
   display: inline-block;
   margin-top: 4px;
-  background: linear-gradient(
-    90deg,
-    #f454ff 0%,
-    #b24aff 38%,
-    #7268ff 68%,
-    #39a4ff 100%
-  );
+  background: linear-gradient(90deg, #f454ff 0%, #b24aff 38%, #7268ff 68%, #39a4ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -2727,13 +2698,7 @@ html {
 .about-hero-primary-button {
   min-width: 218px;
   border: 1px solid rgba(217, 92, 255, 0.36);
-  background:
-    linear-gradient(
-      115deg,
-      #b62dff 0%,
-      #8339ff 48%,
-      #3868ff 100%
-    );
+  background: linear-gradient(115deg, #b62dff 0%, #8339ff 48%, #3868ff 100%);
   box-shadow:
     0 15px 35px rgba(80, 61, 255, 0.24),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -2746,12 +2711,7 @@ html {
   left: -35%;
   width: 38%;
   height: 260%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.22),
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
   transform: rotate(20deg);
   transition: left 450ms ease;
 }
@@ -2851,259 +2811,48 @@ html {
 }
 
 /* =========================================================
-   HERO GÖRSEL ALANI
+   HAKKIMIZDA HERO GÖRSEL ALANI
 ========================================================= */
 
 .about-hero-visual {
   position: relative;
-  display: grid;
+  display: flex;
   min-width: 0;
-  min-height: 540px;
-  place-items: center;
+  min-height: 520px;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-hero-visual-glow {
   position: absolute;
   top: 50%;
-  left: 51%;
-  width: 490px;
-  height: 490px;
-  border-radius: 50%;
-  background:
-    radial-gradient(
-      circle,
-      rgba(208, 46, 255, 0.18) 0%,
-      rgba(85, 60, 255, 0.12) 38%,
-      rgba(36, 103, 255, 0.08) 58%,
-      transparent 73%
-    );
-  filter: blur(30px);
-  transform: translate(-50%, -50%);
-}
-
-.about-hero-visual-orbits {
-  position: absolute;
-  top: 50%;
   left: 50%;
-  width: 475px;
-  height: 475px;
-  transform: translate(-50%, -50%);
-}
-
-.about-orbit {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-}
-
-.about-orbit-one {
-  border: 3px solid rgba(239, 51, 255, 0.94);
-  box-shadow:
-    0 0 13px rgba(240, 45, 255, 0.95),
-    0 0 32px rgba(217, 54, 255, 0.7),
-    inset 0 0 22px rgba(228, 57, 255, 0.28);
-}
-
-.about-orbit-two {
-  inset: 8px;
-  border: 2px solid rgba(75, 93, 255, 0.84);
-  box-shadow:
-    0 0 16px rgba(66, 85, 255, 0.88),
-    inset 0 0 20px rgba(46, 83, 255, 0.25);
-}
-
-.about-orbit-three {
-  inset: 25px;
-  border: 1px solid rgba(120, 79, 255, 0.32);
-}
-
-.about-hero-image-wrap {
-  position: relative;
-  z-index: 3;
-  display: flex;
-  width: 455px;
-  height: 455px;
-  align-items: flex-end;
-  justify-content: center;
-  overflow: hidden;
+  width: 480px;
+  height: 380px;
   border-radius: 50%;
   background:
     radial-gradient(
-      circle at 50% 32%,
-      rgba(174, 62, 255, 0.18),
-      transparent 42%
-    ),
-    rgba(4, 7, 23, 0.38);
+      ellipse,
+      rgba(200, 49, 255, 0.2) 0%,
+      rgba(100, 65, 255, 0.12) 38%,
+      rgba(39, 101, 255, 0.08) 58%,
+      transparent 76%
+    );
+  filter: blur(36px);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .about-hero-image {
+  position: relative;
+  z-index: 2;
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  width: min(100%, 520px);
+  height: auto;
+  object-fit: contain;
   filter:
-    saturate(1.05)
-    contrast(1.03)
-    drop-shadow(0 22px 34px rgba(0, 0, 0, 0.38));
-}
-
-.about-hero-floating-card {
-  position: absolute;
-  z-index: 5;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-width: 170px;
-  padding: 10px 13px;
-  border: 1px solid rgba(149, 107, 255, 0.22);
-  border-radius: 12px;
-  background: rgba(7, 10, 28, 0.72);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.04),
-    0 15px 35px rgba(0, 0, 0, 0.26);
-  backdrop-filter: blur(16px);
-}
-
-.about-hero-floating-card-ai {
-  top: 18%;
-  left: -2%;
-}
-
-.about-hero-floating-card-data {
-  right: -1%;
-  bottom: 22%;
-}
-
-.about-hero-floating-card > div {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.about-hero-floating-card strong {
-  color: rgba(255, 255, 255, 0.93);
-  font-size: 11px;
-  font-weight: 600;
-}
-
-.about-hero-floating-card span {
-  color: rgba(187, 194, 221, 0.67);
-  font-size: 9px;
-}
-
-.about-hero-floating-dot {
-  position: relative;
-  width: 12px;
-  height: 12px;
-  flex: 0 0 12px;
-  border: 2px solid #ea5aff;
-  border-radius: 50%;
-  box-shadow:
-    0 0 8px rgba(231, 76, 255, 0.9),
-    0 0 16px rgba(231, 76, 255, 0.45);
-}
-
-.about-hero-floating-dot::after {
-  content: "";
-  position: absolute;
-  inset: 2px;
-  border-radius: 50%;
-  background: #f088ff;
-}
-
-.about-hero-data-icon {
-  display: flex;
-  width: 18px;
-  height: 20px;
-  flex: 0 0 18px;
-  align-items: flex-end;
-  gap: 2px;
-}
-
-.about-hero-data-icon span {
-  width: 4px;
-  border-radius: 3px 3px 1px 1px;
-  background: linear-gradient(
-    to top,
-    #8452ff,
-    #ed5cff
-  );
-  box-shadow: 0 0 7px rgba(213, 73, 255, 0.4);
-}
-
-.about-hero-data-icon span:nth-child(1) {
-  height: 8px;
-}
-
-.about-hero-data-icon span:nth-child(2) {
-  height: 14px;
-}
-
-.about-hero-data-icon span:nth-child(3) {
-  height: 20px;
-}
-
-.about-hero-badge {
-  position: absolute;
-  right: 4%;
-  bottom: 5%;
-  z-index: 6;
-}
-
-.about-hero-badge-ring {
-  display: grid;
-  width: 94px;
-  height: 94px;
-  place-items: center;
-  border: 2px solid #6e77ff;
-  border-radius: 50%;
-  background:
-    radial-gradient(
-      circle,
-      rgba(111, 47, 255, 0.2),
-      rgba(5, 9, 28, 0.94) 68%
-    );
-  box-shadow:
-    0 0 11px rgba(58, 106, 255, 0.95),
-    0 0 24px rgba(103, 65, 255, 0.8),
-    0 0 40px rgba(219, 48, 255, 0.42),
-    inset 0 0 20px rgba(80, 73, 255, 0.26);
-}
-
-.about-hero-badge-face {
-  position: relative;
-  display: block;
-  width: 46px;
-  height: 34px;
-}
-
-.about-hero-badge-face i {
-  position: absolute;
-  top: 4px;
-  width: 8px;
-  height: 15px;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-}
-
-.about-hero-badge-face i:first-child {
-  left: 4px;
-}
-
-.about-hero-badge-face i:nth-child(2) {
-  right: 4px;
-}
-
-.about-hero-badge-face b {
-  position: absolute;
-  bottom: 2px;
-  left: 50%;
-  width: 18px;
-  height: 8px;
-  border-bottom: 2px solid #ef65ff;
-  border-radius: 0 0 50% 50%;
-  transform: translateX(-50%);
+    drop-shadow(0 0 26px rgba(191, 46, 255, 0.26))
+    drop-shadow(0 18px 32px rgba(0, 0, 0, 0.32));
 }
 
 /* =========================================================
@@ -3116,18 +2865,8 @@ html {
     gap: 25px;
   }
 
-  .about-hero-visual-orbits {
-    width: 425px;
-    height: 425px;
-  }
-
-  .about-hero-image-wrap {
-    width: 407px;
-    height: 407px;
-  }
-
-  .about-hero-floating-card-ai {
-    left: -1%;
+  .about-hero-image {
+    width: min(100%, 470px);
   }
 }
 
@@ -3149,8 +2888,12 @@ html {
   }
 
   .about-hero-visual {
-    min-height: 520px;
+    min-height: 450px;
     order: 1;
+  }
+
+  .about-hero-image {
+    width: min(100%, 500px);
   }
 
   .about-hero h1 {
@@ -3160,14 +2903,6 @@ html {
 
   .about-hero-description {
     max-width: 610px;
-  }
-
-  .about-hero-floating-card-ai {
-    left: 5%;
-  }
-
-  .about-hero-floating-card-data {
-    right: 5%;
   }
 }
 
@@ -3200,31 +2935,16 @@ html {
   }
 
   .about-hero-visual {
-    min-height: 430px;
+    min-height: 350px;
   }
 
-  .about-hero-visual-orbits {
-    width: min(88vw, 390px);
-    height: min(88vw, 390px);
+  .about-hero-image {
+    width: min(100%, 390px);
   }
 
-  .about-hero-image-wrap {
-    width: min(84vw, 372px);
-    height: min(84vw, 372px);
-  }
-
-  .about-hero-floating-card {
-    display: none;
-  }
-
-  .about-hero-badge {
-    right: 2%;
-    bottom: 4%;
-  }
-
-  .about-hero-badge-ring {
-    width: 78px;
-    height: 78px;
+  .about-hero-visual-glow {
+    width: 360px;
+    height: 280px;
   }
 
   .about-hero-trust {
@@ -3234,7 +2954,11 @@ html {
 
 @media (max-width: 420px) {
   .about-hero-visual {
-    min-height: 365px;
+    min-height: 300px;
+  }
+
+  .about-hero-image {
+    width: 100%;
   }
 
   .about-hero h1 {
@@ -3244,13 +2968,5 @@ html {
   .about-hero-eyebrow {
     font-size: 12px;
   }
-
-  .about-hero-badge-ring {
-    width: 68px;
-    height: 68px;
-  }
-
-  .about-hero-badge-face {
-    transform: scale(0.82);
-  }
 }
+
