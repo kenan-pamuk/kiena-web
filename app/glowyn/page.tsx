@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 
-import Header from "../../components/header";
-import Footer from "../../components/footer";
-
 import GlowynHero from "../../components/glowyn/GlowynHero";
 import GlowynHowItWorks from "../../components/glowyn/GlowynHowItWorks";
 import GlowynModules from "../../components/glowyn/GlowynModules";
@@ -19,30 +16,22 @@ export const metadata: Metadata = {
 
 export default function GlowynPage() {
   return (
-    <>
-      <div className="glowyn-page">
-        <div className="glowyn-background" aria-hidden="true">
-          <div className="glowyn-background-orb glowyn-background-orb-left" />
-          <div className="glowyn-background-orb glowyn-background-orb-right" />
-          <div className="glowyn-background-grid" />
-        </div>
-
-        <div className="glowyn-page-container">
-          <Header />
-
-          <main className="glowyn-main">
-            <GlowynHero />
-            <GlowynHowItWorks />
-            <GlowynModules />
-            <GlowynDay />
-            <GlowynCharacters />
-            <GlowynComingSoon />
-            <GlowynNewsletter />
-          </main>
-        </div>
-
-        <Footer />
+    <div className="glowyn-page">
+      <div className="glowyn-background" aria-hidden="true">
+        <div className="glowyn-background-orb glowyn-background-orb-left" />
+        <div className="glowyn-background-orb glowyn-background-orb-right" />
+        <div className="glowyn-background-grid" />
       </div>
-    </>
+
+      <main className="glowyn-page-container glowyn-main">
+        <GlowynHero />
+        <GlowynHowItWorks />
+        <GlowynModules />
+        <GlowynDay />
+        <GlowynCharacters />
+        <GlowynComingSoon />
+        <GlowynNewsletter />
+      </main>
+    </div>
   );
 }
