@@ -13,7 +13,11 @@ type FooterColumnProps = {
 
 function KienaLogo() {
   return (
-    <Link href="/" className="kiena-footer-logo" aria-label="Kiena ana sayfa">
+    <Link
+      href="/"
+      className="kiena-footer-logo"
+      aria-label="Kiena ana sayfa"
+    >
       <Image
         src="/assets/kiena_logo_glowyn.png"
         alt="Kiena"
@@ -166,25 +170,6 @@ const companyLinks: FooterLink[] = [
   },
 ];
 
-const solutionLinks: FooterLink[] = [
-  {
-    label: "Yapay Zekâ",
-    href: "/cozumlerimiz#yapay-zeka",
-  },
-  {
-    label: "Veri Analitiği",
-    href: "/cozumlerimiz#veri-analitigi",
-  },
-  {
-    label: "Mobil Uygulamalar",
-    href: "/cozumlerimiz#mobil-uygulamalar",
-  },
-  {
-    label: "Danışmanlık",
-    href: "/cozumlerimiz#danismanlik",
-  },
-];
-
 const glowynLinks: FooterLink[] = [
   {
     label: "Glowyn Nedir?",
@@ -209,8 +194,15 @@ export default function Footer() {
     <footer id="contact" className="kiena-footer">
       <div className="kiena-footer-container">
         <div className="kiena-footer-panel">
-          <div className="kiena-footer-light kiena-footer-light-left" />
-          <div className="kiena-footer-light kiena-footer-light-right" />
+          <div
+            className="kiena-footer-light kiena-footer-light-left"
+            aria-hidden="true"
+          />
+
+          <div
+            className="kiena-footer-light kiena-footer-light-right"
+            aria-hidden="true"
+          />
 
           <div className="kiena-footer-grid">
             <div className="kiena-footer-brand">
@@ -264,8 +256,7 @@ export default function Footer() {
 
             <FooterColumn title="Glowyn" links={glowynLinks} />
 
-            <div 
-              className="kiena-footer-column kiena-footer-contact">
+            <div className="kiena-footer-column kiena-footer-contact">
               <h3>İletişim</h3>
 
               <a
@@ -291,7 +282,7 @@ export default function Footer() {
         </div>
 
         <p className="kiena-footer-copyright">
-          © 2026 Kiena Bilişim Teknolojileri Ltd.Şti. Tüm hakları saklıdır.
+          © 2026 Kiena Bilişim Teknolojileri Ltd. Şti. Tüm hakları saklıdır.
         </p>
       </div>
     </footer>
