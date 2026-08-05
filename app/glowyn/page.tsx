@@ -25,28 +25,19 @@ export default function GlowynPage() {
         <div className="glowyn-background-grid" />
       </div>
 
-      {/* Ortak Header */}
-      <Header />
+      <div className="glowyn-page-container">
+        <Header />
 
-      {/* Sayfa İçeriği */}
-      <main className="glowyn-page-container glowyn-main">
-        <GlowynHero />
-
-        <GlowynHowItWorks />
-
-        <GlowynModules />
-
-        <GlowynDay />
-
-        <GlowynCharacters />
-
-        <GlowynComingSoon />
-
-        <GlowynNewsletter />
-      </main>
-
-      {/* Footer EKLENMİYOR.
-          Çünkü layout.tsx tarafından zaten gösteriliyor. */}
+        <main className="glowyn-main">
+          <GlowynHero />
+          <GlowynHowItWorks />
+          <GlowynModules />
+          <GlowynDay />
+          <GlowynCharacters />
+          <GlowynComingSoon />
+          <GlowynNewsletter />
+        </main>
+      </div>
     </div>
   );
 }
