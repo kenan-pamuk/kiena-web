@@ -262,8 +262,6 @@ export default function Footer() {
 
             <FooterColumn title="Şirket" links={companyLinks} />
 
-            <FooterColumn title="Çözümlerimiz" links={solutionLinks} />
-
             <FooterColumn title="Glowyn" links={glowynLinks} />
 
             <div 
