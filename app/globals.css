@@ -1774,10 +1774,10 @@ html {
 }
 
 .glowyn-module-card {
-  position: relative;
+  display: flex;
   min-width: 0;
-  height: 282px;
-  padding: 13px 14px 0;
+  min-height: 292px;
+  flex-direction: column;
   overflow: hidden;
   border: 1px solid rgba(75, 95, 170, 0.23);
   border-radius: 12px;
@@ -1798,12 +1798,11 @@ html {
 }
 
 .glowyn-module-header {
-  position: relative;
-  z-index: 2;
   display: grid;
-  grid-template-columns: 46px 1fr;
+  grid-template-columns: 46px minmax(0, 1fr);
   gap: 10px;
   align-items: start;
+  padding: 14px 14px 0;
 }
 
 .glowyn-module-icon {
@@ -1832,6 +1831,7 @@ html {
 }
 
 .glowyn-module-icon svg {
+  display: block;
   width: 100%;
   height: 100%;
   overflow: visible;
@@ -1842,7 +1842,7 @@ html {
   stroke-linejoin: round;
 }
 
-.glowyn-module-header h3 {
+.glowyn-module-copy h3 {
   margin: 3px 0 8px;
   color: #ffffff;
   font-size: 16px;
@@ -1850,64 +1850,66 @@ html {
   line-height: 1.25;
 }
 
-.glowyn-module-header ul {
+.glowyn-module-copy ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.glowyn-module-header li {
+.glowyn-module-copy li {
   position: relative;
   margin: 0 0 3px;
   padding-left: 9px;
   color: rgba(239, 241, 250, 0.84);
   font-size: 10.5px;
-  font-weight: 400;
   line-height: 1.35;
 }
 
-.glowyn-module-header li::before {
+.glowyn-module-copy li::before {
   content: "•";
   position: absolute;
   left: 0;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.glowyn-module-phone {
-  position: absolute;
-  right: 10px;
-  bottom: -4px;
-  left: 10px;
+.glowyn-module-preview {
   display: flex;
+  min-height: 166px;
+  flex: 1;
+  align-items: flex-end;
   justify-content: center;
-  pointer-events: none;
+  margin-top: 8px;
+  overflow: hidden;
 }
 
-.glowyn-module-phone img {
+.glowyn-module-preview img {
   display: block;
   width: 100%;
-  max-width: 176px;
+  max-width: 185px;
   height: auto;
+  margin: 0 auto -2px;
   object-fit: contain;
   object-position: center bottom;
+  opacity: 1;
+  visibility: visible;
   filter: drop-shadow(0 15px 24px rgba(0, 0, 0, 0.42));
 }
 
 @media (max-width: 980px) {
-  .glowyn-modules {
-    padding: 14px;
-  }
-
   .glowyn-modules-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .glowyn-module-card {
-    height: 310px;
+    min-height: 330px;
   }
 
-  .glowyn-module-phone img {
-    max-width: 205px;
+  .glowyn-module-preview {
+    min-height: 195px;
+  }
+
+  .glowyn-module-preview img {
+    max-width: 220px;
   }
 }
 
@@ -1923,13 +1925,13 @@ html {
   }
 
   .glowyn-module-card {
-    height: 330px;
-    padding: 18px 18px 0;
+    min-height: 350px;
   }
 
   .glowyn-module-header {
-    grid-template-columns: 52px 1fr;
+    grid-template-columns: 52px minmax(0, 1fr);
     gap: 12px;
+    padding: 18px 18px 0;
   }
 
   .glowyn-module-icon {
@@ -1937,75 +1939,19 @@ html {
     height: 50px;
   }
 
-  .glowyn-module-header h3 {
+  .glowyn-module-copy h3 {
     font-size: 18px;
   }
 
-  .glowyn-module-header li {
+  .glowyn-module-copy li {
     font-size: 12px;
   }
 
-  .glowyn-module-phone img {
-    max-width: 225px;
-  }
-}
-
-/* GLOWYN MODÜL GÖRSELLERİ - GÖRÜNÜRLÜK DÜZELTMESİ */
-
-.glowyn-module-card {
-  min-height: 300px;
-}
-
-.glowyn-module-phone {
-  position: absolute;
-  right: 12px;
-  bottom: 0;
-  left: 12px;
-  z-index: 1;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  height: 168px;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.glowyn-module-phone-image {
-  display: block !important;
-  width: auto !important;
-  height: 168px !important;
-  max-width: 100% !important;
-  object-fit: contain !important;
-  object-position: center bottom !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.42));
-}
-
-@media (max-width: 980px) {
-  .glowyn-module-card {
-    min-height: 330px;
+  .glowyn-module-preview {
+    min-height: 215px;
   }
 
-  .glowyn-module-phone {
-    height: 190px;
-  }
-
-  .glowyn-module-phone-image {
-    height: 190px !important;
-  }
-}
-
-@media (max-width: 620px) {
-  .glowyn-module-card {
-    min-height: 350px;
-  }
-
-  .glowyn-module-phone {
-    height: 205px;
-  }
-
-  .glowyn-module-phone-image {
-    height: 205px !important;
+  .glowyn-module-preview img {
+    max-width: 235px;
   }
 }
