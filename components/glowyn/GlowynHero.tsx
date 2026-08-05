@@ -6,72 +6,38 @@ export default function GlowynHero() {
     <section className="glowyn-hero" aria-labelledby="glowyn-hero-title">
       <div className="glowyn-hero-content">
         <div className="glowyn-hero-copy">
-          <p className="glowyn-hero-eyebrow">
-            Yapay zekâ ile geleceği şekillendiriyoruz
+          <p className="eyebrow">
+            YAPAY ZEKÂ İLE GELECEĞİ ŞEKİLLENDİRİYORUZ
           </p>
 
-          <h1 id="glowyn-hero-title" className="glowyn-hero-title">
-            Glowyn ile
-            <br />
-            hayatın{" "}
-            <span className="glowyn-hero-gradient-text">
-              seninle
-              <br />
-              uyum içinde.
-            </span>
+          <h1 id="glowyn-hero-title" className="glowyn-home-style-title">
+            Glowyn ile hayatın{" "}
+            <span>seninle uyum içinde.</span>
           </h1>
 
-          <p className="glowyn-hero-description">
+          <p className="lead glowyn-home-style-lead">
             Glowyn, planlamadan beslenmeye, stil önerilerinden günlük keşiflere
             kadar yaşamının her alanında sana eşlik eden yapay zekâ destekli
             kişisel yaşam asistanındır.
           </p>
 
-          <div className="glowyn-hero-actions">
+          <div className="hero-actions glowyn-home-style-actions">
             <Link
               href="#bekleme-listesi"
-              className="glowyn-hero-button glowyn-hero-button-primary"
+              className="primary glowyn-home-primary"
             >
-              <span>Bekleme Listesine Katıl</span>
-
-              <svg
-                width="19"
-                height="19"
-                viewBox="0 0 24 24"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M5 12H19M13 6L19 12L13 18"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              Bekleme Listesine Katıl
+              <b aria-hidden="true">→</b>
             </Link>
 
             <Link
               href="#nasil-calisir"
-              className="glowyn-hero-button glowyn-hero-button-secondary"
+              className="secondary glowyn-home-secondary"
             >
-              <span>Glowyn’i Keşfet</span>
-
-              <svg
-                width="19"
-                height="19"
-                viewBox="0 0 24 24"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M12 4V19M6.5 13.5L12 19L17.5 13.5"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              Glowyn’i Keşfet
+              <span className="glowyn-button-arrow" aria-hidden="true">
+                ↓
+              </span>
             </Link>
           </div>
         </div>
