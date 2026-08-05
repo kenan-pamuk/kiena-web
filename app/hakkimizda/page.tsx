@@ -12,11 +12,6 @@ export const metadata: Metadata = {
 export default function HakkimizdaPage() {
   return (
     <div className="about-page">
-      <div className="about-page-background" aria-hidden="true">
-        <span className="about-page-background-orb about-page-background-orb-left" />
-        <span className="about-page-background-orb about-page-background-orb-right" />
-      </div>
-
       <div className="about-page-container">
         <Header />
 
@@ -24,7 +19,14 @@ export default function HakkimizdaPage() {
           <AboutHero />
 
           {/*
-            Sonraki bölümler
+            Sonraki bölümler burada, Glowyn sayfasındaki yapı korunarak
+            parça parça eklenecek:
+
+            <AboutMission />
+            <AboutVision />
+            <AboutValues />
+            <AboutGlowyn />
+            <AboutContact />
           */}
         </main>
       </div>
