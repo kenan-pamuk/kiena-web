@@ -164,10 +164,6 @@ const companyLinks: FooterLink[] = [
     label: "Değerlerimiz",
     href: "/hakkimizda#degerlerimiz",
   },
-  {
-    label: "Kariyer",
-    href: "/kariyer",
-  },
 ];
 
 const glowynLinks: FooterLink[] = [
