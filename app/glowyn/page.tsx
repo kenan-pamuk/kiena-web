@@ -6,7 +6,6 @@ import GlowynHero from "../../components/glowyn/GlowynHero";
 import GlowynHowItWorks from "../../components/glowyn/GlowynHowItWorks";
 import GlowynModules from "../../components/glowyn/GlowynModules";
 import GlowynDay from "../../components/glowyn/GlowynDay";
-import GlowynCharacters from "../../components/glowyn/GlowynCharacters";
 import GlowynComingSoon from "../../components/glowyn/GlowynComingSoon";
 import GlowynNewsletter from "../../components/glowyn/GlowynNewsletter";
 
@@ -33,7 +32,6 @@ export default function GlowynPage() {
           <GlowynHowItWorks />
           <GlowynModules />
           <GlowynDay />
-          <GlowynCharacters />
           <GlowynComingSoon />
           <GlowynNewsletter />
         </main>
