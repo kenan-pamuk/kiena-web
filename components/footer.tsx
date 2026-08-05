@@ -166,6 +166,25 @@ const companyLinks: FooterLink[] = [
   },
 ];
 
+const solutionLinks: FooterLink[] = [
+  {
+    label: "Yapay Zekâ",
+    href: "/cozumlerimiz#yapay-zeka",
+  },
+  {
+    label: "Veri Analitiği",
+    href: "/cozumlerimiz#veri-analitigi",
+  },
+  {
+    label: "Mobil Uygulamalar",
+    href: "/cozumlerimiz#mobil-uygulamalar",
+  },
+  {
+    label: "Danışmanlık",
+    href: "/cozumlerimiz#danismanlik",
+  },
+];
+
 const glowynLinks: FooterLink[] = [
   {
     label: "Glowyn Nedir?",
