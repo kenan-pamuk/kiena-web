@@ -33,12 +33,7 @@ function SparkleIcon() {
 function OrbitIcon() {
   return (
     <svg viewBox="0 0 64 64" aria-hidden="true">
-      <circle
-        cx="32"
-        cy="32"
-        r="6"
-        fill="currentColor"
-      />
+      <circle cx="32" cy="32" r="6" fill="currentColor" />
 
       <ellipse
         cx="32"
@@ -141,57 +136,17 @@ export default function AboutHero() {
         </div>
       </div>
 
-      <div className="about-hero-visual">
-        <div className="about-hero-visual-glow" aria-hidden="true" />
+      <div className="about-hero-visual" aria-hidden="true">
+        <div className="about-hero-visual-glow" />
 
-        <div className="about-hero-visual-orbits" aria-hidden="true">
-          <span className="about-orbit about-orbit-one" />
-          <span className="about-orbit about-orbit-two" />
-          <span className="about-orbit about-orbit-three" />
-        </div>
-
-        <div className="about-hero-image-wrap">
-          <Image
-            src="/assets/about-kiena-woman.png"
-            alt="Kiena yapay zekâ destekli dijital deneyim"
-            width={620}
-            height={620}
-            className="about-hero-image"
-            priority
-          />
-        </div>
-
-        <div className="about-hero-floating-card about-hero-floating-card-ai">
-          <span className="about-hero-floating-dot" />
-
-          <div>
-            <strong>Yapay zekâ odaklı</strong>
-            <span>Akıllı dijital deneyimler</span>
-          </div>
-        </div>
-
-        <div className="about-hero-floating-card about-hero-floating-card-data">
-          <span className="about-hero-data-icon">
-            <span />
-            <span />
-            <span />
-          </span>
-
-          <div>
-            <strong>Veriyle güçlenen</strong>
-            <span>Ölçülebilir çözümler</span>
-          </div>
-        </div>
-
-        <div className="about-hero-badge">
-          <span className="about-hero-badge-ring">
-            <span className="about-hero-badge-face">
-              <i />
-              <i />
-              <b />
-            </span>
-          </span>
-        </div>
+        <Image
+          src="/assets/hero-orb.png"
+          alt=""
+          width={435}
+          height={380}
+          className="about-hero-image"
+          priority
+        />
       </div>
     </section>
   );
