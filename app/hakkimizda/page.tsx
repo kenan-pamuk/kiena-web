@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import Header from "../../components/header";
-import Footer from "../../components/footer";
 import AboutHero from "../../components/about/AboutHero";
 
 export const metadata: Metadata = {
@@ -25,18 +24,10 @@ export default function HakkimizdaPage() {
           <AboutHero />
 
           {/*
-            Sonraki aşamalarda buraya sırasıyla eklenecek:
-
-            <AboutMission />
-            <AboutVision />
-            <AboutValues />
-            <AboutGlowyn />
-            <AboutContact />
+            Sonraki bölümler
           */}
         </main>
       </div>
-
-      <Footer />
     </div>
   );
 }
