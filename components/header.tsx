@@ -28,10 +28,6 @@ export default function Header() {
           Hakkımızda
         </Link>
 
-        <Link className={pathname === "/cozumlerimiz" ? "active" : ""} href="/cozumlerimiz">
-          Çözümlerimiz
-        </Link>
-
         <Link className={pathname === "/glowyn" ? "active" : ""} href="/glowyn">
           Glowyn
         </Link>
