@@ -1738,3 +1738,214 @@ html {
     display: block;
   }
 }
+
+/* =========================================================
+   GLOWYN - ANA MODÜLLER
+   ========================================================= */
+
+.glowyn-modules {
+  position: relative;
+  width: 100%;
+  padding: 10px 16px 14px;
+  overflow: hidden;
+  border: 1px solid rgba(92, 107, 176, 0.18);
+  border-radius: 16px;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(111, 53, 255, 0.08),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(7, 11, 30, 0.88),
+      rgba(5, 9, 25, 0.94)
+    );
+}
+
+.glowyn-modules .glowyn-section-title {
+  margin-bottom: 8px;
+}
+
+.glowyn-modules-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.glowyn-module-card {
+  position: relative;
+  min-width: 0;
+  height: 282px;
+  padding: 13px 14px 0;
+  overflow: hidden;
+  border: 1px solid rgba(75, 95, 170, 0.23);
+  border-radius: 12px;
+  background:
+    radial-gradient(
+      circle at 20% 5%,
+      rgba(178, 59, 255, 0.08),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(8, 13, 34, 0.94),
+      rgba(5, 10, 27, 0.96)
+    );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.018),
+    0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.glowyn-module-header {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.glowyn-module-icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  color: #f4e9ff;
+  filter:
+    drop-shadow(0 0 7px rgba(149, 74, 255, 0.85))
+    drop-shadow(0 0 13px rgba(224, 64, 255, 0.45));
+}
+
+.glowyn-module-card:nth-child(2) .glowyn-module-icon {
+  color: #dce8ff;
+  filter:
+    drop-shadow(0 0 7px rgba(65, 121, 255, 0.9))
+    drop-shadow(0 0 13px rgba(69, 109, 255, 0.52));
+}
+
+.glowyn-module-card:nth-child(3) .glowyn-module-icon {
+  color: #fff2a8;
+  filter:
+    drop-shadow(0 0 6px rgba(255, 199, 54, 0.95))
+    drop-shadow(0 0 13px rgba(255, 91, 29, 0.72));
+}
+
+.glowyn-module-icon svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.glowyn-module-header h3 {
+  margin: 3px 0 8px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.glowyn-module-header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.glowyn-module-header li {
+  position: relative;
+  margin: 0 0 3px;
+  padding-left: 9px;
+  color: rgba(239, 241, 250, 0.84);
+  font-size: 10.5px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.glowyn-module-header li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.glowyn-module-phone {
+  position: absolute;
+  right: 10px;
+  bottom: -4px;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.glowyn-module-phone img {
+  display: block;
+  width: 100%;
+  max-width: 176px;
+  height: auto;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 15px 24px rgba(0, 0, 0, 0.42));
+}
+
+@media (max-width: 980px) {
+  .glowyn-modules {
+    padding: 14px;
+  }
+
+  .glowyn-modules-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .glowyn-module-card {
+    height: 310px;
+  }
+
+  .glowyn-module-phone img {
+    max-width: 205px;
+  }
+}
+
+@media (max-width: 620px) {
+  .glowyn-modules {
+    padding: 13px 12px;
+    border-radius: 14px;
+  }
+
+  .glowyn-modules-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .glowyn-module-card {
+    height: 330px;
+    padding: 18px 18px 0;
+  }
+
+  .glowyn-module-header {
+    grid-template-columns: 52px 1fr;
+    gap: 12px;
+  }
+
+  .glowyn-module-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .glowyn-module-header h3 {
+    font-size: 18px;
+  }
+
+  .glowyn-module-header li {
+    font-size: 12px;
+  }
+
+  .glowyn-module-phone img {
+    max-width: 225px;
+  }
+}
