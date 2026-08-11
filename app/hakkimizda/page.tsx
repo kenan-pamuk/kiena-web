@@ -6,6 +6,7 @@ import AboutMission from "../../components/about/AboutMission";
 import AboutVision from "../../components/about/AboutVision";
 import AboutValues from "../../components/about/AboutValues";
 import AboutGlowyn from "../../components/about/AboutGlowyn";
+import GlowynNewsletter from "../../components/glowyn/GlowynNewsletter";
 
 export const metadata: Metadata = {
   title: "Hakkımızda",
@@ -31,6 +32,7 @@ export default function HakkimizdaPage() {
           <AboutVision />
           <AboutValues />
           <AboutGlowyn />
+          <GlowynNewsletter />
         </main>
       </div>
     </div>
