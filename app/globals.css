@@ -3042,3 +3042,427 @@ html {
     font-size: 11px;
   }
 }
+
+/* =========================================================
+   HAKKIMIZDA — VİZYON
+   ========================================================= */
+
+.about-vision {
+  position: relative;
+  width: 100%;
+  margin-top: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(92, 107, 176, 0.18);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 78% 35%, rgba(128, 31, 255, 0.12), transparent 35%),
+    linear-gradient(180deg, rgba(7, 11, 30, 0.9), rgba(5, 9, 25, 0.94));
+}
+
+.about-vision__content {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  min-height: 285px;
+}
+
+.about-vision__text {
+  position: relative;
+  z-index: 2;
+  padding: 34px 18px 32px 40px;
+}
+
+.about-vision__eyebrow {
+  display: block;
+  margin-bottom: 15px;
+  color: #ef5cf7;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.about-vision__text h2 {
+  margin: 0;
+  max-width: 430px;
+  color: #fff;
+  font-size: clamp(25px, 2.15vw, 34px);
+  line-height: 1.38;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.about-vision__text h2 span {
+  color: #bd4fff;
+  text-shadow: 0 0 24px rgba(190, 66, 255, 0.25);
+}
+
+.about-vision__text p {
+  max-width: 430px;
+  margin: 16px 0 0;
+  color: rgba(201, 206, 225, 0.65);
+  font-size: 13px;
+  line-height: 1.62;
+}
+
+/* Vision city illustration */
+
+.about-vision__art {
+  position: relative;
+  min-height: 285px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 55% 33%, rgba(223, 0, 255, 0.22), transparent 26%),
+    radial-gradient(circle at 68% 35%, rgba(42, 50, 255, 0.2), transparent 42%);
+}
+
+.about-vision__sun {
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  width: 188px;
+  height: 188px;
+  transform: translateX(-50%);
+  border: 3px solid #ff38f5;
+  border-radius: 50%;
+  box-shadow:
+    0 0 13px #ff2df2,
+    0 0 32px rgba(255, 43, 240, 0.8),
+    inset 0 0 26px rgba(186, 43, 255, 0.28);
+}
+
+.about-vision__city {
+  position: absolute;
+  left: 20%;
+  right: 11%;
+  bottom: 70px;
+  height: 105px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+}
+
+.about-vision__city span {
+  width: 30px;
+  border: 1px solid rgba(189, 61, 255, 0.78);
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 8px,
+      rgba(199, 61, 255, 0.7) 9px 11px
+    ),
+    linear-gradient(180deg, #12053f, #04091e);
+  box-shadow: 0 0 13px rgba(171, 44, 255, 0.28);
+}
+
+.about-vision__city span:nth-child(1) { height: 43px; }
+.about-vision__city span:nth-child(2) { height: 70px; }
+.about-vision__city span:nth-child(3) { height: 50px; }
+.about-vision__city span:nth-child(4) { height: 98px; }
+.about-vision__city span:nth-child(5) { height: 64px; }
+.about-vision__city span:nth-child(6) { height: 80px; }
+.about-vision__city span:nth-child(7) { height: 53px; }
+.about-vision__city span:nth-child(8) { height: 76px; }
+.about-vision__city span:nth-child(9) { height: 45px; }
+
+.about-vision__road {
+  position: absolute;
+  left: 0;
+  right: -20%;
+  height: 2px;
+  border-radius: 50%;
+  transform-origin: center;
+}
+
+.about-vision__road--1 {
+  bottom: 50px;
+  background: #d72aff;
+  box-shadow: 0 0 12px #d72aff;
+  transform: rotate(-4deg);
+}
+
+.about-vision__road--2 {
+  bottom: 37px;
+  background: #5f46ff;
+  box-shadow: 0 0 12px #5f46ff;
+  transform: rotate(2deg);
+}
+
+.about-vision__road--3 {
+  bottom: 23px;
+  background: #b62aff;
+  box-shadow: 0 0 10px #b62aff;
+  transform: rotate(-2deg);
+}
+
+/* =========================================================
+   DEĞERLERİMİZ
+   ========================================================= */
+
+.about-values {
+  position: relative;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.about-values > h2,
+.about-glowyn > h2 {
+  position: relative;
+  z-index: 2;
+  width: max-content;
+  margin: 0 auto -7px;
+  padding: 0 13px;
+  color: #ef5cf7;
+  background: #030617;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.about-values__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.about-values__card {
+  min-height: 224px;
+  padding: 25px 20px 22px;
+  text-align: center;
+  border: 1px solid rgba(92, 107, 176, 0.18);
+  border-radius: 15px;
+  background:
+    radial-gradient(circle at 50% 22%, rgba(124, 36, 255, 0.11), transparent 33%),
+    linear-gradient(180deg, rgba(7, 11, 30, 0.9), rgba(5, 9, 25, 0.94));
+}
+
+.about-values__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 10px;
+  color: #a84cff;
+}
+
+.about-values__icon svg {
+  width: 58px;
+  height: 58px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 10px rgba(170, 65, 255, 0.45));
+}
+
+.about-values__card h3 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.about-values__card p {
+  max-width: 220px;
+  margin: 0 auto;
+  color: rgba(202, 207, 226, 0.65);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   GLOWYN İLE TANIŞIN
+   ========================================================= */
+
+.about-glowyn {
+  position: relative;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.about-glowyn__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.about-glowyn__card {
+  min-height: 112px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 17px 26px;
+  text-decoration: none;
+  border: 1px solid rgba(92, 107, 176, 0.18);
+  border-radius: 15px;
+  background:
+    radial-gradient(circle at 25% 50%, rgba(118, 38, 255, 0.1), transparent 35%),
+    linear-gradient(180deg, rgba(7, 11, 30, 0.9), rgba(5, 9, 25, 0.94));
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.about-glowyn__card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(168, 74, 255, 0.38);
+}
+
+.about-glowyn__icon {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+}
+
+.about-glowyn__card span {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.about-cta {
+  position: relative;
+  width: 100%;
+  min-height: 108px;
+  margin-top: 16px;
+  padding: 18px 34px 18px 110px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px;
+  align-items: center;
+  border: 1px solid rgba(92, 107, 176, 0.18);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 10% 50%, rgba(126, 40, 255, 0.11), transparent 20%),
+    linear-gradient(180deg, rgba(7, 11, 30, 0.9), rgba(5, 9, 25, 0.94));
+}
+
+.about-cta__orb {
+  position: absolute;
+  left: 34px;
+  top: 50%;
+  width: 72px;
+  height: 72px;
+  transform: translateY(-50%);
+  border: 2px solid #ae33ff;
+  border-radius: 50%;
+  box-shadow:
+    0 0 10px #b428ff,
+    0 0 24px rgba(65, 82, 255, 0.7),
+    inset 0 0 20px rgba(82, 53, 255, 0.23);
+}
+
+.about-cta__eye {
+  position: absolute;
+  top: 25px;
+  width: 6px;
+  height: 11px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.about-cta__eye--left {
+  left: 22px;
+}
+
+.about-cta__eye--right {
+  right: 22px;
+}
+
+.about-cta__smile {
+  position: absolute;
+  left: 27px;
+  bottom: 17px;
+  width: 18px;
+  height: 9px;
+  border-bottom: 2px solid #ee4cff;
+  border-radius: 50%;
+}
+
+.about-cta__copy h2 {
+  margin: 0 0 3px;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.about-cta__copy p {
+  max-width: 540px;
+  margin: 0;
+  color: rgba(200, 206, 225, 0.66);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.about-cta__button {
+  min-width: 170px;
+  height: 48px;
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 9px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  background: linear-gradient(90deg, #a323f2, #4932ff);
+  box-shadow: 0 0 24px rgba(109, 45, 255, 0.18);
+}
+
+/* =========================================================
+   HAKKIMIZDA — RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 980px) {
+  .about-vision__content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-vision__art {
+    min-height: 260px;
+  }
+
+  .about-values__grid,
+  .about-glowyn__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-vision__text {
+    padding: 28px 22px;
+  }
+
+  .about-vision__text h2 {
+    font-size: 25px;
+  }
+
+  .about-values__grid,
+  .about-glowyn__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-values__card {
+    min-height: auto;
+  }
+
+  .about-cta {
+    padding: 100px 22px 24px;
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta__orb {
+    top: 19px;
+    left: 22px;
+    transform: none;
+  }
+
+  .about-cta__button {
+    width: 100%;
+  }
+}
