@@ -29,17 +29,6 @@ function KienaLogo() {
   );
 }
 
-function LinkedinIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        fill="currentColor"
-        d="M5.32 7.82a1.76 1.76 0 1 0 0-3.52 1.76 1.76 0 0 0 0 3.52ZM3.78 19.5h3.08V9.18H3.78V19.5ZM9.1 9.18h2.96v1.4h.04c.41-.78 1.42-1.7 2.92-1.7 3.13 0 3.71 2.06 3.71 4.74v5.88h-3.08v-5.21c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.3H9.1V9.18Z"
-      />
-    </svg>
-  );
-}
-
 function InstagramIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -68,23 +57,12 @@ function InstagramIcon() {
   );
 }
 
-function XIcon() {
+function FacebookIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path
         fill="currentColor"
-        d="M5.1 4h3.75l4.02 5.38L17.43 4H19l-5.42 6.43L19.35 20h-3.74l-4.48-5.96L6.08 20H4.5l5.91-7.02L5.1 4Zm2.82 1.3 8.44 13.4h1.18L9.1 5.3H7.92Z"
-      />
-    </svg>
-  );
-}
-
-function YoutubeIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        fill="currentColor"
-        d="M20.45 7.15a2.7 2.7 0 0 0-1.9-1.91C16.88 4.8 12 4.8 12 4.8s-4.88 0-6.55.44a2.7 2.7 0 0 0-1.9 1.91A27.7 27.7 0 0 0 3.1 12c0 1.62.15 3.23.45 4.85a2.7 2.7 0 0 0 1.9 1.91c1.67.44 6.55.44 6.55.44s4.88 0 6.55-.44a2.7 2.7 0 0 0 1.9-1.91c.3-1.62.45-3.23.45-4.85s-.15-3.23-.45-4.85ZM10.25 15.4V8.6L15.9 12l-5.65 3.4Z"
+        d="M13.7 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5H17V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.5V13h2.8v8h3.4Z"
       />
     </svg>
   );
@@ -215,15 +193,6 @@ export default function Footer() {
 
               <div className="kiena-footer-socials">
                 <a
-                  href="https://www.linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                >
-                  <LinkedinIcon />
-                </a>
-
-                <a
                   href="https://www.instagram.com/heyglowyn"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -233,21 +202,12 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="https://x.com"
+                  href="https://www.facebook.com/p/Glowyn-AI-61591561779098/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="X"
+                  aria-label="Facebook"
                 >
-                  <XIcon />
-                </a>
-
-                <a
-                  href="https://www.youtube.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="YouTube"
-                >
-                  <YoutubeIcon />
+                  <FacebookIcon />
                 </a>
               </div>
             </div>
