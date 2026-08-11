@@ -3476,3 +3476,14 @@ html {
     font-size: 12px;
   }
 }
+/* MOBİL — MENÜYÜ LOGO VE BUTONA YAKLAŞTIR */
+@media (max-width: 768px) {
+  .site-header .nav {
+    margin-top: -6px;
+  }
+
+  .site-header {
+    row-gap: 0;
+    padding-bottom: 6px;
+  }
+}
