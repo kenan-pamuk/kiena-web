@@ -3385,3 +3385,27 @@ html {
     width: 100%;
   }
 }
+/* =========================================================
+   HEADER — MOBİL MENÜ EKRAN MERKEZİ
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .site-header {
+    position: relative;
+  }
+
+  .site-header .nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: max-content;
+    margin: 0;
+
+    text-align: center;
+  }
+}
