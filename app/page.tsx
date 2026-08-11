@@ -136,7 +136,7 @@ export default function Home() {
                 height={310}
               />
             </div>
-
+            
             <div className="card-grid">
               {cards.map(([icon, title, text]) => (
                 <article key={title} className="glow-card">
@@ -144,18 +144,19 @@ export default function Home() {
                     <Image
                       src={icon}
                       alt={title}
-                      width={140}
-                      height={140}
+                      width={100}
+                      height={100}
                       className="glow-card-image"
                     />
                   </div>
+            
                   <div className="glow-card-content">
                     <h3>{title}</h3>
                     <p>{text}</p>
                   </div>
                 </article>
               ))}
-            </div>
+            </div>            
           </section>
 
           <section className="newsletter">
