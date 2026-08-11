@@ -149,13 +149,9 @@ export default function Home() {
                       className="glow-card-image"
                     />
                   </div>
-
-                  <div>
+                  <div className="glow-card-content">
                     <h3>{title}</h3>
                     <p>{text}</p>
-                    <Link href="/glowyn">
-                      Keşfet <span>→</span>
-                    </Link>
                   </div>
                 </article>
               ))}
