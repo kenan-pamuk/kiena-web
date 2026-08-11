@@ -3208,7 +3208,7 @@ html {
   position: relative;
   z-index: 2;
   width: max-content;
-  margin: 0 auto -7px;
+  margin: 0 auto -1px;
   padding: 0 13px;
   color: #ef5cf7;
   background: #030617;
