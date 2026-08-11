@@ -2682,9 +2682,8 @@ html {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: 28px 0 0px;
+  padding: 4px 0 8px;
 }
-
 .about-mission__container {
   width: 100%;
   margin: 0;
@@ -3050,7 +3049,7 @@ html {
 .about-vision {
   position: relative;
   width: 100%;
-  margin-top: 16px;
+  margin-top: 4px;
   overflow: hidden;
   border: 1px solid rgba(92, 107, 176, 0.18);
   border-radius: 16px;
