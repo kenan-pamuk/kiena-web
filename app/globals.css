@@ -3691,3 +3691,19 @@ html {
     line-height: 1.5 !important;
   }
 }
+
+/* Ana Sayfa - Feature ikonları */
+
+.home-page .feature .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home-page .feature-icon-image {
+  display: block;
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
