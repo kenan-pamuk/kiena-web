@@ -3101,95 +3101,15 @@ html {
   line-height: 1.62;
 }
 
-/* Vision city illustration */
-
 .about-vision__art {
   position: relative;
   min-height: 285px;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 55% 33%, rgba(223, 0, 255, 0.22), transparent 26%),
-    radial-gradient(circle at 68% 35%, rgba(42, 50, 255, 0.2), transparent 42%);
 }
 
-.about-vision__sun {
-  position: absolute;
-  left: 50%;
-  top: 24px;
-  width: 188px;
-  height: 188px;
-  transform: translateX(-50%);
-  border: 3px solid #ff38f5;
-  border-radius: 50%;
-  box-shadow:
-    0 0 13px #ff2df2,
-    0 0 32px rgba(255, 43, 240, 0.8),
-    inset 0 0 26px rgba(186, 43, 255, 0.28);
-}
-
-.about-vision__city {
-  position: absolute;
-  left: 20%;
-  right: 11%;
-  bottom: 70px;
-  height: 105px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 8px;
-}
-
-.about-vision__city span {
-  width: 30px;
-  border: 1px solid rgba(189, 61, 255, 0.78);
-  background:
-    repeating-linear-gradient(
-      to bottom,
-      transparent 0 8px,
-      rgba(199, 61, 255, 0.7) 9px 11px
-    ),
-    linear-gradient(180deg, #12053f, #04091e);
-  box-shadow: 0 0 13px rgba(171, 44, 255, 0.28);
-}
-
-.about-vision__city span:nth-child(1) { height: 43px; }
-.about-vision__city span:nth-child(2) { height: 70px; }
-.about-vision__city span:nth-child(3) { height: 50px; }
-.about-vision__city span:nth-child(4) { height: 98px; }
-.about-vision__city span:nth-child(5) { height: 64px; }
-.about-vision__city span:nth-child(6) { height: 80px; }
-.about-vision__city span:nth-child(7) { height: 53px; }
-.about-vision__city span:nth-child(8) { height: 76px; }
-.about-vision__city span:nth-child(9) { height: 45px; }
-
-.about-vision__road {
-  position: absolute;
-  left: 0;
-  right: -20%;
-  height: 2px;
-  border-radius: 50%;
-  transform-origin: center;
-}
-
-.about-vision__road--1 {
-  bottom: 50px;
-  background: #d72aff;
-  box-shadow: 0 0 12px #d72aff;
-  transform: rotate(-4deg);
-}
-
-.about-vision__road--2 {
-  bottom: 37px;
-  background: #5f46ff;
-  box-shadow: 0 0 12px #5f46ff;
-  transform: rotate(2deg);
-}
-
-.about-vision__road--3 {
-  bottom: 23px;
-  background: #b62aff;
-  box-shadow: 0 0 10px #b62aff;
-  transform: rotate(-2deg);
+.about-vision__image {
+  object-fit: cover;
+  object-position: center;
 }
 
 /* =========================================================
