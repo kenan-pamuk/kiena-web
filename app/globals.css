@@ -343,7 +343,7 @@ body {
   grid-template-columns:220px 1fr 520px;
   align-items:center;
   gap:22px;
-  margin-top:24px;
+  margin-top:4px;
   padding:26px;
   background:rgba(8,12,30,.78);
   border:1px solid var(--line);
