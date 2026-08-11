@@ -10,12 +10,12 @@ const items = [
   {
     title: "Planım",
     href: "/glowyn",
-    src: "/assets/planim.png",
+    src: "/assets/takvim.png",
   },
   {
     title: "Yemeğim",
     href: "/glowyn",
-    src: "/assets/yemegim.png",
+    src: "/assets/yemek.png",
   },
   {
     title: "Keşfet",
