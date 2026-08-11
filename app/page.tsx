@@ -5,22 +5,22 @@ import Header from "../components/header";
 
 const features = [
   [
-    "▣",
+    "/assets/feature-ai.png",
     "Yapay Zekâ Odaklı",
     "Akıllı algoritmalarla veriye dayalı çözümler sunarız.",
   ],
   [
-    "◇",
+    "/assets/feature-security.png",
     "Güvenli & Şeffaf",
     "Veri güvenliği ve şeffaflık ilkelerimizle çalışırız.",
   ],
   [
-    "▯",
+    "/assets/feature-mobile.png",
     "Mobil Deneyim",
     "Kullanıcı odaklı tasarım ile dijital deneyimi taşırız.",
   ],
   [
-    "✣",
+    "/assets/feature-growth.png",
     "Sürekli Gelişim",
     "Yenilikçi bakış açımızla ihtiyaçları takip ederiz.",
   ],
@@ -109,7 +109,15 @@ export default function Home() {
           <section className="feature-bar">
             {features.map(([icon, title, text]) => (
               <article key={title} className="feature">
-                <div className="icon">{icon}</div>
+                  <div className="icon">
+                    <Image
+                      src={icon}
+                      alt=""
+                      width={64}
+                      height={64}
+                      className="feature-icon-image"
+                    />
+                  </div>
                 <div>
                   <h3>{title}</h3>
                   <p>{text}</p>
