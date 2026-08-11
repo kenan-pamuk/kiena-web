@@ -2682,7 +2682,7 @@ html {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: 28px 0 16px;
+  padding: 28px 0 4px;
 }
 
 .about-mission__container {
