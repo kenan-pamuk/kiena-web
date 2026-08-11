@@ -3508,3 +3508,55 @@ html {
     </article>
   ))}
 </div>
+
+   /* =========================================================
+   MOBİL
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .home-page .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  .home-page .card-grid .glow-card {
+    min-height: 255px !important;
+
+    padding: 20px 14px 18px !important;
+  }
+
+  .home-page .card-grid .glow-card > .big-icon {
+    flex-basis: 86px !important;
+
+    height: 86px !important;
+
+    margin-bottom: 8px !important;
+  }
+
+  .home-page .card-grid .glow-card .glow-card-image {
+    width: 68px !important;
+    height: 68px !important;
+
+    min-width: 68px !important;
+    max-width: 68px !important;
+
+    min-height: 68px !important;
+    max-height: 68px !important;
+  }
+
+  .home-page .glow-card-content h3 {
+    height: 30px !important;
+
+    margin-bottom: 8px !important;
+
+    font-size: 16px !important;
+  }
+
+  .home-page .glow-card-content p {
+    max-width: 230px !important;
+
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+}
