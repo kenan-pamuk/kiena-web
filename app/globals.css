@@ -3457,3 +3457,22 @@ html {
     margin: 0;
   }
 }
+
+@media (max-width: 480px) {
+  .site-header .nav {
+    gap: 17px;
+  }
+
+  .site-header .nav a {
+    font-size: 12px;
+  }
+
+  .site-header .brand img {
+    width: 115px;
+  }
+
+  .site-header .contact-btn {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
