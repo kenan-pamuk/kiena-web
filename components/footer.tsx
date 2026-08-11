@@ -241,9 +241,33 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="kiena-footer-copyright">
-          © 2026 Kiena Bilişim Teknolojileri Ltd. Şti. Tüm hakları saklıdır.
-        </p>
+        <div className="kiena-footer-bottom">
+          <p className="kiena-footer-copyright">
+            © 2026 Kiena Bilişim Teknolojileri Ltd. Şti. Tüm hakları saklıdır.
+          </p>
+        
+          <nav
+            className="kiena-footer-legal"
+            aria-label="Yasal belgeler"
+          >
+            <Link href="/legal/gizlilik-politikasi">
+              Gizlilik Politikası
+            </Link>
+        
+            <span aria-hidden="true">•</span>
+        
+            <Link href="/legal/kullanim-kosullari">
+              Kullanım Koşulları
+            </Link>
+        
+            <span aria-hidden="true">•</span>
+        
+            <Link href="/legal/kvkk-aydinlatma-metni">
+              KVKK Aydınlatma Metni
+            </Link>
+          </nav>
+        </div>
+        
       </div>
     </footer>
   );
