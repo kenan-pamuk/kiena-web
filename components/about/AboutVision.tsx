@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function AboutVision() {
   return (
     <section className="about-vision" id="vizyonumuz">
@@ -18,24 +19,15 @@ export default function AboutVision() {
         </div>
 
         <div className="about-vision__art" aria-hidden="true">
-          <div className="about-vision__sun" />
-
-          <div className="about-vision__city">
-            <span />
-            <span />
-            <span />
-            <span />
-            <span />
-            <span />
-            <span />
-            <span />
-            <span />
-          </div>
-
-          <div className="about-vision__road about-vision__road--1" />
-          <div className="about-vision__road about-vision__road--2" />
-          <div className="about-vision__road about-vision__road--3" />
-        </div>
+  <Image
+    src="/assets/about-vision.png"
+    alt=""
+    fill
+    sizes="(max-width: 980px) 100vw, 58vw"
+    className="about-vision__image"
+  />
+</div>
+        
       </div>
     </section>
   );
