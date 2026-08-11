@@ -3498,29 +3498,6 @@ html {
   gap: 16px;
 }
 
-.home-page .glow-card {
-  min-height: 290px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-
-  padding: 26px 24px 24px;
-
-  text-align: center;
-}
-
-.home-page .glow-card .big-icon {
-  width: 100%;
-  height: 112px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin: 0 0 8px;
-}
 
 .home-page .glow-card-image {
   width: 96px !important;
@@ -3531,16 +3508,6 @@ html {
   object-position: center;
 
   margin: 0 auto;
-}
-
-.home-page .glow-card-content {
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  margin: 0;
 }
 
 .home-page .glow-card-content h3 {
@@ -3626,5 +3593,166 @@ html {
 
   .home-page .glow-card-content p {
     max-width: 280px;
+  }
+}
+
+/* =========================================================
+   ANA SAYFA — GLOWYN KARTLARI
+   Referans tasarıma göre son düzen
+   ========================================================= */
+
+.home-page .card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.home-page .glow-card {
+  min-height: 300px;
+  padding: 28px 28px 26px;
+
+  display: grid;
+  grid-template-rows: 118px 40px auto;
+  justify-items: center;
+  align-items: start;
+
+  text-align: center;
+
+  border: 1px solid rgba(111, 91, 210, 0.24);
+  border-radius: 18px;
+
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      rgba(116, 62, 205, 0.16),
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(19, 20, 58, 0.96),
+      rgba(15, 18, 51, 0.98)
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.025),
+    0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+/* İKON ALANI */
+.home-page .glow-card .big-icon {
+  width: 100%;
+  height: 118px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* İKON */
+.home-page .glow-card-image {
+  display: block;
+
+  width: 86px !important;
+  height: 86px !important;
+
+  max-width: 86px !important;
+  max-height: 86px !important;
+
+  object-fit: contain;
+  object-position: center;
+
+  margin: 0 auto;
+}
+
+/* METİN GRUBU */
+.home-page .glow-card-content {
+  display: contents;
+}
+
+/* BAŞLIK */
+.home-page .glow-card-content h3 {
+  width: 100%;
+  height: 40px;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  text-align: center;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* AÇIKLAMA */
+.home-page .glow-card-content p {
+  width: 100%;
+  max-width: 310px;
+
+  margin: 0 auto;
+  padding-top: 4px;
+
+  color: rgba(222, 226, 247, 0.86);
+
+  text-align: center;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Eski Keşfet linki hiçbir şekilde görünmesin */
+.home-page .glow-card a {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .home-page .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .home-page .glow-card {
+    min-height: 270px;
+
+    grid-template-rows: 98px 36px auto;
+
+    padding: 22px 16px 20px;
+
+    border-radius: 16px;
+  }
+
+  .home-page .glow-card .big-icon {
+    height: 98px;
+  }
+
+  .home-page .glow-card-image {
+    width: 72px !important;
+    height: 72px !important;
+
+    max-width: 72px !important;
+    max-height: 72px !important;
+  }
+
+  .home-page .glow-card-content h3 {
+    height: 36px;
+
+    font-size: 16px;
+  }
+
+  .home-page .glow-card-content p {
+    max-width: 230px;
+
+    padding-top: 3px;
+
+    font-size: 13px;
+    line-height: 1.55;
   }
 }
