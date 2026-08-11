@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import Header from "../../components/header";
 import AboutHero from "../../components/about/AboutHero";
 import AboutMission from "../../components/about/AboutMission";
+import AboutVision from "../../components/about/AboutVision";
+import AboutValues from "../../components/about/AboutValues";
+import AboutGlowyn from "../../components/about/AboutGlowyn";
 
 export const metadata: Metadata = {
   title: "Hakkımızda",
@@ -25,6 +28,9 @@ export default function HakkimizdaPage() {
         <main className="glowyn-main">
           <AboutHero />
           <AboutMission />
+          <AboutVision />
+          <AboutValues />
+          <AboutGlowyn />
         </main>
       </div>
     </div>
