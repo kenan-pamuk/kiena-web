@@ -4126,3 +4126,22 @@ html {
   object-fit: contain;
   object-position: center top;
 }
+
+/* =========================================================
+   FOOTER — AKTİF YASAL LİNK
+   ========================================================= */
+
+.kiena-footer-legal-link {
+  font-weight: 400;
+}
+
+.kiena-footer-legal-link:visited,
+.kiena-footer-legal-link:hover,
+.kiena-footer-legal-link:focus,
+.kiena-footer-legal-link:active {
+  font-weight: 400;
+}
+
+.kiena-footer-legal-link.active {
+  font-weight: 700;
+}
