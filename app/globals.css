@@ -4087,7 +4087,7 @@ html {
 }
 
 /* Keşfet */
-.glowyn-module-card:nth-child(3) .glowyn-module-preview img {
+.glowyn-module-card:nth-child(4) .glowyn-module-preview img {
   transform: scale(1.28);
   transform-origin: center center;
 }
