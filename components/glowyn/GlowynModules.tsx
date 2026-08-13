@@ -2,7 +2,7 @@ const modules = [
   {
     title: "AI Asistan",
     items: ["Sohbet et", "Sesli görüş", "Günlük öneriler", "Hatırlatmalar"],
-    image: "/glowyn/modules/ai-assistant.webp",
+    image: "/glowyn/modules/ai-assistant.png",
     icon: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <path d="M12 14h40a8 8 0 0 1 8 8v19a8 8 0 0 1-8 8H31L18 58l2-9h-8a8 8 0 0 1-8-8V22a8 8 0 0 1 8-8Z" />
