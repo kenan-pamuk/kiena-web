@@ -44,7 +44,7 @@ const modules = [
       "Yakındaki mekanlar",
       "Trend içerikler",
     ],
-    image: "/glowyn/modules/kesfet.webp",
+    image: "/glowyn/modules/kesfet.png",
     icon: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <path d="M22 8h20l-2 12 10 9-7 27H21l-7-27 10-9-2-12Z" />
