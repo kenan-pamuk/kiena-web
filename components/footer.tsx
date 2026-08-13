@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 type FooterLink = {
   label: string;
@@ -52,7 +55,12 @@ function InstagramIcon() {
         strokeWidth="1.8"
       />
 
-      <circle cx="17.4" cy="6.7" r="1.05" fill="currentColor" />
+      <circle
+        cx="17.4"
+        cy="6.7"
+        r="1.05"
+        fill="currentColor"
+      />
     </svg>
   );
 }
@@ -125,7 +133,9 @@ function FooterColumn({ title, links }: FooterColumnProps) {
       <ul>
         {links.map((link) => (
           <li key={link.label}>
-            <Link href={link.href}>{link.label}</Link>
+            <Link href={link.href}>
+              {link.label}
+            </Link>
           </li>
         ))}
       </ul>
@@ -168,6 +178,8 @@ const glowynLinks: FooterLink[] = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+
   return (
     <footer id="contact" className="kiena-footer">
       <div className="kiena-footer-container">
@@ -212,9 +224,15 @@ export default function Footer() {
               </div>
             </div>
 
-            <FooterColumn title="Şirket" links={companyLinks} />
+            <FooterColumn
+              title="Şirket"
+              links={companyLinks}
+            />
 
-            <FooterColumn title="Glowyn" links={glowynLinks} />
+            <FooterColumn
+              title="Glowyn"
+              links={glowynLinks}
+            />
 
             <div className="kiena-footer-column kiena-footer-contact">
               <h3>İletişim</h3>
@@ -245,29 +263,49 @@ export default function Footer() {
           <p className="kiena-footer-copyright">
             © 2026 Kiena Bilişim Teknolojileri Ltd. Şti. Tüm hakları saklıdır.
           </p>
-        
+
           <nav
             className="kiena-footer-legal"
             aria-label="Yasal belgeler"
           >
-            <Link href="/legal/gizlilik-politikasi">
+            <Link
+              href="/legal/gizlilik-politikasi"
+              className={
+                pathname === "/legal/gizlilik-politikasi"
+                  ? "kiena-footer-legal-link active"
+                  : "kiena-footer-legal-link"
+              }
+            >
               Gizlilik Politikası
             </Link>
-        
+
             <span aria-hidden="true">•</span>
-        
-            <Link href="/legal/kullanim-kosullari">
+
+            <Link
+              href="/legal/kullanim-kosullari"
+              className={
+                pathname === "/legal/kullanim-kosullari"
+                  ? "kiena-footer-legal-link active"
+                  : "kiena-footer-legal-link"
+              }
+            >
               Kullanım Koşulları
             </Link>
-        
+
             <span aria-hidden="true">•</span>
-        
-            <Link href="/legal/kvkk-aydinlatma-metni">
+
+            <Link
+              href="/legal/kvkk-aydinlatma-metni"
+              className={
+                pathname === "/legal/kvkk-aydinlatma-metni"
+                  ? "kiena-footer-legal-link active"
+                  : "kiena-footer-legal-link"
+              }
+            >
               KVKK Aydınlatma Metni
             </Link>
           </nav>
         </div>
-        
       </div>
     </footer>
   );
