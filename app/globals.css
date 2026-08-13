@@ -4096,12 +4096,12 @@ html {
    ========================================================= */
 
 .glowyn-day-card {
-  min-height: 350px;
+  min-height: 335px;
 }
 
 .glowyn-day-preview {
   min-height: 225px;
-  margin-top: -8px;
+  margin-top: -15px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
