@@ -4068,8 +4068,13 @@ html {
     white-space: normal;
   }
 }
-/* AI Asistan ve Planım görsellerini büyüt */
-.glowyn-module-card:nth-child(1) .glowyn-module-preview img,
+/* AI Asistan */
+.glowyn-module-card:nth-child(1) .glowyn-module-preview img {
+  transform: scale(1.22);
+  transform-origin: center center;
+}
+
+/* Planım */
 .glowyn-module-card:nth-child(2) .glowyn-module-preview img {
   transform: scale(1.18);
   transform-origin: center center;
