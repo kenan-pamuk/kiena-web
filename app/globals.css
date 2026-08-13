@@ -4117,4 +4117,15 @@ html {
   object-fit: contain;
   object-position: center top;
 }
+/* =========================================================
+   GLOWYN İLE BİR GÜN — ALT BOŞLUĞU KALDIR
+   ========================================================= */
 
+.glowyn-day-card {
+  min-height: 0;
+}
+
+.glowyn-day-preview {
+  flex: none;
+  min-height: 0;
+}
