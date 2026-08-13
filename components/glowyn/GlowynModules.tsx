@@ -27,7 +27,7 @@ const modules = [
   {
     title: "Yemeğim",
     items: ["Tarif önerileri", "Günlük yemek planı", "Kilerim"],
-    image: "/glowyn/modules/yemegim.webp",
+    image: "/glowyn/modules/yemegim.png",
     icon: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <path d="M8 29h48l-5 23H13L8 29Z" />
