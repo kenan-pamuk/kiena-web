@@ -10,8 +10,54 @@ import GlowynNewsletter from "../../components/glowyn/GlowynNewsletter";
 
 export const metadata: Metadata = {
   title: "Hakkımızda",
+
   description:
-    "Kiena, yapay zekâ ve veri teknolojileriyle insan odaklı dijital ürünler geliştiren yenilikçi bir teknoloji şirketidir.",
+    "Kiena, yapay zekâ ve veri teknolojileriyle insan odaklı dijital ürünler geliştiren yenilikçi bir teknoloji şirketidir. Kiena'nın misyonunu, vizyonunu, değerlerini ve Glowyn'i keşfedin.",
+
+  keywords: [
+    "Kiena",
+    "kiena",
+    "Kiena Bilişim",
+    "Kiena Bilişim Teknolojileri",
+    "Kiena hakkında",
+    "Kiena Hakkımızda",
+    "Glowyn",
+    "glowyn",
+    "yapay zeka",
+    "yapay zekâ",
+    "yapay zeka şirketi",
+    "yapay zekâ şirketi",
+    "teknoloji şirketi",
+    "dijital ürünler",
+    "veri teknolojileri",
+    "İstanbul teknoloji şirketi",
+  ],
+
+  alternates: {
+    canonical: "/hakkimizda",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "tr_TR",
+    url: "https://www.kiena.com.tr/hakkimizda",
+    siteName: "Kiena",
+    title: "Hakkımızda | Kiena",
+    description:
+      "Kiena'nın misyonunu, vizyonunu ve değerlerini keşfedin. Yapay zekâ ve veri teknolojileriyle insan odaklı dijital ürünler geliştiriyoruz.",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Hakkımızda | Kiena",
+    description:
+      "Kiena'nın misyonunu, vizyonunu ve değerlerini keşfedin. Yapay zekâ ve veri teknolojileriyle insan odaklı dijital ürünler geliştiriyoruz.",
+  },
 };
 
 export default function HakkimizdaPage() {
