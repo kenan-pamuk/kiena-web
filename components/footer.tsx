@@ -261,7 +261,7 @@ export default function Footer() {
 
         <div className="kiena-footer-bottom">
           <p className="kiena-footer-copyright">
-            © 2026 Kiena Bilişim Teknolojileri Ltd. Şti. Tüm hakları saklıdır.
+            © Kiena Bilişim Sistemleri Limited Şirketi. Tüm hakları saklıdır.
           </p>
 
           <nav
