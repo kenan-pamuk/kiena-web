@@ -4093,53 +4093,7 @@ html {
 }
 
 /* =========================================================
-   GLOWYN İLE BİR GÜN — GÖRSEL BOYUT AYARLARI
-   ========================================================= */
-
-/* Sabah */
-.glowyn-day-card:nth-child(1) .glowyn-day-preview img {
-  transform: scale(1.88);
-  transform-origin: center center;
-}
-
-/* Öğle */
-.glowyn-day-card:nth-child(2) .glowyn-day-preview img {
-  transform: scale(1.88);
-  transform-origin: center center;
-}
-
-/* Akşam */
-.glowyn-day-card:nth-child(3) .glowyn-day-preview img {
-  transform: scale(1.88);
-  transform-origin: center center;
-}
-
-/* Gece */
-.glowyn-day-card:nth-child(4) .glowyn-day-preview img {
-  transform: scale(1.88);
-  transform-origin: center center;
-}
-
-/* Dördünü birlikte yukarı taşı */
-.glowyn-day-preview img {
-  position: relative;
-  top: -85px;
-}
-
-/* =========================================================
-   GLOWYN İLE BİR GÜN — TELEFON ALANI YÜKSEKLİĞİ
-   ========================================================= */
-
-.glowyn-day-card {
-  min-height: 390px;
-}
-
-.glowyn-day-preview {
-  min-height: 260px;
-  overflow: visible;
-}
-/* =========================================================
-   GLOWYN İLE BİR GÜN — TEMİZ TELEFON YERLEŞİMİ
+   GLOWYN İLE BİR GÜN — TEMİZ VE DENGELİ GÖRSEL AYARI
    ========================================================= */
 
 .glowyn-day-card {
@@ -4148,26 +4102,51 @@ html {
 }
 
 .glowyn-day-preview {
-  min-height: 285px;
+  min-height: 290px;
   flex: 1;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin-top: 4px;
+  margin-top: 0;
   overflow: hidden;
 }
 
 .glowyn-day-preview img {
+  display: block;
   position: static;
-  top: auto;
 
   width: 218px;
   max-width: 218px;
   height: auto;
 
-  margin: 0 auto;
+  margin: -18px auto 0;
+
   object-fit: contain;
   object-position: center top;
 
   transform: none;
+}
+
+/* Sabah */
+.glowyn-day-card:nth-child(1) .glowyn-day-preview img {
+  width: 218px;
+  max-width: 218px;
+}
+
+/* Öğle */
+.glowyn-day-card:nth-child(2) .glowyn-day-preview img {
+  width: 218px;
+  max-width: 218px;
+}
+
+/* Akşam */
+.glowyn-day-card:nth-child(3) .glowyn-day-preview img {
+  width: 218px;
+  max-width: 218px;
+}
+
+/* Gece */
+.glowyn-day-card:nth-child(4) .glowyn-day-preview img {
+  width: 218px;
+  max-width: 218px;
 }
