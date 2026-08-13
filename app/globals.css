@@ -4119,3 +4119,16 @@ html {
   transform: scale(1.88);
   transform-origin: center center;
 }
+
+/* =========================================================
+   GLOWYN İLE BİR GÜN — TELEFON ALANI YÜKSEKLİĞİ
+   ========================================================= */
+
+.glowyn-day-card {
+  min-height: 390px;
+}
+
+.glowyn-day-preview {
+  min-height: 260px;
+  overflow: visible;
+}
