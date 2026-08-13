@@ -4091,5 +4091,30 @@ html {
   transform: scale(1.30);
   transform-origin: center center;
 }
+/* =========================================================
+   GLOWYN İLE BİR GÜN — KOMPAKT VE YAKIN YERLEŞİM
+   ========================================================= */
 
+.glowyn-day-card {
+  min-height: 350px;
+}
+
+.glowyn-day-preview {
+  min-height: 225px;
+  margin-top: -8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.glowyn-day-preview img {
+  display: block;
+  width: 205px;
+  max-width: 205px;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: center top;
+}
 
