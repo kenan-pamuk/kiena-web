@@ -4070,7 +4070,7 @@ html {
 }
 /* AI Asistan */
 .glowyn-module-card:nth-child(1) .glowyn-module-preview img {
-  transform: scale(1.22);
+  transform: scale(1.25);
   transform-origin: center center;
 }
 
