@@ -4120,6 +4120,12 @@ html {
   transform-origin: center center;
 }
 
+/* Dördünü birlikte yukarı taşı */
+.glowyn-day-preview img {
+  position: relative;
+  top: -35px;
+}
+
 /* =========================================================
    GLOWYN İLE BİR GÜN — TELEFON ALANI YÜKSEKLİĞİ
    ========================================================= */
