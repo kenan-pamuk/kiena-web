@@ -2,7 +2,7 @@ const moments = [
   {
     title: "Sabah",
     quote: "Günaydın! Bugün 3 toplantın var ve hava güneşli.",
-    image: "/glowyn/day/sabah.webp",
+    image: "/glowyn/day/sabah.png",
     icon: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <circle cx="32" cy="32" r="10" />
@@ -13,7 +13,7 @@ const moments = [
   {
     title: "Öğle",
     quote: "Evdeki malzemelerle pratik bir makarna yapabilirsin.",
-    image: "/glowyn/day/ogle.webp",
+    image: "/glowyn/day/ogle.png",
     icon: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <path d="M14 8v20M22 8v20M14 18h8M18 28v28M42 8v48M50 8c0 12-2 18-8 20" />
@@ -23,7 +23,7 @@ const moments = [
   {
     title: "Akşam",
     quote: "Bu akşam için bu kombini tam sana göre olabilir.",
-    image: "/glowyn/day/aksam.webp",
+    image: "/glowyn/day/aksam.png",
     icon: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <path d="M32 8c0 6 7 7 7 13 0 4-3 7-7 7s-7-3-7-7" />
@@ -34,7 +34,7 @@ const moments = [
   {
     title: "Gece",
     quote: "Yarınki planlarını gözden geçirmeyi unutma.",
-    image: "/glowyn/day/gece.webp",
+    image: "/glowyn/day/gece.png",
     icon: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <path d="M44 8a24 24 0 1 0 12 42A22 22 0 0 1 44 8Z" />
