@@ -4138,3 +4138,24 @@ html {
   min-height: 260px;
   overflow: visible;
 }
+/* =========================================================
+   GLOWYN İLE BİR GÜN — TELEFON KIRPILMASINI KALDIR
+   ========================================================= */
+
+.glowyn-day-card {
+  overflow: visible;
+}
+
+.glowyn-day-preview {
+  min-height: 280px;
+  overflow: visible;
+  align-items: flex-start;
+  padding-top: 0;
+}
+
+.glowyn-day-preview img {
+  position: relative;
+  top: -20px;
+  margin-bottom: 0;
+  object-position: center top;
+}
