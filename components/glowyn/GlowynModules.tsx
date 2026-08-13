@@ -15,7 +15,7 @@ const modules = [
   {
     title: "Planım",
     items: ["Takvim", "Görevler", "Hatırlatıcılar", "Hedefler"],
-    image: "/glowyn/modules/planim.webp",
+    image: "/glowyn/modules/planim.png",
     icon: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <rect x="8" y="13" width="48" height="43" rx="7" />
