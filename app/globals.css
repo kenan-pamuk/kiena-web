@@ -4139,23 +4139,35 @@ html {
   overflow: visible;
 }
 /* =========================================================
-   GLOWYN İLE BİR GÜN — TELEFON KIRPILMASINI KALDIR
+   GLOWYN İLE BİR GÜN — TEMİZ TELEFON YERLEŞİMİ
    ========================================================= */
 
 .glowyn-day-card {
-  overflow: visible;
+  min-height: 410px;
+  overflow: hidden;
 }
 
 .glowyn-day-preview {
-  min-height: 280px;
-  overflow: visible;
+  min-height: 285px;
+  flex: 1;
+  display: flex;
   align-items: flex-start;
-  padding-top: 0;
+  justify-content: center;
+  margin-top: 4px;
+  overflow: hidden;
 }
 
 .glowyn-day-preview img {
-  position: relative;
-  top: -20px;
-  margin-bottom: 0;
+  position: static;
+  top: auto;
+
+  width: 218px;
+  max-width: 218px;
+  height: auto;
+
+  margin: 0 auto;
+  object-fit: contain;
   object-position: center top;
+
+  transform: none;
 }
