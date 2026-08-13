@@ -17,7 +17,8 @@ export const metadata: Metadata = {
     "Kiena",
     "kiena",
     "Kiena Bilişim",
-    "Kiena Bilişim Teknolojileri",
+    "Kiena Bilişim Sistemleri",
+    "Kiena Bilişim Sistemleri Limited Şirketi",
     "Glowyn",
     "glowyn",
     "Glowyn AI",
@@ -34,12 +35,12 @@ export const metadata: Metadata = {
 
   authors: [
     {
-      name: "Kiena Bilişim Teknolojileri Ltd. Şti.",
+      name: "KİENA BİLİŞİM SİSTEMLERİ LİMİTED ŞİRKETİ",
     },
   ],
 
   creator: "Kiena",
-  publisher: "Kiena Bilişim Teknolojileri Ltd. Şti.",
+  publisher: "KİENA BİLİŞİM SİSTEMLERİ LİMİTED ŞİRKETİ",
 
   alternates: {
     canonical: "/",
@@ -81,6 +82,34 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.kiena.com.tr/#organization",
+  name: "Kiena",
+  legalName: "KİENA BİLİŞİM SİSTEMLERİ LİMİTED ŞİRKETİ",
+  url: "https://www.kiena.com.tr",
+  logo: "https://www.kiena.com.tr/icon.png",
+  description:
+    "Kiena, yapay zekâ ve veri teknolojileriyle yenilikçi dijital ürünler geliştiren teknoloji şirketidir.",
+  brand: {
+    "@type": "Brand",
+    name: "Kiena",
+  },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.kiena.com.tr/#website",
+  url: "https://www.kiena.com.tr",
+  name: "Kiena",
+  publisher: {
+    "@id": "https://www.kiena.com.tr/#organization",
+  },
+  inLanguage: "tr-TR",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -89,6 +118,20 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
+          }}
+        />
+
         {children}
         <Footer />
       </body>
