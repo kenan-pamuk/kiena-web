@@ -4098,24 +4098,24 @@ html {
 
 /* Sabah */
 .glowyn-day-card:nth-child(1) .glowyn-day-preview img {
-  transform: scale(1.18);
+  transform: scale(1.58);
   transform-origin: center center;
 }
 
 /* Öğle */
 .glowyn-day-card:nth-child(2) .glowyn-day-preview img {
-  transform: scale(1.18);
+  transform: scale(1.58);
   transform-origin: center center;
 }
 
 /* Akşam */
 .glowyn-day-card:nth-child(3) .glowyn-day-preview img {
-  transform: scale(1.18);
+  transform: scale(1.58);
   transform-origin: center center;
 }
 
 /* Gece */
 .glowyn-day-card:nth-child(4) .glowyn-day-preview img {
-  transform: scale(1.18);
+  transform: scale(1.58);
   transform-origin: center center;
 }
