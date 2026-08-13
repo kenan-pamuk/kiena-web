@@ -4115,11 +4115,11 @@ html {
   display: block;
   position: static;
 
-  width: 218px;
-  max-width: 218px;
+  width: 248px;
+  max-width: 248px;
   height: auto;
 
-  margin: -18px auto 0;
+  margin: -1px auto 0;
 
   object-fit: contain;
   object-position: center top;
@@ -4127,26 +4127,27 @@ html {
   transform: none;
 }
 
+
 /* Sabah */
 .glowyn-day-card:nth-child(1) .glowyn-day-preview img {
-  width: 218px;
-  max-width: 218px;
+  width: 248px;
+  max-width: 248px;
 }
 
 /* Öğle */
 .glowyn-day-card:nth-child(2) .glowyn-day-preview img {
-  width: 218px;
-  max-width: 218px;
+  width: 248px;
+  max-width: 248px;
 }
 
 /* Akşam */
 .glowyn-day-card:nth-child(3) .glowyn-day-preview img {
-  width: 218px;
-  max-width: 218px;
+  width: 248px;
+  max-width: 248px;
 }
 
 /* Gece */
 .glowyn-day-card:nth-child(4) .glowyn-day-preview img {
-  width: 218px;
-  max-width: 218px;
+  width: 248px;
+  max-width: 248px;
 }
