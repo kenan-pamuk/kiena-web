@@ -60,9 +60,52 @@ export const metadata: Metadata = {
   },
 };
 
+const glowynJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://www.kiena.com.tr/glowyn#softwareapplication",
+
+  name: "Glowyn",
+  url: "https://www.kiena.com.tr/glowyn",
+
+  applicationCategory: "LifestyleApplication",
+  operatingSystem: "iOS, Android",
+
+  description:
+    "Glowyn, planlama, beslenme, stil, günlük rutinler ve kişiselleştirilmiş öneriler sunan yapay zekâ destekli kişisel yaşam asistanıdır.",
+
+  creator: {
+    "@type": "Organization",
+    "@id": "https://www.kiena.com.tr/#organization",
+    name: "Kiena",
+    legalName: "KİENA BİLİŞİM SİSTEMLERİ LİMİTED ŞİRKETİ",
+    url: "https://www.kiena.com.tr",
+  },
+
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.kiena.com.tr/#organization",
+    name: "Kiena",
+  },
+
+  brand: {
+    "@type": "Brand",
+    name: "Glowyn",
+  },
+
+  inLanguage: "tr-TR",
+};
+
 export default function GlowynPage() {
   return (
     <div className="glowyn-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(glowynJsonLd),
+        }}
+      />
+
       <div className="glowyn-background" aria-hidden="true">
         <div className="glowyn-background-orb glowyn-background-orb-left" />
         <div className="glowyn-background-orb glowyn-background-orb-right" />
