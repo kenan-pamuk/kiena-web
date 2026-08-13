@@ -4068,8 +4068,9 @@ html {
     white-space: normal;
   }
 }
-/* AI Asistan görselini Planım ile görsel olarak eşitle */
-.glowyn-module-card:first-child .glowyn-module-preview img {
+/* AI Asistan ve Planım görsellerini büyüt */
+.glowyn-module-card:nth-child(1) .glowyn-module-preview img,
+.glowyn-module-card:nth-child(2) .glowyn-module-preview img {
   transform: scale(1.18);
   transform-origin: center center;
 }
