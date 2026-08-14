@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import Header from "../../components/header";
 import FaqClient from "./FaqClient";
+import styles from "./sss.module.css";
 
 export const metadata: Metadata = {
   title: "Sıkça Sorulan Sorular | Glowyn",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
 
 export default function SSSPage() {
   return (
-    <div className="glowyn-page">
+    <div className={`glowyn-page ${styles.sssPage}`}>
       <div
         className="glowyn-background"
         aria-hidden="true"
