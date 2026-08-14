@@ -311,19 +311,8 @@ export default function FaqClient() {
                     </span>
                   </span>
 
-                  <span className={styles.questionActions}>
-                    {isOpen && (
-                      <img
-                        src="/assets/yanit.png"
-                        alt=""
-                        className={styles.answerIcon}
-                        aria-hidden="true"
-                      />
-                    )}
-
-                    <span className={styles.toggle}>
-                      {isOpen ? "−" : "+"}
-                    </span>
+                  <span className={styles.toggle}>
+                    {isOpen ? "−" : "+"}
                   </span>
                 </button>
 
@@ -335,8 +324,17 @@ export default function FaqClient() {
                   }`}
                 >
                   <div className={styles.answerInner}>
-                    <div className={styles.answer}>
-                      {item.answer}
+                    <div className={styles.answerRow}>
+                      <div className={styles.answer}>
+                        {item.answer}
+                      </div>
+
+                      <img
+                        src="/assets/yanit.png"
+                        alt=""
+                        className={styles.answerIcon}
+                        aria-hidden="true"
+                      />
                     </div>
                   </div>
                 </div>
