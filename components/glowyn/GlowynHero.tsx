@@ -24,16 +24,9 @@ export default function GlowynHero() {
         </p>
 
         <div className="hero-actions">
-          <Link href="#bekleme-listesi" className="primary glowyn-primary">
-            Bekleme Listesine Katıl
-            <b aria-hidden="true">→</b>
-          </Link>
-
-          <Link href="#nasil-calisir" className="secondary glowyn-secondary">
+          <Link href="#nasil-calisir" className="primary glowyn-primary">
             Glowyn&apos;i Keşfet
-            <span className="glowyn-discover-icon" aria-hidden="true">
-              ↓
-            </span>
+            <b aria-hidden="true">↓</b>
           </Link>
         </div>
       </div>
