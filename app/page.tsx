@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Header from "../components/header";
+import GlowynNewsletter from "../components/glowyn/GlowynNewsletter";
 
 const features = [
   [
@@ -231,42 +232,7 @@ export default function Home() {
               </div>
             </section>
 
-            <section className="newsletter">
-              <Image
-                src="/assets/glow-face.png"
-                alt="Glowyn maskotu"
-                width={190}
-                height={185}
-              />
-
-              <div>
-                <h2>
-                  Glowyn’den
-                  <br /> ilk sen haberdar ol!
-                </h2>
-
-                <p>
-                  Yeniliklerden, beta testlerinden ve özel fırsatlardan ilk sen
-                  haberdar ol.
-                </p>
-              </div>
-
-              <form>
-                <input
-                  type="email"
-                  placeholder="E-posta adresinizi girin"
-                />
-
-                <button type="submit">
-                  Haber Ver
-                </button>
-
-                <small>
-                  🔒 Bilgileriniz güvendedir. İstediğiniz zaman abonelikten
-                  çıkabilirsiniz.
-                </small>
-              </form>
-            </section>
+            <GlowynNewsletter />
           </main>
         </div>
       </div>
