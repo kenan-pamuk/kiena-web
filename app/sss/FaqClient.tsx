@@ -311,8 +311,19 @@ export default function FaqClient() {
                     </span>
                   </span>
 
-                  <span className={styles.toggle}>
-                    {isOpen ? "−" : "+"}
+                  <span className={styles.questionActions}>
+                    {isOpen && (
+                      <img
+                        src="/assets/yanit.png"
+                        alt=""
+                        className={styles.answerIcon}
+                        aria-hidden="true"
+                      />
+                    )}
+
+                    <span className={styles.toggle}>
+                      {isOpen ? "−" : "+"}
+                    </span>
                   </span>
                 </button>
 
