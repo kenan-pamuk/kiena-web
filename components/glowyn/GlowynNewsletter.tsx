@@ -1,6 +1,44 @@
+"use client";
+
 import Image from "next/image";
+import { FormEvent, useState } from "react";
 
 export default function GlowynNewsletter() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!email) return;
+
+    setStatus("loading");
+
+    try {
+      const response = await fetch("/api/glowyn-notify", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Gönderim başarısız.");
+      }
+
+      setStatus("success");
+      setEmail("");
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+    }
+  };
+
   return (
     <section
       id="bekleme-listesi"
@@ -27,17 +65,48 @@ export default function GlowynNewsletter() {
         </p>
       </div>
 
-      <form>
-        <input
-          type="email"
-          name="email"
-          placeholder="E-posta adresinizi girin"
-          aria-label="E-posta adresinizi girin"
-          autoComplete="email"
-          required
-        />
+      <form onSubmit={handleSubmit}>
+        {status !== "success" && (
+          <>
+            <input
+              type="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="E-posta adresinizi girin"
+              aria-label="E-posta adresinizi girin"
+              autoComplete="email"
+              required
+              disabled={status === "loading"}
+            />
 
-        <button type="submit">Haber Ver</button>
+            <button
+              type="submit"
+              disabled={status === "loading"}
+            >
+              {status === "loading" ? "Gönderiliyor..." : "Haber Ver"}
+            </button>
+          </>
+        )}
+
+        {status === "success" && (
+          <div
+            className="newsletter-success"
+            role="status"
+            aria-live="polite"
+          >
+            Teşekkürler! Seni haberdar edeceğiz ✓
+          </div>
+        )}
+
+        {status === "error" && (
+          <div
+            className="newsletter-error"
+            role="alert"
+          >
+            Bir sorun oluştu. Lütfen tekrar deneyin.
+          </div>
+        )}
 
         <small>
           🔒 Bilgileriniz güvendedir. İstediğiniz zaman abonelikten
