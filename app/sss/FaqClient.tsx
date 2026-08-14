@@ -59,8 +59,9 @@ const faqItems: FaqItem[] = [
         Kullanıcı gizliliği ve kişisel verilerin korunması Glowyn için
         önemlidir. Kişisel veriler, yürürlükteki mevzuata ve ilgili gizlilik
         politikalarımıza uygun şekilde işlenir ve korunur. Ayrıntılı bilgiye{" "}
-        <a href="/gizlilik-politikasi">Gizlilik Politikası</a> ve{" "}
-        <a href="/kvkk">KVKK Aydınlatma Metni</a> üzerinden ulaşabilirsin.
+        <a href="/legal/kvkk-aydinlatma-metni">KVKK Aydınlatma Metni</a> ve{" "}
+        <a href="/legal/gizlilik-politikasi">Gizlilik Politikası</a> üzerinden
+        ulaşabilirsin.
       </>
     ),
   },
@@ -124,6 +125,7 @@ function QuestionIcon() {
         stroke="currentColor"
         strokeWidth="1.7"
       />
+
       <path
         d="M9.7 9.4a2.5 2.5 0 0 1 4.8.9c0 2-2.5 2.2-2.5 4"
         fill="none"
@@ -131,6 +133,7 @@ function QuestionIcon() {
         strokeWidth="1.7"
         strokeLinecap="round"
       />
+
       <circle cx="12" cy="17" r="1" fill="currentColor" />
     </svg>
   );
@@ -203,15 +206,20 @@ export default function FaqClient() {
   const [message, setMessage] = useState("");
 
   const [sending, setSending] = useState(false);
+
   const [status, setStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
 
   const toggleFaq = (index: number) => {
-    setOpenIndex((current) => (current === index ? null : index));
+    setOpenIndex((current) =>
+      current === index ? null : index
+    );
   };
 
-  async function handleContactSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleContactSubmit(
+    event: FormEvent<HTMLFormElement>
+  ) {
     event.preventDefault();
 
     if (!email.trim() || !message.trim()) {
@@ -225,9 +233,11 @@ export default function FaqClient() {
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
+
         headers: {
           "Content-Type": "application/json",
         },
+
         body: JSON.stringify({
           email: email.trim(),
           message: message.trim(),
@@ -251,8 +261,15 @@ export default function FaqClient() {
 
   return (
     <main className={styles.page}>
-      <div className={styles.ambientOne} />
-      <div className={styles.ambientTwo} />
+      <div
+        className={styles.ambientOne}
+        aria-hidden="true"
+      />
+
+      <div
+        className={styles.ambientTwo}
+        aria-hidden="true"
+      />
 
       <section className={styles.faqSection}>
         <div className={styles.heading}>
@@ -260,6 +277,7 @@ export default function FaqClient() {
             <span className={styles.badgeIcon}>
               <QuestionIcon />
             </span>
+
             SSS
           </div>
 
@@ -274,10 +292,10 @@ export default function FaqClient() {
 
             return (
               <div
+                key={item.question}
                 className={`${styles.faqItem} ${
                   isOpen ? styles.faqItemOpen : ""
                 }`}
-                key={item.question}
               >
                 <button
                   type="button"
@@ -300,7 +318,9 @@ export default function FaqClient() {
 
                 <div
                   className={`${styles.answerWrapper} ${
-                    isOpen ? styles.answerWrapperOpen : ""
+                    isOpen
+                      ? styles.answerWrapperOpen
+                      : ""
                   }`}
                 >
                   <div className={styles.answerInner}>
@@ -344,7 +364,9 @@ export default function FaqClient() {
 
           <div
             className={`${styles.contactFormWrapper} ${
-              contactOpen ? styles.contactFormWrapperOpen : ""
+              contactOpen
+                ? styles.contactFormWrapperOpen
+                : ""
             }`}
           >
             <div className={styles.contactFormInner}>
@@ -398,14 +420,16 @@ export default function FaqClient() {
                   <div className={styles.statusArea}>
                     {status === "success" && (
                       <p className={styles.success}>
-                        ✓ Mesajın bize ulaştı. Teşekkür ederiz.
+                        ✓ Mesajın bize ulaştı. Teşekkür
+                        ederiz.
                       </p>
                     )}
 
                     {status === "error" && (
                       <p className={styles.error}>
-                        Mesaj gönderilemedi. Lütfen alanları
-                        kontrol edip tekrar deneyin.
+                        Mesaj gönderilemedi. Lütfen
+                        alanları kontrol edip tekrar
+                        deneyin.
                       </p>
                     )}
                   </div>
@@ -415,7 +439,10 @@ export default function FaqClient() {
                     className={styles.sendButton}
                     disabled={sending}
                   >
-                    {sending ? "Gönderiliyor..." : "Mesajı Gönder"}
+                    {sending
+                      ? "Gönderiliyor..."
+                      : "Mesajı Gönder"}
+
                     {!sending && <span>→</span>}
                   </button>
                 </div>
