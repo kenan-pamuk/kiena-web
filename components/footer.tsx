@@ -173,7 +173,7 @@ const glowynLinks: FooterLink[] = [
   },
   {
     label: "S.S.S.",
-    href: "/glowyn#sss",
+    href: "/sss",
   },
 ];
 
