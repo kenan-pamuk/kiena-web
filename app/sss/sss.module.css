@@ -260,27 +260,6 @@
    + / - VE AÇIK CEVAP GÖRSELİ
    ========================================================= */
 
-.questionActions {
-  flex: 0 0 auto;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  gap: 22px;
-}
-
-.answerIcon {
-  display: block;
-
-  width: 256px;
-  height: 256px;
-
-  flex: 0 0 256px;
-  object-fit: contain;
-  align-self: center;
-}
-
 .toggle {
   flex: 0 0 29px;
 
@@ -329,11 +308,40 @@
   overflow: hidden;
 }
 
+.answerRow {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+
+  width: 100%;
+}
+
+.answerRow .answer {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.answerIcon {
+  flex: 0 0 128px;
+
+  width: 128px;
+  height: 128px;
+
+  margin-right: 58px;
+
+  object-fit: contain;
+  align-self: center;
+}
+
 .answer {
   position: relative;
   z-index: 2;
 
-  max-width: 980px;
+  max-width: none;
 
   padding:
     0 48px
@@ -855,19 +863,7 @@
 
     font-size: 20px;
   }
-
-
-  .questionActions {
-    gap: 14px;
-  }
-
-  .answerIcon {
-    width: 192px;
-    height: 192px;
-    flex-basis: 192px;
-  }
-
-  .answer {
+.answer {
     padding:
       0 14px
       15px 39px;
@@ -936,5 +932,45 @@
 
   .faqButton {
     min-height: 54px;
+  }
+}
+
+
+/* =========================================================
+   YANIT GÖRSELİ - RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 980px) {
+  .answerRow {
+    gap: 20px;
+  }
+
+  .answerIcon {
+    flex-basis: 112px;
+    width: 112px;
+    height: 112px;
+    margin-right: 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  .answerRow {
+    gap: 14px;
+  }
+
+  .answerIcon {
+    flex-basis: 96px;
+    width: 96px;
+    height: 96px;
+    margin-right: 6px;
+  }
+}
+
+@media (max-width: 560px) {
+  .answerIcon {
+    flex-basis: 80px;
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
   }
 }
